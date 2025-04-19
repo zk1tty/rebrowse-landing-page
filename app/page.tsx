@@ -31,7 +31,7 @@ export default function Home() {
         <div className="text-center mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Twitch for AI creators</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Record, Automate, and Share in one shot. 
+            Record, Replay, and Share all in one place.
           </p>
         </div>
         <div className="relative w-full max-w-[800px] aspect-video">
