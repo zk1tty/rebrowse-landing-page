@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FigmaEmbed from './components/FigmaEmbed'
 
 export default function Home() {
   return (
@@ -34,13 +34,7 @@ export default function Home() {
             Record, Replay, and Share your AI workflow in one shot.
           </p>
         </div>
-        <div className="relative w-full max-w-[800px] aspect-video">
-          <iframe 
-            className="w-full h-full rounded-xl border border-white/10 shadow-[0_0_20px_rgba(255,0,255,0.3)]"
-            src="https://embed.figma.com/proto/CTamlV3eFXZ6pdHWTYSSL5/xPunks-LP?node-id=652-6852&p=f&scaling=scale-down&content-scaling=fixed&page-id=412%3A192&starting-point-node-id=589%3A6662&embed-host=share" 
-            allowFullScreen
-          />
-        </div>
+        <FigmaEmbed />
       </main>
 
       <footer className="row-start-3 w-full max-w-7xl mx-auto px-4">
