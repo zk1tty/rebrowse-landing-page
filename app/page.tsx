@@ -1,4 +1,5 @@
 import FigmaEmbed from './components/FigmaEmbed'
+import StopRecording from './components/ConfirmWorkflow'
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
           </p>
         </div>
         <FigmaEmbed />
+        {/* <StopRecording /> */}
       </main>
 
       <footer className="row-start-3 w-full max-w-7xl mx-auto px-4">
