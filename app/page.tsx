@@ -1,5 +1,6 @@
 import FigmaEmbed from './components/FigmaEmbed'
 import StopRecording from './components/ConfirmWorkflow'
+import NapkinExplanation from './components/NapkinExplanation'
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         </div>
         <FigmaEmbed />
         <StopRecording />
+        <NapkinExplanation />
       </main>
 
       <footer className="row-start-3 w-full max-w-7xl mx-auto px-4">
