@@ -35,6 +35,9 @@ export default function Home() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Record, Replay, and Share your AI workflow in one shot.
           </p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Convert screen-record into cross-app workflow.
+          </p>
         </div>
         <FigmaEmbed />
         <StopRecording />
