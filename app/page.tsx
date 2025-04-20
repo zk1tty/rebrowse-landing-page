@@ -36,7 +36,7 @@ export default function Home() {
           </p>
         </div>
         <FigmaEmbed />
-        {/* <StopRecording /> */}
+        <StopRecording />
       </main>
 
       <footer className="row-start-3 w-full max-w-7xl mx-auto px-4">
