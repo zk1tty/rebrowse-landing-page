@@ -31,9 +31,9 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center w-full row-start-2 max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Twitch for AI creators</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Record once, Automate forever</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Record, Replay, and Share your AI workflow in one shot.
+            Record, Automate, and Share your AI workflow in one shot.
           </p>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Convert screen-record into cross-app workflow.
