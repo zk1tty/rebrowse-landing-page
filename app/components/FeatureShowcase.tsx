@@ -15,15 +15,15 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "case: Airbnb Booking",
-    description: "If you already logined your Airbnb account, full automation from searching the place to payment is done.",
+    description: "If you already logged in to your Airbnb account, full automation from searching the place to payment is done.",
     icon: <CreditCard className="size-5 mb-1 text-rose-400" />,
     videoUrl: "/videos/airbnb-booking-5x.mp4", // You'll need to add these videos
     colSpan: "lg:col-span-5",
     roundedCorner: "lg:rounded-tr-[2rem]"
   },
   {
-    title: "case: Luma guests -> LinkedIn DM",
-    description: "Convert your recorded actions into automated workflows. Rebrowse understands your actions and creates reusable automation scripts.",
+    title: "case: Luma guests list -> LinkedIn DM",
+    description: "Extract the Linkedin link from the Luma event guest list, request Connect, and send LinkedIn DM.",
     icon: <Mails className="size-5 mb-1 text-emerald-500" />,
     videoUrl: "/videos/luma-linkedin-dming-4x.mp4",
     colSpan: "lg:col-span-5",
