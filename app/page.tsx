@@ -1,6 +1,8 @@
 import FigmaEmbed from './components/FigmaEmbed'
 import StopRecording from './components/ConfirmWorkflow'
 import NapkinExplanation from './components/NapkinExplanation'
+import Image from 'next/image'
+import rebrowseLogo from '../svgs/rebrowse-logo.png'
 
 export default function Home() {
   return (
@@ -8,8 +10,14 @@ export default function Home() {
       <header className="row-start-1 w-full max-w-7xl mx-auto px-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-              <span className="text-lg font-bold">R</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <Image
+                src={rebrowseLogo}
+                alt="Rebrowse Logo"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
             </div>
             <span className="text-xl font-bold">Rebrowse</span>
           </div>
