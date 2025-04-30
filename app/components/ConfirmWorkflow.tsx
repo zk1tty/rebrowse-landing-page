@@ -117,9 +117,9 @@ const StopRecording: React.FC = () => {
         <button className="px-4 py-2 rounded-sm text-sm whitespace-nowrap cursor-pointer bg-amber-600 text-stone-950 font-bold">
           Ghibli Movie
         </button>
-        <button className="px-4 py-2 rounded-sm text-sm whitespace-nowrap cursor-pointer bg-stone-800 hover:bg-stone-700 text-stone-300">
+        {/* <button className="px-4 py-2 rounded-sm text-sm whitespace-nowrap cursor-pointer bg-stone-800 hover:bg-stone-700 text-stone-300">
           Alipay ➜ Shopfy
-        </button>
+        </button> */}
       </div>
 
       <p className="text-stone-400 mb-6 text-sm md:text-base">
@@ -162,7 +162,7 @@ const StopRecording: React.FC = () => {
           <div className={`text-sm font-bold mb-1 ${activeStep === 1 ? 'text-amber-500' : 'text-stone-400'}`}>
             STEP 1
           </div>
-          <div className="text-stone-300">Record your screen</div>
+          <div className="text-stone-300">Record screen</div>
           {activeStep === 1 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
               <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
@@ -179,7 +179,7 @@ const StopRecording: React.FC = () => {
           <div className={`text-sm font-bold mb-1 ${activeStep === 2 ? 'text-amber-500' : 'text-stone-400'}`}>
             STEP 2
           </div>
-          <div className="text-stone-300">Replay workflow</div>
+          <div className="text-stone-300">Extract flow</div>
           {activeStep === 2 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
               <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
@@ -196,7 +196,7 @@ const StopRecording: React.FC = () => {
           <div className={`text-sm font-bold mb-1 ${activeStep === 3 ? 'text-amber-500' : 'text-stone-400'}`}>
             STEP 3
           </div>
-          <div className="text-stone-300">Share workflow agent</div>
+          <div className="text-stone-300">Automate flow</div>
           {activeStep === 3 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
               <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
