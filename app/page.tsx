@@ -24,9 +24,9 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <a href="#features" className="hover:text-purple-400 transition-colors">Features</a>
             <a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a>
-            <a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a>
+            <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors">Contact</a>
             <a 
-              href="https://github.com/yourusername/rebrowse" 
+              href="https://github.com/zk1tty/browser-agent-demo" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors"
