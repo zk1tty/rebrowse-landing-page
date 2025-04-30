@@ -6,17 +6,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rebrowse",
-  description: "Record one,Automate forever.",
+  description: "Record once, Automate forever.",
   icons: {
     icon: [
       {
-        url: "svgs/rebrowse-logo.png",
+        url: "/rebrowse-logo.png",
         type: "image/png",
       }
     ],
     apple: [
       {
-        url: "/svgs/rebrowse-logo.png",
+        url: "/rebrowse-logo.png",
         type: "image/png",
       }
     ],

@@ -55,8 +55,14 @@ export default function Home() {
       <footer className="row-start-3 w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-8 py-8 border-t border-white/10">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-              <span className="text-sm font-bold">R</span>
+            <div className="w-6 h-6 rounded-lg flex items-center justify-center">
+              <Image
+                src={rebrowseLogo}
+                alt="Rebrowse Logo"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
             </div>
             <span className="font-bold">Rebrowse</span>
           </div>
