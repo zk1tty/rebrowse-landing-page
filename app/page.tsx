@@ -1,4 +1,3 @@
-import AnimatedPlayButton from './components/AnimatedPlayButton';
 import FigmaEmbed from './components/FigmaEmbed'
 import StopRecording from './components/ConfirmWorkflow'
 import FeatureShowcase from './components/FeatureShowcase'
