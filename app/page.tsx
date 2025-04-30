@@ -1,5 +1,6 @@
 import FigmaEmbed from './components/FigmaEmbed'
 import StopRecording from './components/ConfirmWorkflow'
+import FeatureShowcase from './components/FeatureShowcase'
 import NapkinExplanation from './components/NapkinExplanation'
 import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
@@ -47,8 +48,9 @@ export default function Home() {
             Convert screen-record into cross-app workflow.
           </p>
         </div>
-        <FigmaEmbed />
+        {/* <FigmaEmbed /> */}
         <StopRecording />
+        <FeatureShowcase />
         <NapkinExplanation />
       </main>
 
