@@ -53,6 +53,7 @@ export default function Home() {
         {/* <FigmaEmbed /> */}
         <FeatureShowcase />
         <StopRecording />
+        <FeatureShowcase />
         <NapkinExplanation />
       </main>
 
