@@ -121,7 +121,7 @@ const ThreeStepFlows: React.FC = () => {
             Convert a image into a Ghibli-style movie with ChatGPT and Krea.ai.
           </p>
 
-          <div className="bg-stone-800 border border-stone-700 rounded-sm mb-6 overflow-hidden flex flex-col h-[450px] sm:h-[500px]">
+          <div className="bg-stone-800 border border-stone-700 rounded-sm mb-6 overflow-hidden flex flex-col h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
             {/* Browser window header */}
             <div className="bg-stone-800 border-b border-stone-700 py-2 px-3 flex items-center flex-shrink-0">
               <div className="flex space-x-1.5 sm:space-x-2 mr-2 sm:mr-4">
@@ -147,17 +147,17 @@ const ThreeStepFlows: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-between mb-4 w-full">
+          <div className="flex flex-row gap-2 justify-between mb-4 w-full overflow-x-auto px-1">
             <button
               onClick={() => handleStepClick(1)}
-              className={`flex-1 p-3 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
+              className={`flex-1 min-w-[80px] p-2 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
                 activeStep === 1 ? 'bg-stone-800 border-amber-500' : 'bg-stone-900 border-stone-700 hover:bg-stone-800'
               }`}
             >
               <div className={`text-xs sm:text-sm font-bold mb-1 ${activeStep === 1 ? 'text-amber-500' : 'text-stone-400'}`}>
                 STEP 1
               </div>
-              <div className="text-sm sm:text-base text-stone-300">Record screen</div>
+              <div className="text-xs sm:text-base text-stone-300">Record screen</div>
               {activeStep === 1 && (
                 <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
                   <div 
@@ -170,14 +170,14 @@ const ThreeStepFlows: React.FC = () => {
 
             <button
               onClick={() => handleStepClick(2)}
-              className={`flex-1 p-3 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
+              className={`flex-1 min-w-[80px] p-2 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
                 activeStep === 2 ? 'bg-stone-800 border-amber-500' : 'bg-stone-900 border-stone-700 hover:bg-stone-800'
               }`}
             >
               <div className={`text-xs sm:text-sm font-bold mb-1 ${activeStep === 2 ? 'text-amber-500' : 'text-stone-400'}`}>
                 STEP 2
               </div>
-              <div className="text-sm sm:text-base text-stone-300">Analyze flow</div>
+              <div className="text-xs sm:text-base text-stone-300">Analyze flow</div>
               {activeStep === 2 && (
                 <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
                   <div 
@@ -190,14 +190,14 @@ const ThreeStepFlows: React.FC = () => {
 
             <button
               onClick={() => handleStepClick(3)}
-              className={`flex-1 p-3 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
+              className={`flex-1 min-w-[80px] p-2 sm:p-4 rounded-sm border text-left transition-colors duration-300 cursor-pointer ${
                 activeStep === 3 ? 'bg-stone-800 border-amber-500' : 'bg-stone-900 border-stone-700 hover:bg-stone-800'
               }`}
             >
               <div className={`text-xs sm:text-sm font-bold mb-1 ${activeStep === 3 ? 'text-amber-500' : 'text-stone-400'}`}>
                 STEP 3
               </div>
-              <div className="text-sm sm:text-base text-stone-300">Automate flow</div>
+              <div className="text-xs sm:text-base text-stone-300">Automate flow</div>
               {activeStep === 3 && (
                 <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
                   <div 
