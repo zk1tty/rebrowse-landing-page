@@ -1,3 +1,4 @@
+import AnimatedPlayButton from './components/AnimatedPlayButton';
 import FigmaEmbed from './components/FigmaEmbed'
 import StopRecording from './components/ConfirmWorkflow'
 import FeatureShowcase from './components/FeatureShowcase'
@@ -48,10 +49,10 @@ export default function Home() {
             Convert screen-record into cross-app workflow.
           </p>
         </div>
-        {/* <AnimatedPlayButton /> */}
-        <FigmaEmbed />
-        <StopRecording />
+        <AnimatedPlayButton />
+        {/* <FigmaEmbed /> */}
         <FeatureShowcase />
+        <StopRecording />
         <NapkinExplanation />
       </main>
 
