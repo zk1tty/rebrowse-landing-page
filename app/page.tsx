@@ -1,6 +1,6 @@
 import AnimatedPlayButton from './components/AnimatedPlayButton';
 import FigmaEmbed from './components/FigmaEmbed'
-import StopRecording from './components/ConfirmWorkflow'
+import ThreeStepFlows from './components/ThreeStepFlows'
 import FeatureShowcase from './components/FeatureShowcase'
 import NapkinExplanation from './components/NapkinExplanation'
 import Image from 'next/image'
@@ -24,7 +24,6 @@ export default function Home() {
             <span className="text-xl font-bold">Rebrowse</span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#features" className="hover:text-purple-400 transition-colors">Features</a>
             <a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a>
             <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors">Contact</a>
             <a 
@@ -52,8 +51,7 @@ export default function Home() {
         <AnimatedPlayButton />
         {/* <FigmaEmbed /> */}
         <FeatureShowcase />
-        <StopRecording />
-        <FeatureShowcase />
+        <ThreeStepFlows />
         <NapkinExplanation />
       </main>
 

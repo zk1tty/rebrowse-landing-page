@@ -15,32 +15,6 @@ import step1Flow from '../../svgs/LP-Step1.svg';
 import step2Flow from '../../svgs/LP-Step2.svg';
 import step3Flow from '../../svgs/LP-Step3.svg';
 
-// Define data for the flow section
-const flowSteps = [
-  {
-    image: "🍱", // Original food image
-    model: null,
-    prompt: null,
-  },
-  {
-    image: "🎨", // Ghibli-style transformed image
-    model: "GPT-4o",
-    prompt: "Turn this image into Ghibli world.",
-  },
-  {
-    image: "🔥", // Final enhanced image
-    model: "Wan 2.1",
-    prompt: "make this food look very hot and tasty",
-  },
-];
-
-// Define emojis for each step
-const stepEmojis = {
-  step1: ["🎥", "📹", "🎬"], // Recording related emojis
-  step2: ["🔄", "⏯️", "▶️"], // Replay related emojis
-  step3: ["🤖", "📤", "🌐"], // Share related emojis
-};
-
 // Step 1 Display Component
 const Step1Display = () => (
   <div className="flex flex-col h-full w-full">
@@ -86,25 +60,11 @@ const Step3Display = () => (
   </div>
 );
 
-const StopRecording: React.FC = () => {
+const ThreeStepFlows: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(1);
-  const [currentEmojis, setCurrentEmojis] = useState<string[]>(stepEmojis.step1);
 
   const handleStepClick = (step: number) => {
     setActiveStep(step);
-    switch (step) {
-      case 1:
-        setCurrentEmojis(stepEmojis.step1);
-        break;
-      case 2:
-        setCurrentEmojis(stepEmojis.step2);
-        break;
-      case 3:
-        setCurrentEmojis(stepEmojis.step3);
-        break;
-      default:
-        setCurrentEmojis(stepEmojis.step1);
-    }
   };
 
   return (
@@ -117,9 +77,6 @@ const StopRecording: React.FC = () => {
         <button className="px-4 py-2 rounded-sm text-sm whitespace-nowrap cursor-pointer bg-amber-600 text-stone-950 font-bold">
           Ghibli Movie
         </button>
-        {/* <button className="px-4 py-2 rounded-sm text-sm whitespace-nowrap cursor-pointer bg-stone-800 hover:bg-stone-700 text-stone-300">
-          Alipay ➜ Shopfy
-        </button> */}
       </div>
 
       <p className="text-stone-400 mb-6 text-sm md:text-base">
@@ -208,4 +165,4 @@ const StopRecording: React.FC = () => {
   );
 }
 
-export default StopRecording;
+export default ThreeStepFlows;
