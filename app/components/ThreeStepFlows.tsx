@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowLeft,
@@ -19,11 +19,12 @@ import step3Flow from '../../svgs/LP-Step3.svg';
 const Step1Display = () => (
   <div className="flex flex-col h-full w-full">
     <div className="w-full h-full flex items-center justify-center">
-      <Image
-        src={step1Flow}
-        alt="Step 1 Flow Diagram"
-        width={702}
-        height={279}
+    <video
+        src="/videos/step1-5.5s.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
         className="w-full h-full object-contain"
       />
     </div>
@@ -34,11 +35,12 @@ const Step1Display = () => (
 const Step2Display = () => (
   <div className="flex flex-col h-full w-full">
     <div className="w-full h-full flex items-center justify-center">
-      <Image
-        src={step2Flow}
-        alt="Step 2 Flow Diagram"
-        width={702}
-        height={279}
+      <video
+        src="/videos/step2-5.5s.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
         className="w-full h-full object-contain"
       />
     </div>
@@ -49,11 +51,12 @@ const Step2Display = () => (
 const Step3Display = () => (
   <div className="flex flex-col h-full w-full">
     <div className="w-full h-full flex items-center justify-center">
-      <Image
-        src={step3Flow}
-        alt="Step 3 Flow Diagram"
-        width={702}
-        height={279}
+    <video
+        src="/videos/step3-5.5s.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
         className="w-full h-full object-contain"
       />
     </div>
@@ -62,15 +65,54 @@ const Step3Display = () => (
 
 const ThreeStepFlows: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(1);
+  const [progress, setProgress] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const hasCompletedRef = useRef(false);
+
+  const moveToNextStep = useCallback(() => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setProgress(0);
+      setActiveStep(prev => prev === 3 ? 1 : prev + 1);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 100);
+    }
+  }, [activeStep, isTransitioning]);
+
+  useEffect(() => {
+    hasCompletedRef.current = false;
+    
+    if (activeStep > 3) return;
+
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100 && !hasCompletedRef.current) {
+          hasCompletedRef.current = true;
+          clearInterval(timer);
+          moveToNextStep();
+          return 100;
+        }
+        return prevProgress + 1;
+      });
+    }, 50);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [activeStep, moveToNextStep]);
 
   const handleStepClick = (step: number) => {
+    if (isTransitioning) return;
+    setProgress(0);
     setActiveStep(step);
+    hasCompletedRef.current = false;
   };
 
   return (
     <div className="w-[702px] mx-auto">
       <h2 className="text-2xl mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8">
-        ## What you can rebrowse
+        ## 3 Steps to Rebrowse
       </h2>
       
       <div className="flex gap-2 pb-3 overflow-x-auto">
@@ -80,7 +122,7 @@ const ThreeStepFlows: React.FC = () => {
       </div>
 
       <p className="text-stone-400 mb-6 text-sm md:text-base">
-        Transform your food images into Ghibli-style artwork with AI.
+        Convert a image into a Ghibli-style movie with ChatGPT and Krea.ai.
       </p>
 
       <div className="bg-stone-800 border border-stone-700 rounded-sm mb-6 overflow-hidden flex flex-col h-[450px] sm:h-[500px]">
@@ -122,7 +164,10 @@ const ThreeStepFlows: React.FC = () => {
           <div className="text-stone-300">Record screen</div>
           {activeStep === 1 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
-              <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
+              <div 
+                className="h-full bg-amber-500 transition-all duration-100"
+                style={{ width: `${progress}%` }}
+              />
             </div>
           )}
         </button>
@@ -136,10 +181,13 @@ const ThreeStepFlows: React.FC = () => {
           <div className={`text-sm font-bold mb-1 ${activeStep === 2 ? 'text-amber-500' : 'text-stone-400'}`}>
             STEP 2
           </div>
-          <div className="text-stone-300">Extract flow</div>
+          <div className="text-stone-300">Analyze flow</div>
           {activeStep === 2 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
-              <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
+              <div 
+                className="h-full bg-amber-500 transition-all duration-100"
+                style={{ width: `${progress}%` }}
+              />
             </div>
           )}
         </button>
@@ -156,7 +204,10 @@ const ThreeStepFlows: React.FC = () => {
           <div className="text-stone-300">Automate flow</div>
           {activeStep === 3 && (
             <div className="mt-2 h-1 bg-stone-700 rounded-full overflow-hidden">
-              <div className="h-full bg-amber-500 animate-progress" style={{ animationDuration: '7s' }}></div>
+              <div 
+                className="h-full bg-amber-500 transition-all duration-100"
+                style={{ width: `${progress}%` }}
+              />
             </div>
           )}
         </button>

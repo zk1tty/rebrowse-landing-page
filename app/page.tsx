@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-6">
             <a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a>
-            <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors">Contact</a>
+            <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors">Creator</a>
             <a 
               href="https://github.com/zk1tty/browser-agent-demo" 
               target="_blank" 
