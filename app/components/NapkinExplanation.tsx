@@ -15,7 +15,7 @@ const NapkinExplanation: React.FC = () => {
         <div className="mx-auto max-w-2xl lg:max-w-[702px]">
           <div className="w-full max-w-[702px] mx-auto">
             <Image
-              src="/images/bell-curve-automation.jpg"
+              src="/images/bell-curve-with-logos.png"
               alt="rebrowse Problem"
               width={702}
               height={279}
