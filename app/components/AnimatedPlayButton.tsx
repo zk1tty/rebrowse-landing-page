@@ -19,7 +19,7 @@ export default function AnimatedPlayButton() {
     { value: "document", label: "Document (Google Docs, Word)" },
     { value: "ecommerce", label: "eCommerce (Amazon, Shopify)" },
     { value: "event-management", label: "Event (Luma, Eventbrite)" },
-    { value: "marketing", label: "Marketing (Hubspot, Salesforce)" },
+    { value: "ai-content", label: "AI Content Creation (ChatGPT, evelenlab, Heygen, etc)" },
     { value: "other", label: "Other" }
   ];
 
