@@ -1,3 +1,4 @@
+'use client';
 import AnimatedPlayButton from './components/AnimatedPlayButton';
 import FigmaEmbed from './components/FigmaEmbed'
 import ThreeStepFlows from './components/ThreeStepFlows'
@@ -5,10 +6,14 @@ import FeatureShowcase from './components/FeatureShowcase'
 import NapkinExplanation from './components/NapkinExplanation'
 import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
+import { useState } from 'react';
+import QRModal from './components/QRModal';
 
 export default function Home() {
+  const [isQROpen, setIsQROpen] = useState(false);
   return (
     <div className="min-h-screen bg-black text-white">
+      <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
       <div className="flex flex-col min-h-screen">
         <header className="w-full">
           <div className="max-w-[1200px] mx-auto px-4 py-8">
@@ -26,7 +31,7 @@ export default function Home() {
                 <span className="text-lg sm:text-xl font-bold">Rebrowse</span>
               </div>
               <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
-                <a href="#pricing" className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base">Pricing</a>
+                <a href="#" onClick={(e) => { e.preventDefault(); setIsQROpen(true); }} className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base cursor-pointer">QR</a>
                 <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base">Creator</a>
                 <a 
                   href="https://github.com/zk1tty/browser-agent-demo" 
