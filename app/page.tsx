@@ -52,10 +52,10 @@ export default function Home() {
             <div className="text-center mb-8 w-full">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Record once, Automate forever</h1>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Record, Automate, and Share your AI workflow in one shot.
+                Record, Automate, and Share your cross-app workflow in one shot.
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Convert screen-record into cross-app workflow.
+                Or Choose a good one from experts.
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
