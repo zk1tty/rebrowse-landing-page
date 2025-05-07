@@ -55,7 +55,7 @@ export default function Home() {
                 Record, Automate, and Share your cross-app workflow in one shot.
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Or Choose a good one from experts.
+                Or Pick up a good one from experts.
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
