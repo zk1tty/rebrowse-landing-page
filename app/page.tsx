@@ -8,6 +8,7 @@ import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
 import { useState } from 'react';
 import QRModal from './components/QRModal';
+import TechnicalRoadmapSection from './components/TechnicalRoadmapSection';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -64,6 +65,7 @@ export default function Home() {
             <FeatureShowcase />
             <ThreeStepFlows />
             <NapkinExplanation />
+            <TechnicalRoadmapSection />
           </div>
         </main>
 
