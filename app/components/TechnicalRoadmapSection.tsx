@@ -23,7 +23,7 @@ const TechnicalRoadmapSection: React.FC = () => (
         rel="noopener noreferrer"
         className="hover:text-purple-400 transition-colors"
       >
-        🤙🏻 Check out real Roadmap on Github 🤙🏻
+        🤙🏻 Check Roadmap on Github 🤙🏻
       </a>
     </div>
   </div>
