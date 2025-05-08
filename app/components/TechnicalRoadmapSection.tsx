@@ -3,7 +3,7 @@ import React from 'react';
 const TechnicalRoadmapSection: React.FC = () => (
   <div className="mx-auto px-4">
     <h2 className="text-2xl mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8">
-      ## Technical Roadmap
+      ## Endgame
     </h2>
     <div className="mx-auto max-w-2xl lg:max-w-[702px]">
       <div className="w-full max-w-[702px] mx-auto mb-6">
