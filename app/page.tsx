@@ -9,6 +9,7 @@ import rebrowseLogo from '../svgs/rebrowse-logo.png'
 import { useState } from 'react';
 import QRModal from './components/QRModal';
 import TechnicalRoadmapSection from './components/TechnicalRoadmapSection';
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
