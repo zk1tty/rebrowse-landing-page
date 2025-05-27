@@ -20,7 +20,7 @@ const features: Feature[] = [
     title: "record: Tweet on X",
     description: "Record your tweet flow, and replay it at 5x speed.",
     icon: <CirclePlay className="size-5 mb-1 text-emerald-500" />,
-    videoUrl: "/videos/record-replay-mode-rebrowse.mov",
+    videoUrl: "/videos/record-replay-3s.mp4",
     link: "https://youtu.be/lPN4lYGrzzQ",
     colSpan: "lg:col-span-5",
     roundedCorner: "lg:rounded-tr-[2rem]"
