@@ -26,6 +26,15 @@ const features: Feature[] = [
     roundedCorner: "lg:rounded-tr-[2rem]"
   },
   {
+    title: "Remove background image",
+    description: "Image upload/download to remove the background of Rick Rubin.",
+    icon: <CirclePlay className="size-5 mb-1 text-emerald-500" />,
+    videoUrl: "/videos/rm-bg-5s.mp4",
+    link: "https://youtu.be/CjxfwRO0TC8?si=KB7gndtCMdwM1Qoi&t=40",
+    colSpan: "lg:col-span-5",
+    roundedCorner: "lg:rounded-tr-[2rem]"
+  },
+  {
     title: "prompt: Airbnb Booking",
     description: "If you already logged in to your Airbnb account, full automation from searching the place to payment is done.",
     icon: <CreditCard className="size-5 mb-1 text-rose-400" />,
