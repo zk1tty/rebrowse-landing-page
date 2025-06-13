@@ -65,24 +65,38 @@ export default function Home() {
 
         <main className="flex-1 w-full">
           <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-            <div className="flex flex-col items-center w-full mb-8 bg-gray-500 rounded-xl py-6">
-              <p className="text-lg sm:text-5xl text-gray-800 max-w-2xl mx-auto mb-4">
-                🚀 Launching closed-β in 🚀
-              </p>
-              <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} />
-              <p className="text-lg sm:text-2xl text-gray-800 max-w-2xl mx-auto">
-                Sign up for the{' '}
-                <span
-                  className="font-bold bg-gray-100 text-black px-2 py-1 rounded cursor-pointer hover:bg-gray-500 transition"
-                  onClick={() => setIsTryOutOpen(true)}
-                  tabIndex={0}
-                  role="button"
-                  aria-label="Open waitlist signup"
-                >
-                  waitlist
-                </span>
-                {' '}to get early access.
-              </p>
+            <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 400 }}>
+              {/* Background Video */}
+              <video
+                className="absolute inset-0 w-full h-full object-cover object-center scale-110"
+                src="/videos/journey.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              {/* Optional: Overlay for readability */}
+              <div className="absolute inset-0 bg-black/40" />
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center py-6 w-full">
+                <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4">
+                  🚀 Launching closed-β in 🚀
+                </p>
+                <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} />
+                <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto">
+                  Sign up for the{' '}
+                  <span
+                    className="font-bold bg-pink-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-pink-200 transition"
+                    onClick={() => setIsTryOutOpen(true)}
+                    tabIndex={0}
+                    role="button"
+                    aria-label="Open waitlist signup"
+                  >
+                    waitlist 💌
+                  </span>
+                  {' '}to get early access.
+                </p>
+              </div>
             </div>
             <div className="text-center mb-8 w-full">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Record once, Automate forever</h1>
