@@ -43,7 +43,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ launchDate }) => {
 
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
-  const colors = "#D80039";
+  const colors = "#9906cc";
 
   return (
     <div className="flex justify-center gap-4 mb-8">

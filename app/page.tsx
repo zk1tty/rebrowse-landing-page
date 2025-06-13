@@ -86,7 +86,7 @@ export default function Home() {
                 <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto">
                   Sign up for the{' '}
                   <span
-                    className="font-bold bg-pink-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-pink-200 transition"
+                    className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-purple-300 transition"
                     onClick={() => setIsTryOutOpen(true)}
                     tabIndex={0}
                     role="button"

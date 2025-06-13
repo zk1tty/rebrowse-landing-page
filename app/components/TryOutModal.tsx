@@ -79,7 +79,7 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
           >
             {!state.succeeded ? (
               <>
-                <h3 className="text-xl font-semibold text-white mb-4">Whitelist for closed beta!</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">waitlist for closed beta!</h3>
                 <p className="text-zinc-400 mb-6">FInally we can launch Rebrowse!</p>
                 <p className="text-zinc-400 mb-6">Please leave your email and we'll notify you when we launch.</p>
                 <form onSubmit={onSubmitModal} className="space-y-4">
