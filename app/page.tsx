@@ -65,11 +65,11 @@ export default function Home() {
 
         <main className="flex-1 w-full">
           <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-            <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 400 }}>
+            <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 350 }}>
               {/* Background Video */}
               <video
                 className="absolute inset-0 w-full h-full object-cover object-center scale-110"
-                src="/videos/journey.mp4"
+                src="/videos/journey-7s.mp4"
                 autoPlay
                 loop
                 muted
