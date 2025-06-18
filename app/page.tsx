@@ -80,9 +80,9 @@ export default function Home() {
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center py-6 w-full">
                 <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4">
-                  🚀 Launching closed-β in 🚀
+                  🚀 Closed-β Launched🚀
                 </p>
-                <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} />
+                {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                 <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto">
                   Sign up for the{' '}
                   <span
@@ -99,12 +99,12 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center mb-8 w-full">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Record once, Automate forever</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">F*ck n8n. Just record.</h1>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Record, Automate, and Share your cross-app workflow in one shot.
+                Record, Share, and Remix cross AI-app workflow.
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Or Pick up a good one from experts.
+                Pick up a good one from the community.
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
