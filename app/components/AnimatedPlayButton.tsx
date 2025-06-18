@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import TryOutModal from "./TryOutModal";
+import VideoModal from "./VideoModal";
 
 export default function AnimatedPlayButton() {
   const [rotation, setRotation] = useState(0);
@@ -73,7 +73,7 @@ export default function AnimatedPlayButton() {
         </motion.div>
       </motion.div>
 
-      <TryOutModal isOpen={isModalOpen} onClose={toggleModal} />
+      <VideoModal isOpen={isModalOpen} onClose={toggleModal} videoSrc="/videos/demo-grok-post.mp4" />
     </>
   );
 } 
