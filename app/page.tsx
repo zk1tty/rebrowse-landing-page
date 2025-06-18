@@ -100,11 +100,11 @@ export default function Home() {
             </div>
             <div className="text-center mb-8 w-full">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">F*ck n8n. Just record.</h1>
+              <h2 className="text-2xl sm:text-3xl text-gray-400 max-w-2xl mx-auto">
+                loom for executable workflows.
+              </h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Record, Share, and Remix cross AI-app workflow
-              </p>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Just record and prompt.
+                No Code. No Prompt.
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">

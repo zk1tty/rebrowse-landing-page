@@ -80,7 +80,7 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
             {!state.succeeded ? (
               <>
                 <h3 className="text-xl font-semibold text-white mb-4">Refferal code 🔑</h3>
-                <p className="text-zinc-400 mb-6">Finally we launched Rebrowse😍 </p>
+                <p className="text-zinc-400 mb-6">Finally I launched my baby, Rebrowse😍 </p>
                 <p className="text-zinc-400 mb-6">leave your email and we'll send you a refferal code.</p>
                 <form onSubmit={onSubmitModal} className="space-y-4">
                   <div className="space-y-2">
