@@ -1,7 +1,7 @@
 {
-  "name": "Rebrowse - Loom for Executable Workflows",
+  "name": "Rebrowse - Loom for workflow automation",
   "short_name": "Rebrowse",
-  "description": "Create executable workflows by simply recording your browser actions",
+  "description": "Create workflow automation by simply recording your browser actions",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

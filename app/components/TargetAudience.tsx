@@ -12,7 +12,7 @@ const TargetAudience: React.FC = () => {
       </h2>
       <h3 className="text-lg mb-4 text-center">
         <span className="text-stone-100 font-semibold block mt-1">
-          Because you can share/choose cross-app workflows by recording, instead of node editors.
+          Because you can share and remid cross-app workflows by recording. No more node editors.
         </span>
       </h3>
       

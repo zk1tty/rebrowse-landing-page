@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rebrowse - Loom for Executable Workflows",
-  description: "F*ck n8n. Just record. Create executable workflows by simply recording.",
+  title: "Rebrowse - Loom for workflow automation",
+  description: "F*ck n8n. Just record. Create workflow automation by simply recording.",
   keywords: ["automation", "workflow", "browser recording", "no-code", "productivity", "rebrowse"],
   authors: [{ name: "Norika Kizawa", url: "https://n0ri.com" }],
   creator: "Norika Kizawa",
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.rebrowse.me", // Replace with your actual domain
     siteName: "Rebrowse",
-    title: "Rebrowse - Loom for Executable Workflows",
-    description: "F*ck n8n. Just record! Create executable workflows by simply recording.",
+    title: "Rebrowse - Loom for workflow automation",
+    description: "F*ck n8n. Just record! Create workflow automation by simply recording.",
          images: [
        {
          url: "/images/rebrowse-social-card.png",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@n0rizkitty", // Your Twitter handle
     creator: "@n0rizkitty",
-    title: "Rebrowse - Loom for Executable Workflows",
-    description: "F*ck n8n. Just record! Create executable workflows by simply recording.",
+    title: "Rebrowse - Loom for workflow automation",
+    description: "F*ck n8n. Just record! Create workflow automation by simply recording.",
          images: ["/images/rebrowse-social-card.png"],
   },
   

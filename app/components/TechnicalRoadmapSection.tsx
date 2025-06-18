@@ -5,6 +5,9 @@ const TechnicalRoadmapSection: React.FC = () => (
     <h2 className="text-2xl mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8">
       ## Why Rebrowse?
     </h2>
+    <p className="text-lg sm:text-2xl max-w-xl mx-auto mb-4 text-center">
+       If you're a marketer/operator, don't waist your time at fixing HTTP API errors at n8n.io. Just record.
+    </p>
     <div className="mx-auto max-w-2xl lg:max-w-[702px]">
       <div className="w-full max-w-[702px] mx-auto mb-6">
         <div style={{
