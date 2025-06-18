@@ -106,6 +106,9 @@ export default function Home() {
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
                 No Code. No Prompt.
               </p>
+              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                (we have meta prompt 🤫)
+              </p>
             </div>
             <div className="flex justify-center w-full mb-8">
               <AnimatedPlayButton />
