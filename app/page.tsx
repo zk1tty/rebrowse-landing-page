@@ -78,13 +78,13 @@ export default function Home() {
               {/* Optional: Overlay for readability */}
               <div className="absolute inset-0 bg-black/40" />
               {/* Content */}
-              <div className="relative z-10 flex flex-col items-center py-6 w-full">
-                <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4">
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+                <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
                   🚀 Closed-β Launched🚀
                 </p>
                 {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
-                <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto">
-                  Sign up for {' '}
+                <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
+                  Get a {' '}
                   <span
                     className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-purple-300 transition"
                     onClick={() => setIsTryOutOpen(true)}
@@ -92,9 +92,9 @@ export default function Home() {
                     role="button"
                     aria-label="Open waitlist signup"
                   >
-                    waitlist 💌
+                    referral code 🔑
                   </span>
-                  {' '}to get a referral code.
+                  {' '}
                 </p>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 Record, Share, and Remix cross AI-app workflow
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                by just recording. No bullshit.
+                Just record and prompt.
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
