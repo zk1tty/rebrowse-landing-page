@@ -12,6 +12,7 @@ import TechnicalRoadmapSection from './components/TechnicalRoadmapSection';
 import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
+import AutoPlayVideoSection from './components/AutoPlayVideoSection';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -100,7 +101,7 @@ export default function Home() {
             </div>
             <div className="text-center mb-8 w-full">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">F*ck n8n. Just record.</h1>
-              <h2 className="text-2xl sm:text-3xl text-gray-400 max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+              <h2 className="text-2xl sm:text-3xl max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap">
                 <img src="/svgs/loom-logo.svg" alt="Loom" className="h-8 sm:h-10 inline-block" /> for executable workflows.
               </h2>
               <p className="text-lg sm:text-2xl text-gray-400 max-w-2xl mx-auto mb-4 mt-8">
@@ -113,8 +114,13 @@ export default function Home() {
             <div className="flex justify-center w-full mb-8">
               <AnimatedPlayButton />
             </div>
-            {/* <FigmaEmbed /> */}
-            <FeatureShowcase />
+            {/* Auto-play Video Section */}
+            <AutoPlayVideoSection 
+              videoSrc="/videos/demo-grok-post.mp4"
+              title="How to Rebrowse"
+              description=""
+            />
+            {/* <FeatureShowcase /> */}
             <ThreeStepFlows />
             <NapkinExplanation />
             <TechnicalRoadmapSection />
