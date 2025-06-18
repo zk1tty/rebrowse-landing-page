@@ -3,7 +3,7 @@ import AnimatedPlayButton from './components/AnimatedPlayButton';
 import FigmaEmbed from './components/FigmaEmbed'
 import ThreeStepFlows from './components/ThreeStepFlows'
 import FeatureShowcase from './components/FeatureShowcase'
-import NapkinExplanation from './components/NapkinExplanation'
+import TargetAudience from './components/TargetAudience'
 import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
 import { useState } from 'react';
@@ -122,7 +122,7 @@ export default function Home() {
             />
             {/* <FeatureShowcase /> */}
             <ThreeStepFlows />
-            <NapkinExplanation />
+            <TargetAudience />
             <TechnicalRoadmapSection />
           </div>
         </main>

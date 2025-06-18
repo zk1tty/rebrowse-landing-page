@@ -4,11 +4,11 @@ import Image from 'next/image';
 import rebrowseVision from '../../svgs/rebrowse-vision.jpg';
 import rebrowseProblem from '../../svgs/rebrowse-problem.jpg';
 
-const NapkinExplanation: React.FC = () => {
+const TargetAudience: React.FC = () => {
   return (
     <div className="mx-auto px-4">
       <h2 className="text-2xl mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8">
-        ## Why you choose Rebrowse?
+        ## Who should Rebrowse?
       </h2>
       <h3 className="text-lg mb-4 text-center">
         <span className="text-stone-100 font-semibold block mt-1">
@@ -34,4 +34,4 @@ const NapkinExplanation: React.FC = () => {
   );
 };
 
-export default NapkinExplanation; 
+export default TargetAudience; 
