@@ -6,20 +6,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rebrowse - Loom for Executable Workflows",
-  description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions. No code, no long prompts needed.",
+  description: "F*ck n8n. Just record. Create executable workflows by simply recording.",
   keywords: ["automation", "workflow", "browser recording", "no-code", "productivity", "rebrowse"],
   authors: [{ name: "Norika Kizawa", url: "https://n0ri.com" }],
   creator: "Norika Kizawa",
-  metadataBase: new URL("https://rebrowse-landing-page.vercel.app"), // Replace with your actual domain
+  metadataBase: new URL("https://www.rebrowse.me"), // Replace with your actual domain
   
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rebrowse-landing-page.vercel.app", // Replace with your actual domain
+    url: "https://www.rebrowse.me", // Replace with your actual domain
     siteName: "Rebrowse",
     title: "Rebrowse - Loom for Executable Workflows",
-    description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions. No code, no long prompts needed.",
+    description: "F*ck n8n. Just record! Create executable workflows by simply recording.",
          images: [
        {
          url: "/images/rebrowse-social-card.png",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     site: "@n0rizkitty", // Your Twitter handle
     creator: "@n0rizkitty",
     title: "Rebrowse - Loom for Executable Workflows",
-    description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions.",
+    description: "F*ck n8n. Just record! Create executable workflows by simply recording.",
          images: ["/images/rebrowse-social-card.png"],
   },
   
