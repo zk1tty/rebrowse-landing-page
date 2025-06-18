@@ -84,7 +84,7 @@ export default function Home() {
                 </p>
                 {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                 <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto">
-                  Sign up for the{' '}
+                  Sign up for {' '}
                   <span
                     className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-purple-300 transition"
                     onClick={() => setIsTryOutOpen(true)}
@@ -94,7 +94,7 @@ export default function Home() {
                   >
                     waitlist 💌
                   </span>
-                  {' '}to get early access.
+                  {' '}to get a referral code.
                 </p>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 Record, Share, and Remix cross AI-app workflow.
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                Pick up a good one from the community.
+                Just record. No bullshit
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
