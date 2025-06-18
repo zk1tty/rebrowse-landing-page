@@ -1,0 +1,21 @@
+{
+  "name": "Rebrowse - Loom for Executable Workflows",
+  "short_name": "Rebrowse",
+  "description": "Create executable workflows by simply recording your browser actions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8B5CF6",
+  "icons": [
+    {
+      "src": "/rebrowse-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/rebrowse-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

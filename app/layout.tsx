@@ -5,21 +5,66 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rebrowse",
-  description: "Record once, Automate forever.",
+  title: "Rebrowse - Loom for Executable Workflows",
+  description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions. No code, no long prompts needed.",
+  keywords: ["automation", "workflow", "browser recording", "no-code", "productivity", "rebrowse"],
+  authors: [{ name: "Norika Kizawa", url: "https://n0ri.com" }],
+  creator: "Norika Kizawa",
+  metadataBase: new URL("https://rebrowse-landing-page.vercel.app"), // Replace with your actual domain
+  
+  // Open Graph (Facebook, LinkedIn, etc.)
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://rebrowse-landing-page.vercel.app", // Replace with your actual domain
+    siteName: "Rebrowse",
+    title: "Rebrowse - Loom for Executable Workflows",
+    description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions. No code, no long prompts needed.",
+         images: [
+       {
+         url: "/images/bell-curve-with-logos.png",
+         width: 1200,
+         height: 630,
+         alt: "Rebrowse - I will just record vs learning complex automation tools",
+       },
+     ],
+  },
+  
+  // Twitter Cards
+  twitter: {
+    card: "summary_large_image",
+    site: "@n0rizkitty", // Your Twitter handle
+    creator: "@n0rizkitty",
+    title: "Rebrowse - Loom for Executable Workflows",
+    description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions.",
+         images: ["/images/bell-curve-with-logos.png"],
+  },
+  
+  // Favicon and icons
   icons: {
     icon: [
-      {
-        url: "/rebrowse-logo.png",
-        type: "image/png",
-      }
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/rebrowse-logo.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      {
-        url: "/rebrowse-logo.png",
-        type: "image/png",
-      }
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
+    shortcut: "/favicon.ico",
+  },
+  
+  // Additional meta tags
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
