@@ -68,7 +68,7 @@ export default function AnimatedPlayButton() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="text-sm font-medium">Demo</span>
+            <span className="text-sm font-medium">App</span>
           </div>
         </motion.div>
       </motion.div>
