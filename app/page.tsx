@@ -104,10 +104,10 @@ export default function Home() {
                 loom for executable workflows.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                No Code. No Prompt.
+                No Code. No Long Prompt.
               </p>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                (we have meta prompt 🤫)
+                (Do Meta Prompt 🤫)
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
