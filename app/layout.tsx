@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions. No code, no long prompts needed.",
          images: [
        {
-         url: "/images/bell-curve-with-logos.png",
+         url: "/images/rebrowse-social-card.png",
          width: 1200,
          height: 630,
          alt: "Rebrowse - I will just record vs learning complex automation tools",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     creator: "@n0rizkitty",
     title: "Rebrowse - Loom for Executable Workflows",
     description: "F*ck n8n. Just record. Create executable workflows by simply recording your browser actions.",
-         images: ["/images/bell-curve-with-logos.png"],
+         images: ["/images/rebrowse-social-card.png"],
   },
   
   // Favicon and icons
