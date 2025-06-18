@@ -113,12 +113,12 @@ const ThreeStepFlows: React.FC = () => {
         <div className="mx-auto max-w-2xl lg:max-w-[702px]">
           <div className="flex gap-2 pb-3 overflow-x-auto">
             <button className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-sm text-xs sm:text-sm whitespace-nowrap cursor-pointer bg-amber-600 text-stone-950 font-bold">
-              Ghibli Movie
+              Ghibli Movie Generator
             </button>
           </div>
 
-          <p className="text-stone-400 mb-4 sm:mb-6 text-sm md:text-base">
-            Convert a image into a Ghibli-style movie with ChatGPT and Krea.ai.
+          <p className="text-white mb-4 sm:mb-6 text-sm md:text-base">
+            prompt 💬 → [ChatGPT] → Ghibli image 🖼️ → [Krea.ai] → movie 🎦
           </p>
 
           <div className="bg-stone-800 border border-stone-700 rounded-sm mb-6 overflow-hidden flex flex-col h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
