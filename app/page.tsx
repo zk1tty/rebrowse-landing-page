@@ -103,7 +103,7 @@ export default function Home() {
               <div className="my-8">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">F*ck n8n. Just record.</h1>
                 <h2 className="text-2xl sm:text-3xl max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap mt-4">
-                  <img src="/svgs/loom-logo.svg" alt="Loom" className="h-8 sm:h-10 inline-block" /> for workflow automation.
+                  <img src="/svgs/loom-logo.svg" alt="Loom" className="h-8 sm:h-10 inline-block" /> for executable workflows.
                 </h2>
               </div>
               <p className="text-lg sm:text-2xl max-w-2xl mx-auto">
