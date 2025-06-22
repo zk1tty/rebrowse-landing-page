@@ -148,7 +148,7 @@ export default function Home() {
                 <span className="text-sm sm:text-base font-bold">Rebrowse</span>
               </div>
               <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
-                <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>
+                <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
                 <a href="#terms" className="hover:text-white transition-colors">Terms</a>
                 <a href="#docs" className="hover:text-white transition-colors">Documentation</a>
               </div>
