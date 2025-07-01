@@ -6,7 +6,7 @@ const TechnicalRoadmapSection: React.FC = () => (
       ## Why Rebrowse?
     </h2>
     <p className="text-lg sm:text-2xl max-w-xl mx-auto mb-4 text-center">
-       If you're a marketer/operator, don't waist your time at fixing HTTP API errors at n8n.io.
+       If you're a marketer/operator, don't waste your time at fixing HTTP API errors at n8n.io.
     </p>
     <p className="text-lg sm:text-2xl max-w-xl mx-auto mb-4 text-center">
        Just record.
