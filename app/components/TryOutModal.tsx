@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm, ValidationError } from '@formspree/react';
+import { Rocket, Bell } from "lucide-react";
 
 interface TryOutModalProps {
   isOpen: boolean;
@@ -30,7 +31,7 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
         setSelectedUseCases([]);
         setOtherUseCase("");
         // Resetting form state if useForm provides a method, or might need to re-initialize the form
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [state.succeeded, onClose]);
@@ -56,9 +57,6 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
     formData.set('useCases', formattedUseCases.join(', '));
     // Email is already part of formData through the input field
     await handleSubmit(formData); // Pass formData directly
-    
-    // Navigate to app.rebrowse.me after form submission
-    window.open('https://app.rebrowse.me', '_blank');
   };
   
 
@@ -154,7 +152,11 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
                     disabled={state.submitting || selectedUseCases.length === 0 || (isOtherSelected && !otherUseCase.trim())}
                     className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
                   >
-                    {state.submitting ? 'Submitting...' : 'Try Rebrowse 🚀'}
+                    {state.submitting ? 'Submitting...' : (
+                      <>
+                        Notify me <Bell className="inline-block w-4 h-4 ml-1" />
+                      </>
+                    )}
                   </button>
                 </form>
               </>
@@ -162,7 +164,13 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-white mb-2">🤗Thanks🤗</h3>
                 <p className="text-zinc-400">We'll be in touch soon.</p>
-                <p className="text-zinc-400">Follow <a href="https://x.com/n0rizkitty" className="text-pink-500 hover:underline">me on X</a> to get updates :D</p>
+                <p className="text-zinc-400 mb-6">Follow <a href="https://x.com/n0rizkitty" className="text-pink-500 hover:underline">Nori on X</a> to get updates :D</p>
+                <button
+                  onClick={() => window.open('https://app.rebrowse.me', '_blank')}
+                  className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:opacity-90 transition-opacity"
+                >
+                  Try Rebrowse <Rocket className="inline-block w-4 h-4 ml-1" />
+                </button>
               </div>
             )}
           </motion.div>

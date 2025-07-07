@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Key } from "lucide-react";
 
-export default function AnimatedPlayButton() {
+interface AnimatedPlayButtonProps {
+  onClick?: () => void;
+}
+
+export default function AnimatedPlayButton({ onClick }: AnimatedPlayButtonProps) {
   const [rotation, setRotation] = useState(0);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -19,24 +23,24 @@ export default function AnimatedPlayButton() {
   }, []);
 
   return (
-    <a href="https://app.rebrowse.me" target="_blank" rel="noopener noreferrer">
-      <motion.div
-        className="relative w-32 h-32 cursor-pointer"
-        style={{
-          perspective: 1000,
-        }}
-        onMouseMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          const centerX = rect.left + rect.width / 2;
-          const centerY = rect.top + rect.height / 2;
-          mouseX.set(e.clientX - centerX);
-          mouseY.set(e.clientY - centerY);
-        }}
-        onMouseLeave={() => {
-          mouseX.set(0);
-          mouseY.set(0);
-        }}
-      >
+    <motion.div
+      className="relative w-32 h-32 cursor-pointer"
+      style={{
+        perspective: 1000,
+      }}
+      onClick={onClick}
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        mouseX.set(e.clientX - centerX);
+        mouseY.set(e.clientY - centerY);
+      }}
+      onMouseLeave={() => {
+        mouseX.set(0);
+        mouseY.set(0);
+      }}
+    >
         <motion.div
           className="relative w-full h-full rounded-full bg-gradient-to-br from-pink-500 to-purple-600 shadow-lg"
           style={{
@@ -55,6 +59,5 @@ export default function AnimatedPlayButton() {
           </div>
         </motion.div>
       </motion.div>
-    </a>
   );
 } 

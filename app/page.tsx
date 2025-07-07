@@ -117,7 +117,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
-              <AnimatedPlayButton />
+              <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
             </div>
             {/* Auto-play Video Section */}
             <AutoPlayVideoSection 
