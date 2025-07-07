@@ -9,11 +9,12 @@ interface TryOutModalProps {
 }
 
 const useCasesArray = [
+  { value: "ai-content", label: "AI Content Creation (ChatGPT, evelenlab, Heygen, etc)" },
+  { value: "web-qa", label: "Web QA Testing(Cypress, Playwright, etc)" },
+  { value: "tech-ops", label: "Tech Ops (DevOps, SRE, etc)" },
   { value: "spreadsheet", label: "Spreadsheet (Excel, Google Sheets)" },
   { value: "document", label: "Document (Google Docs, Word)" },
-  { value: "ecommerce", label: "eCommerce (Amazon, Shopify)" },
-  { value: "event-management", label: "Event (Luma, Eventbrite)" },
-  { value: "ai-content", label: "AI Content Creation (ChatGPT, evelenlab, Heygen, etc)" },
+  { value: "ecommerce", label: "eCommerce (Shopify, TikTok Shop, etc)" },
   { value: "other", label: "Other" }
 ];
 
@@ -55,6 +56,9 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
     formData.set('useCases', formattedUseCases.join(', '));
     // Email is already part of formData through the input field
     await handleSubmit(formData); // Pass formData directly
+    
+    // Navigate to app.rebrowse.me after form submission
+    window.open('https://app.rebrowse.me', '_blank');
   };
   
 
@@ -79,9 +83,9 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
           >
             {!state.succeeded ? (
               <>
-                <h3 className="text-xl font-semibold text-white mb-4">Refferal code 🔑</h3>
-                <p className="text-zinc-400 mb-6">Finally I launched my baby, Rebrowse😍 </p>
-                <p className="text-zinc-400 mb-6">leave your email and we'll send you a refferal code.</p>
+                <h3 className="text-xl font-semibold text-white mb-4"> Welcome to Rebrowse 🤗</h3>
+                <p className="text-zinc-400 mb-6">Public launch is coming soon at Product Hunt. 😸</p>
+                <p className="text-zinc-400 mb-6">Please join our founding user community, and get the early user perks.</p>
                 <form onSubmit={onSubmitModal} className="space-y-4">
                   <div className="space-y-2">
                     <label htmlFor="email" className="block text-sm font-medium text-zinc-400">
@@ -150,7 +154,7 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
                     disabled={state.submitting || selectedUseCases.length === 0 || (isOtherSelected && !otherUseCase.trim())}
                     className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
                   >
-                    {state.submitting ? 'Submitting...' : 'Notify Me'}
+                    {state.submitting ? 'Submitting...' : 'Try Rebrowse 🚀'}
                   </button>
                 </form>
               </>

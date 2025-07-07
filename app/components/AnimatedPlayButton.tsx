@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { Rocket } from "lucide-react";
+import { Key } from "lucide-react";
 
 export default function AnimatedPlayButton() {
   const [rotation, setRotation] = useState(0);
@@ -50,8 +50,8 @@ export default function AnimatedPlayButton() {
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-400/30 to-purple-500/30 blur-xl" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <Rocket className="w-10 h-10 mb-1" />
-            <span className="text-sm font-medium">Launch App</span>
+            <Key className="w-10 h-10 mb-1" />
+            <span className="text-sm font-medium">Early access</span>
           </div>
         </motion.div>
       </motion.div>

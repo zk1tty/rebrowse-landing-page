@@ -81,11 +81,11 @@ export default function Home() {
               {/* Content */}
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
                 <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
-                  🚀 Closed-β Launched🚀
+                PH Launch is coming on 25th July🚀
                 </p>
                 {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                 <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
-                  Get a {' '}
+                Get the {' '}
                   <span
                     className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-purple-300 transition"
                     onClick={() => setIsTryOutOpen(true)}
@@ -93,7 +93,7 @@ export default function Home() {
                     role="button"
                     aria-label="Open waitlist signup"
                   >
-                    referral code 🔑
+                    Founding User Perks 🔑
                   </span>
                   {' '}
                 </p>
@@ -107,13 +107,13 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg sm:text-2xl max-w-2xl mx-auto">
-                Record your screen, and turn it into a workflow.
+                Turn Your Screen Recording into Agentic Workflows. 
               </p>
               <p className="text-lg sm:text-2xl max-w-2xl mx-auto mt-4">
                 Record ➜ Share ➜ Remix (with meta prompt 🤫)
               </p>
               <p className="text-lg sm:text-2xl max-w-2xl mx-auto mb-4 mt-8">
-                No Long Prompt. Just f*cking record.
+                No Long Prompt. Just f*cking record. 🤘🏼
               </p>
             </div>
             <div className="flex justify-center w-full mb-8">
