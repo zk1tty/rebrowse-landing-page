@@ -76,7 +76,7 @@ const TryOutModal: React.FC<TryOutModalProps> = ({ isOpen, onClose }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-[#171717] p-8 rounded-2xl max-w-md w-full mx-4"
+            className="bg-[#171717] p-4 sm:p-8 rounded-2xl max-w-xs sm:max-w-md w-full mx-2 sm:mx-4 max-h-[90vh] overflow-y-auto text-sm sm:text-base"
             onClick={e => e.stopPropagation()}
           >
             {!state.succeeded ? (
