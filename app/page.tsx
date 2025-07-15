@@ -84,7 +84,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
                   <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
-                  PH Launch is coming on 25th July🚀
+                  Alpha Launch is coming soon🚀
                   </p>
                   {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                   <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
@@ -129,8 +129,25 @@ export default function Home() {
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
                 title="How to Rebrowse"
-                description="v0.1.0 - Browser bot tweets on X"
+                description="v0.1.0 - Browser tweet-bot demo on X"
               />
+               <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
+                 {/* add the oneliner description on the top of the image */}
+                 <div className="text-center mb-8">
+                   <p className="text-lg sm:text-2xl text-white mb-4">
+                     v0.2.0 - hardcore tech features
+                   </p>
+                 </div>
+                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
+                   <Image 
+                     src="/images/v0.2-core-feature.png" 
+                     alt="v0.2.0 - production-ready" 
+                     width={1000} 
+                     height={1000}
+                     className="w-full h-auto object-cover"
+                   />
+                 </div>
+               </div> 
               {/* <FeatureShowcase /> */}
               <ThreeStepFlows />
               <TargetAudience />
