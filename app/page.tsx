@@ -13,6 +13,7 @@ import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
+import { Code, CodeXl,Puzzle } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -109,8 +110,8 @@ export default function Home() {
                     with reliability, not demos.
                   </h1>
                   <h2 className="text-2xl sm:text-3xl max-w-2xl mx-auto flex items-center justify-center gap-4 flex-wrap mt-8">
-                    🧩 Control browser workflows like code 🧩
-                  </h2>
+                     <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" /> Manage browser workflows like code <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" />
+                   </h2>
                 </div>
                 <p className="text-lg sm:text-2xl max-w-2xl mx-auto">
                   Tired to expect Google Marrier to work reliably?
