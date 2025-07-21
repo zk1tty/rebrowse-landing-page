@@ -106,8 +106,7 @@ export default function Home() {
               <div className="text-center mb-8 w-full">
                 <div className="my-8">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Browser agents for engineers<br className="mb-2" />
-                    with reliability, not demos.
+                    Browser agents for techies.
                   </h1>
                   <h2 className="text-2xl sm:text-3xl max-w-2xl mx-auto flex items-center justify-center gap-4 flex-wrap mt-8">
                      <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" /> Manage browser workflows like code <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -117,10 +116,10 @@ export default function Home() {
                   Tired to expect Google Marrier to work reliably?
                 </p>
                 <p className="text-lg sm:text-2xl max-w-2xl mx-auto mt-4 ">
-                  We can automate browser flow across 100s of inputs.
+                  We can run and validate browser flow
                 </p>
                 <p className="text-lg sm:text-2xl max-w-2xl mx-auto mt-4">
-                  — with multi-execution and result validation. 😎
+                  — with multi-input, multi-execution and result validation. 😎
                 </p>
               </div>
               <div className="flex justify-center w-full mb-8">
@@ -130,13 +129,13 @@ export default function Home() {
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
                 title="How to Rebrowse"
-                description="v0.1.0 - Browser tweet-bot demo on X"
+                description="v0.1.0 - Grok-powered X bot"
               />
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
                  {/* add the oneliner description on the top of the image */}
                  <div className="text-center mb-8">
                    <p className="text-lg sm:text-2xl text-white mb-4">
-                     v0.2.0 - hardcore tech features
+                     v0.2.0 - techy features
                    </p>
                  </div>
                  <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
