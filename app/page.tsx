@@ -104,19 +104,28 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center mb-8 w-full">
-                <div className="my-8">
+                                <div className="my-16">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     Turn one screen-record into 100 browser jobs.
                   </h1>
-                  <h2 className="text-3xl sm:text-4xl md:text-2xl font-bold mb-8">
-                     Cut 90% of your browser job times for QA testing, no-API ops, and AI tools 🚀
-                   </h2>
+                  <h2 className="text-3xl sm:text-4xl md:text-2xl font-bold mb-16">
+                    Cut 90% of your browser job times for QA testing, no-API ops, and AI tools 🚀
+                  </h2>
                    
                    {/* 4-Step Workflow */}
-                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mb-8">
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto mb-8">
                      <div className="flex flex-col items-center text-center">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
-                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+                         <video
+                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                           src="/videos/step1-5.5s.mp4"
+                           autoPlay
+                           loop
+                           muted
+                           playsInline
+                         />
+                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                          </svg>
                        </div>
@@ -124,8 +133,17 @@ export default function Home() {
                      </div>
                      
                      <div className="flex flex-col items-center text-center">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
-                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+                         <video
+                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                           src="/videos/step2-5.5s.mp4"
+                           autoPlay
+                           loop
+                           muted
+                           playsInline
+                         />
+                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                          </svg>
                        </div>
@@ -133,8 +151,17 @@ export default function Home() {
                      </div>
                      
                      <div className="flex flex-col items-center text-center">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
-                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+                         <video
+                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                           src="/videos/step3-5.5s.mp4"
+                           autoPlay
+                           loop
+                           muted
+                           playsInline
+                         />
+                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                          </svg>
                        </div>
@@ -142,8 +169,17 @@ export default function Home() {
                      </div>
                      
                      <div className="flex flex-col items-center text-center">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
-                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+                         <video
+                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                           src="/videos/record-replay-3s.mp4"
+                           autoPlay
+                           loop
+                           muted
+                           playsInline
+                         />
+                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                          </svg>
                        </div>
@@ -158,7 +194,7 @@ export default function Home() {
               {/* Auto-play Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
-                title="How to Rebrowse"
+                title="What can we build with Rebrowse?"
                 description="v0.1.0 - Grok-powered X bot"
               />
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
