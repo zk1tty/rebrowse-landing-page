@@ -13,7 +13,7 @@ import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Code, CodeXl,Puzzle } from 'lucide-react';
+import { Puzzle } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -85,7 +85,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
                   <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
-                  Alpha Launch is coming soon🚀
+                  Alpha Launch is mid Aug🚀
                   </p>
                   {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                   <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
@@ -106,21 +106,51 @@ export default function Home() {
               <div className="text-center mb-8 w-full">
                 <div className="my-8">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Browser agents for techies.
+                    Turn one screen-record into 100 browser jobs.
                   </h1>
-                  <h2 className="text-2xl sm:text-3xl max-w-2xl mx-auto flex items-center justify-center gap-4 flex-wrap mt-8">
-                     <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" /> Manage browser workflows like code <Puzzle className="w-8 h-8 sm:w-10 sm:h-10" />
+                  <h2 className="text-3xl sm:text-4xl md:text-2xl font-bold mb-8">
+                     Cut 90% of your browser job times for QA testing, no-API ops, and AI tools 🚀
                    </h2>
+                   
+                   {/* 4-Step Workflow */}
+                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mb-8">
+                     <div className="flex flex-col items-center text-center">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
+                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                         </svg>
+                       </div>
+                       <span className="text-sm md:text-base font-medium">1. Screen recording</span>
+                     </div>
+                     
+                     <div className="flex flex-col items-center text-center">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
+                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                         </svg>
+                       </div>
+                       <span className="text-sm md:text-base font-medium">2. Upload inputs</span>
+                     </div>
+                     
+                     <div className="flex flex-col items-center text-center">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
+                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                         </svg>
+                       </div>
+                       <span className="text-sm md:text-base font-medium">3. Run 100 jobs</span>
+                     </div>
+                     
+                     <div className="flex flex-col items-center text-center">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3">
+                         <svg className="w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                         </svg>
+                       </div>
+                       <span className="text-sm md:text-base font-medium">4. Validate results</span>
+                     </div>
+                   </div>
                 </div>
-                <p className="text-lg sm:text-2xl max-w-2xl mx-auto">
-                  Tired to expect Google Marrier to work reliably?
-                </p>
-                <p className="text-lg sm:text-2xl max-w-2xl mx-auto mt-4 ">
-                  We can run and validate browser flow
-                </p>
-                <p className="text-lg sm:text-2xl max-w-2xl mx-auto mt-4">
-                  — with multi-input, multi-execution and result validation. 😎
-                </p>
               </div>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
@@ -135,7 +165,7 @@ export default function Home() {
                  {/* add the oneliner description on the top of the image */}
                  <div className="text-center mb-8">
                    <p className="text-lg sm:text-2xl text-white mb-4">
-                     v0.2.0 - techy features
+                     v0.2.0 - Techy features 🤓
                    </p>
                  </div>
                  <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
