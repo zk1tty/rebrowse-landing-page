@@ -106,10 +106,10 @@ export default function Home() {
               <div className="text-center mb-8 w-full">
                                 <div className="my-16">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Turn one screen-record into 100 browser jobs.
+                    Turn <span className="text-purple-400">one</span> screen-record into <span className="text-purple-400">100</span> browser jobs.
                   </h1>
-                  <h2 className="text-3xl sm:text-4xl md:text-2xl font-bold mb-16">
-                    Cut 90% of your browser job times for QA testing, no-API ops, and AI tools 🚀
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
+                    Cut <span className="text-purple-400">90%</span> of your browser job times for QA testing, no-API ops, and AI tools 🚀
                   </h2>
                    
                    {/* 4-Step Workflow */}
