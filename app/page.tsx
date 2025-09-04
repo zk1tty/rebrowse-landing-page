@@ -12,18 +12,21 @@ import TechnicalRoadmapSection from './components/TechnicalRoadmapSection';
 import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
+import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
 import { Puzzle, Send } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
   const [isTryOutOpen, setIsTryOutOpen] = useState(false);
+  const [isEventOpen, setIsEventOpen] = useState(false);
 
   return (
     <>
       <div className="min-h-screen bg-black text-white">
         <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
         <TryOutModal isOpen={isTryOutOpen} onClose={() => setIsTryOutOpen(false)} />
+        <EventModal isOpen={isEventOpen} onClose={() => setIsEventOpen(false)} />
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
           <header className="w-full sticky top-0 z-50 bg-black/90 backdrop-blur">
@@ -85,10 +88,10 @@ export default function Home() {
                   <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
                     <span
                       className="font-bold bg-red-600 text-white px-2 py-1 rounded cursor-pointer hover:opacity-70 transition"
-                      onClick={() => setIsTryOutOpen(true)}
+                      onClick={() => setIsEventOpen(true)}
                       tabIndex={0}
                       role="button"
-                      aria-label="Open waitlist signup"
+                      aria-label="Open event RSVP"
                     >
                       ► RSVP(27.09.25)
                     </span>
