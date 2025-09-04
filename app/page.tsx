@@ -75,39 +75,33 @@ export default function Home() {
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
               <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 350 }}>
-                {/* Background Video */}
-                <video
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-110"
-                  src="/videos/journey-7s.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                {/* Background Image */}
+                <Image
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/images/silicon-valley-showcase.png"
+                  alt="Rebrowse Hero Background"
+                  fill
+                  priority
                 />
-                {/* Optional: Overlay for readability */}
-                <div className="absolute inset-0 bg-black/40" />
                 {/* Content */}
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
-                  <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
-                  launch at The Residency🚀
-                  </p>
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-end px-4 pb-8">
                   {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                   <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
                     <span
-                      className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:opacity-70 transition"
+                      className="font-bold bg-red-600 text-white px-2 py-1 rounded cursor-pointer hover:opacity-70 transition"
                       onClick={() => setIsTryOutOpen(true)}
                       tabIndex={0}
                       role="button"
                       aria-label="Open waitlist signup"
                     >
-                      RSVP for Showcase(27.09)
+                      ► RSVP(27.09.25)
                     </span>
                     {' '}
                   </p>
                 </div>
               </div>
               <div className="text-center mb-8 w-full">
-                                <div className="my-16">
+                <div className="my-16">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     Turn <span className="text-purple-400">one</span> screen-record into <span className="text-purple-400">100</span> browser jobs.
                   </h1>
