@@ -3,6 +3,7 @@ import Image from 'next/image'
 import rebrowseLogo from '../../svgs/rebrowse-logo.png'
 import { useState } from 'react';
 import QRModal from '../components/QRModal';
+import { Send } from 'lucide-react';
 
 export default function Privacy() {
   const [isQROpen, setIsQROpen] = useState(false);

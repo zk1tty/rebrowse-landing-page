@@ -13,7 +13,7 @@ import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Puzzle } from 'lucide-react';
+import { Puzzle, Send } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -50,6 +50,10 @@ export default function Home() {
                     <img src="/svgs/hugging-face.svg" alt="Hugging Face" width={20} height={20} className="mr-1" />
                     Creator
                   </a>
+                  <a href="/shipnori" className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base flex items-center gap-1">
+                    <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.18 9"/></svg>
+                    ShipNori
+                  </a>
                   <a 
                     href="https://github.com/zk1tty/rebrowse-app" 
                     target="_blank" 
@@ -85,19 +89,18 @@ export default function Home() {
                 {/* Content */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
                   <p className="text-lg sm:text-5xl text-white max-w-2xl mx-auto mb-4 text-center">
-                  Alpha Launch is mid Aug🚀
+                  launch at The Residency🚀
                   </p>
                   {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
                   <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
-                  Get the {' '}
                     <span
-                      className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:bg-purple-300 transition"
+                      className="font-bold bg-purple-400 text-black px-2 py-1 rounded cursor-pointer hover:opacity-70 transition"
                       onClick={() => setIsTryOutOpen(true)}
                       tabIndex={0}
                       role="button"
                       aria-label="Open waitlist signup"
                     >
-                      Founding User Perks 🔑
+                      RSVP for Showcase(27.09)
                     </span>
                     {' '}
                   </p>
