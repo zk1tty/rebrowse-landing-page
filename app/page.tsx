@@ -77,7 +77,7 @@ export default function Home() {
               <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 350 }}>
                 {/* Background Image */}
                 <Image
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-contain object-center"
                   src="/images/silicon-valley-showcase.png"
                   alt="Rebrowse Hero Background"
                   fill
