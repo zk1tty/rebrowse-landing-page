@@ -102,14 +102,14 @@ export default function Home() {
               <div className="text-center mb-8 w-full">
                 <div className="my-16">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Turn <span className="text-purple-400">one</span> screen-record into <span className="text-purple-400">100</span> browser jobs.
+                    Record and Replay browser flows
                   </h1>
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
-                    Cut <span className="text-purple-400">90%</span> of your browser job times for QA testing, no-API ops, and AI tools 🚀
+                    by anyone, anywhere - in one click.
                   </h2>
                    
                    {/* 4-Step Workflow */}
-                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto mb-8">
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-8">
                      <div className="flex flex-col items-center text-center">
                        <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
                          <video
@@ -143,7 +143,7 @@ export default function Home() {
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                          </svg>
                        </div>
-                       <span className="text-sm md:text-base font-medium">2. Upload inputs</span>
+                       <span className="text-sm md:text-base font-medium">2. Share URL</span>
                      </div>
                      
                      <div className="flex flex-col items-center text-center">
@@ -161,29 +161,14 @@ export default function Home() {
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                          </svg>
                        </div>
-                       <span className="text-sm md:text-base font-medium">3. Run 100 jobs</span>
-                     </div>
-                     
-                     <div className="flex flex-col items-center text-center">
-                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
-                         <video
-                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                           src="/videos/record-replay-3s.mp4"
-                           autoPlay
-                           loop
-                           muted
-                           playsInline
-                         />
-                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
-                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                         </svg>
-                       </div>
-                       <span className="text-sm md:text-base font-medium">4. Validate results</span>
+                       <span className="text-sm md:text-base font-medium">3. Run flows on mobile</span>
                      </div>
                    </div>
                 </div>
               </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
+                Cut <span className="text-purple-400">90%</span> of repetitive browser tasks for QA testing, no-API ops, and AI tools 🚀
+              </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div>
