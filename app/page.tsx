@@ -93,7 +93,7 @@ export default function Home() {
                       role="button"
                       aria-label="Open event RSVP"
                     >
-                      ► RSVP(27.09.25)
+                      ► RSVP Showcase(27.09.25)
                     </span>
                     {' '}
                   </p>
@@ -166,8 +166,11 @@ export default function Home() {
                    </div>
                 </div>
               </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">
                 Cut <span className="text-purple-400">90%</span> of repetitive browser tasks for QA testing, no-API ops, and AI tools 🚀
+                <br />
+                <br />
+                Share the value of workflow, zero setting up.
               </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
@@ -175,8 +178,8 @@ export default function Home() {
               {/* Auto-play Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
-                title="What can we build with Rebrowse?"
-                description="v0.1.0 - Grok-powered X bot"
+                title="demo"
+                description="v0.1.0 - Grok-powered X bot demo"
               />
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
                  {/* add the oneliner description on the top of the image */}
