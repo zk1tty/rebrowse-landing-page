@@ -15,6 +15,7 @@ import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
 import { Puzzle, Send } from 'lucide-react';
+import SignupForm from './components/SignupForm';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -166,6 +167,18 @@ export default function Home() {
                    </div>
                 </div>
               </div>
+              
+              {/* Signup Form Section */}
+              <div className="my-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+                  Be the first to know when we launch
+                </h2>
+                <p className="text-gray-400 text-center mb-8 text-lg">
+                  Join our waitlist and get early access to Rebrowse
+                </p>
+                <SignupForm />
+              </div>
+              
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">
                 Cut <span className="text-purple-400">90%</span> of repetitive browser tasks for QA testing, no-API ops, and AI tools 🚀
                 <br />
