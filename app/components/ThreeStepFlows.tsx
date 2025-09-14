@@ -108,6 +108,62 @@ const ThreeStepFlows: React.FC = () => {
       <h2 className="text-2xl mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8">
         ## 3 Steps to Rebrowse
       </h2>
+      {/* 3-Step Workflow */}
+      <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
+        <div className="flex flex-col items-center text-center">
+          <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+            <video
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              src="/videos/step-1-3.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+            <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span className="text-xs sm:text-sm md:text-base font-medium">1. Screen recording</span>
+        </div>
+        
+        <div className="flex flex-col items-center text-center">
+          <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+            <video
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              src="/videos/step-2-3.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+            <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+           </svg>
+          </div>
+          <span className="text-xs sm:text-sm md:text-base font-medium">2. Share URL</span>
+        </div>
+        
+        <div className="flex flex-col items-center text-center">
+          <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+            <video
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              src="/videos/step-3-3.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
+            <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <span className="text-xs sm:text-sm md:text-base font-medium">3. Run flows on mobile</span>
+        </div>
+      </div>
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-[702px]">

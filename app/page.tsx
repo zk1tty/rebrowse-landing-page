@@ -4,6 +4,7 @@ import FigmaEmbed from './components/FigmaEmbed'
 import ThreeStepFlows from './components/ThreeStepFlows'
 import FeatureShowcase from './components/FeatureShowcase'
 import TargetAudience from './components/TargetAudience'
+import SignUpForm from './components/SignUpForm'
 import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
 import { useState } from 'react';
@@ -73,104 +74,40 @@ export default function Home() {
         <div className="flex flex-col min-h-screen">
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-              <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: 350 }}>
-                {/* Background Image */}
-                <Image
-                  className="absolute inset-0 w-full h-full object-contain object-center"
-                  src="/images/silicon-valley-showcase.png"
-                  alt="Rebrowse Hero Background"
-                  fill
-                  priority
-                />
-                {/* Content */}
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-end px-4 pb-8">
-                  {/* <CountdownTimer launchDate={new Date('2025-06-15T10:00:00Z')} /> */}
-                  <p className="text-lg sm:text-2xl text-white max-w-2xl mx-auto text-center">
-                    <span
-                      className="font-bold bg-red-600 text-white px-2 py-1 rounded cursor-pointer hover:opacity-70 transition"
-                      onClick={() => setIsEventOpen(true)}
-                      tabIndex={0}
-                      role="button"
-                      aria-label="Open event RSVP"
-                    >
-                      ► RSVP Showcase(27.09.25)
-                    </span>
-                    {' '}
-                  </p>
+              <div className="text-center mb-8 w-full">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                  Record and Replay browser flows
+                </h1>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
+                  at scale from anywhere - in one click.
+                </h2>
+                {/* Add sign up for whitelists */}
+                <div className="mb-16">
+                  <SignUpForm />
                 </div>
               </div>
+              {/* Hero Video Section */}
+              <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: '50vh' }}>
+                {/* Background Video */}
+                <video
+                  className="absolute inset-0 w-full h-full object-cover object-center scale-100"
+                  src="/videos/cloud-run-with-POV.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+              {/* Hero Title Section */}
               <div className="text-center mb-8 w-full">
                 <div className="my-16">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Record and Replay browser flows
-                  </h1>
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
-                    by anyone, anywhere - in one click.
-                  </h2>
-                   
-                   {/* 3-Step Workflow */}
-                   <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
-                     <div className="flex flex-col items-center text-center">
-                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
-                         <video
-                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                           src="/videos/step-1-3.mp4"
-                           autoPlay
-                           loop
-                           muted
-                           playsInline
-                         />
-                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
-                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                         </svg>
-                       </div>
-                       <span className="text-xs sm:text-sm md:text-base font-medium">1. Screen recording</span>
-                     </div>
-                     
-                     <div className="flex flex-col items-center text-center">
-                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
-                         <video
-                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                           src="/videos/step-2-3.mp4"
-                           autoPlay
-                           loop
-                           muted
-                           playsInline
-                         />
-                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
-                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                        </svg>
-                       </div>
-                       <span className="text-xs sm:text-sm md:text-base font-medium">2. Share URL</span>
-                     </div>
-                     
-                     <div className="flex flex-col items-center text-center">
-                       <div className="relative w-full aspect-video bg-purple-600/20 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
-                         <video
-                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                           src="/videos/step-3-3.mp4"
-                           autoPlay
-                           loop
-                           muted
-                           playsInline
-                         />
-                         <div className="absolute inset-0 bg-purple-600/20 rounded-2xl" />
-                         <svg className="relative z-10 w-8 h-8 md:w-10 md:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                         </svg>
-                       </div>
-                       <span className="text-xs sm:text-sm md:text-base font-medium">3. Run flows on mobile</span>
-                     </div>
-                   </div>
                 </div>
               </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">
-                Cut <span className="text-purple-400">90%</span> of repetitive browser tasks for QA testing, no-API ops, and AI tools 🚀
+                Turn <span className="text-purple-400">one</span> repetitive browser task into <span className="text-purple-400">100 runs</span> in one click.
                 <br />
                 <br />
-                Share the value of workflow, zero setting up.
+                for QA testing, no-API ops, and multi SNS accounts.
               </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
