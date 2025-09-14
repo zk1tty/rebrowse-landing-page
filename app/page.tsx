@@ -14,6 +14,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
+import SignupForm from './components/SignupForm';
 import { Puzzle, Send } from 'lucide-react';
 
 export default function Home() {
@@ -172,6 +173,11 @@ export default function Home() {
                 <br />
                 Share the value of workflow, zero setting up.
               </h2>
+              
+              <div className="mb-12">
+                <SignupForm />
+              </div>
+              
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div>
