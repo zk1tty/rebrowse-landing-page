@@ -20,6 +20,30 @@ export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
   const [isTryOutOpen, setIsTryOutOpen] = useState(false);
   const [isEventOpen, setIsEventOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    setSubmitState('idle');
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!response.ok) throw new Error('Failed');
+      setSubmitState('success');
+      setEmail('');
+    } catch (err) {
+      setSubmitState('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -104,9 +128,39 @@ export default function Home() {
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     Record and Replay browser flows
                   </h1>
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-10">
                     by anyone, anywhere - in one click.
                   </h2>
+                  <form
+                    onSubmit={handleSubmit}
+                    className="max-w-md mx-auto space-y-4 animate-fade-in-up"
+                    style={{ animationDelay: '0.6s' }}
+                  >
+                    <div className="relative">
+                      <input
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="flex rounded-md border py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full h-14 bg-secondary/50 border-primary/20 glow-border text-lg px-6 focus:border-primary/40 transition-all duration-300"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground px-4 py-2 w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 neon-glow group transition-all duration-300"
+                    >
+                      {isSubmitting ? 'Joining…' : 'Join the Waitlist'}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                    {submitState === 'success' && (
+                      <p className="text-green-400 text-sm text-center">Thanks! You're on the list.</p>
+                    )}
+                    {submitState === 'error' && (
+                      <p className="text-red-400 text-sm text-center">Something went wrong. Please try again.</p>
+                    )}
+                  </form>
                    
                    {/* 3-Step Workflow */}
                    <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
