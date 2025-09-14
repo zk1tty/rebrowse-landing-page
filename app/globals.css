@@ -123,3 +123,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Waitlist form utilities and animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out both;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px var(--border), 0 0 18px var(--primary);
+    transition: box-shadow 300ms ease;
+  }
+
+  .neon-glow {
+    box-shadow:
+      0 0 0 2px var(--primary),
+      0 0 26px var(--primary),
+      0 0 64px var(--primary);
+    transition: box-shadow 300ms ease, transform 300ms ease;
+  }
+}
