@@ -29,7 +29,7 @@ const SignUpForm: React.FC = () => {
         <input 
           type="email" 
           name="email"
-          className="flex rounded-md border py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full h-14 bg-stone-800/50 border-purple-500/20 glow-border text-lg px-6 text-white placeholder:text-stone-400 focus:border-purple-500/40 transition-all duration-300" 
+          className="flex rounded-md border py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full h-10 sm:h-14 bg-stone-800/50 border-purple-500/20 glow-border text-sm sm:text-lg px-4 sm:px-6 text-white placeholder:text-stone-400 focus:border-purple-500/40 transition-all duration-300" 
           placeholder="Enter your email address" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -44,12 +44,12 @@ const SignUpForm: React.FC = () => {
         />
       </div>
       <button 
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-white px-4 py-2 w-full h-14 text-lg font-semibold bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 neon-glow group transition-all duration-300" 
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-white px-4 py-2 w-full h-10 sm:h-14 text-sm sm:text-lg font-semibold bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 neon-glow group transition-all duration-300" 
         type="submit"
         disabled={state.submitting}
       >
         {state.submitting ? 'Welcome...' : 'Get early access'}
-        <ArrowRight className="w-7 h-7 ml-2 group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7 ml-2 group-hover:translate-x-1 transition-transform" />
       </button>
     </form>
   );

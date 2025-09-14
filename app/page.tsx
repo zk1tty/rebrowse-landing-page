@@ -74,15 +74,15 @@ export default function Home() {
         <div className="flex flex-col min-h-screen">
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-              <div className="text-center mb-8 w-full">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                  Record and Replay browser flows
+              <div className="text-center mb-8 w-full px-4 sm:px-0">
+                <h1 className="text-xl sm:text-4xl md:text-5xl font-bold mb-4">
+                  Record and Replay browser
                 </h1>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16">
-                  at scale from anywhere - in one click.
+                <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16">
+                  at scale - in one click.
                 </h2>
                 {/* Add sign up for whitelists */}
-                <div className="mb-16">
+                <div className="mb-8 sm:mb-16">
                   <SignUpForm />
                 </div>
               </div>
