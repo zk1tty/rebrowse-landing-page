@@ -87,11 +87,11 @@ export default function Home() {
                 </div>
               </div>
               {/* Hero Video Section */}
-              <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden" style={{ minHeight: '50vh' }}>
+              <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden">
                 {/* Background Video */}
                 <video
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-100"
-                  src="/videos/cloud-run-with-POV.mp4"
+                  className="w-full h-auto object-contain"
+                  src="/videos/cloud-run-POV.mp4"
                   autoPlay
                   loop
                   muted
