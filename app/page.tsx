@@ -89,9 +89,11 @@ export default function Home() {
               {/* Hero Video Section */}
               <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden">
                 {/* Background Video */}
+                {/* Grok-powered X bot demo */}
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">demo: Grok-powered X bot - one click</h2>
                 <video
                   className="w-full h-auto object-contain"
-                  src="/videos/cloud-run-POV.mp4"
+                  src="/videos/grok-post-with-cloud-run.mp4"
                   autoPlay
                   loop
                   muted
