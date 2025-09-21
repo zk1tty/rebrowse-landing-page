@@ -117,7 +117,7 @@ export default function Home() {
                 videoSrc="/videos/grok-post-with-cloud-run.mp4"
                 title=""
                 description= ""
-                bottomText={"e.g. posting a tweet made by Grok-4 on X.\nYou can run the multi-browsers workflow in one click, from your phone!"}
+                bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account.\nYou can run the multipul browserflows in one click, from your phone.🤯"}
               />
               {/* Hero Title Section */}
               <div className="text-center mb-8 w-full">
