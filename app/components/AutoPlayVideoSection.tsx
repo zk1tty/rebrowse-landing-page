@@ -101,7 +101,7 @@ export default function AutoPlayVideoSection({
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
             
             {/* Play Button Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white ml-1"
@@ -111,7 +111,7 @@ export default function AutoPlayVideoSection({
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             {/* Auto-play indicator */}
             {!hasTriggered && (
