@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center items-center w-full mb-8 gap-6 flex-wrap">
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-white">NOT backed by</span>
+                  <span className="text-sm text-white"><span className="text-md font-bold">NOT</span> backed by</span>
                   <Image
                     alt="backed by Y Combinator"
                     loading="lazy"
@@ -100,7 +100,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-white"> BUT partnered with</span>
+                  <span className="text-sm text-white"> BUT <span className="text-md font-bold">partnered</span> with</span>
                   <Image
                     alt="partnered with Browser-use"
                     loading="lazy"
@@ -113,19 +113,11 @@ export default function Home() {
                 </div>
               </div>
               {/* Hero Video Section */}
-              <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden">
-                {/* Background Video */}
-                {/* Grok-powered X bot demo */}
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>one click to automate X posting</h2>
-                <video
-                  className="w-full h-auto object-contain"
-                  src="/videos/grok-post-with-cloud-run.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              </div>
+              <AutoPlayVideoSection 
+                videoSrc="/videos/grok-post-with-cloud-run.mp4"
+                title=""
+                description= "one click to run cloud browser"
+              />
               {/* Hero Title Section */}
               <div className="text-center mb-8 w-full">
                 <div className="my-16">
