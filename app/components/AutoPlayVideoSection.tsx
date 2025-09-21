@@ -6,12 +6,14 @@ interface AutoPlayVideoSectionProps {
   videoSrc: string;
   title?: string;
   description?: string;
+  bottomText?: string;
 }
 
 export default function AutoPlayVideoSection({ 
   videoSrc, 
   title = "Watch Demo", 
-  description = "See how it works in action" 
+  description = "See how it works in action",
+  bottomText = ""
 }: AutoPlayVideoSectionProps) {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
@@ -122,6 +124,11 @@ export default function AutoPlayVideoSection({
           {/* Bottom gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
+        {bottomText && (
+          <p className="mt-3 text-sm text-gray-400 text-center whitespace-pre-line">
+            {bottomText}
+          </p>
+        )}
       </div>
 
       <VideoModal 

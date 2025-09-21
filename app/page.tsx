@@ -116,7 +116,8 @@ export default function Home() {
               <AutoPlayVideoSection 
                 videoSrc="/videos/grok-post-with-cloud-run.mp4"
                 title=""
-                description= "one click to run cloud browser"
+                description= ""
+                bottomText={"e.g. posting a tweet made by Grok-4 on X.\nYou can run the multi-browsers workflow in one click, from your phone!"}
               />
               {/* Hero Title Section */}
               <div className="text-center mb-8 w-full">
@@ -135,7 +136,7 @@ export default function Home() {
               {/* Auto-play Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
-                title="demo"
+                title="Record and Replay"
                 description="v0.1.0 - Grok-powered X bot demo"
               />
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
