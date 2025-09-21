@@ -86,17 +86,31 @@ export default function Home() {
                   <SignUpForm />
                 </div>
               </div>
-              <div className="flex justify-center items-center w-full mb-8 gap-3">
-                <span className="text-sm text-white">NOT backed by</span>
-                <Image
-                  alt="backed by Y Combinator"
-                  loading="lazy"
-                  width={808}
-                  height={161}
-                  className="w-32 sm:w-40 md:w-60"
-                  style={{ color: 'transparent' }}
-                  src="/svgs/YCombinator_logo.svg"
-                />
+              <div className="flex justify-center items-center w-full mb-8 gap-6 flex-wrap">
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-white">NOT backed by</span>
+                  <Image
+                    alt="backed by Y Combinator"
+                    loading="lazy"
+                    width={808}
+                    height={161}
+                    className="w-32 sm:w-40 md:w-60"
+                    style={{ color: 'transparent' }}
+                    src="/svgs/YCombinator_logo.svg"
+                  />
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-white"> BUT partnered with</span>
+                  <Image
+                    alt="partnered with Browser-use"
+                    loading="lazy"
+                    width={808}
+                    height={161}
+                    className="w-32 sm:w-40 md:w-60"
+                    style={{ color: 'transparent' }}
+                    src="/images/browser-use-white-text.png"
+                  />
+                </div>
               </div>
               {/* Hero Video Section */}
               <div className="relative flex flex-col items-center w-full mb-8 rounded-xl overflow-hidden">
