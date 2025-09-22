@@ -125,7 +125,7 @@ export default function AutoPlayVideoSection({
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
         {bottomText && (
-          <p className="mt-3 text-md text-gray-300 text-center whitespace-pre-line">
+          <p className="mt-3 text-lg sm:text-xl text-gray-300 text-center whitespace-pre-line">
             {bottomText}
           </p>
         )}

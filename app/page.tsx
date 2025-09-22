@@ -113,7 +113,7 @@ export default function Home() {
                 </div>
               </div>
               <a href="https://www.producthunt.com/products/rebrowse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-rebrowse" target="_blank">
-                <img className="block mx-auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=987539&theme=light&t=1758515080888" alt="Rebrowse - Turn&#0032;screen&#0045;recording&#0032;into&#0032;100&#0032;browser&#0032;flows&#0032;in&#0032;one&#0032;click&#0046; | Product Hunt" style={{ width: 250, height: 54 }} width="250" height="54" />
+                <img className="block mx-auto w-2/5 sm:w-[250px] h-auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=987539&theme=light&t=1758515080888" alt="Rebrowse - Turn&#0032;screen&#0045;recording&#0032;into&#0032;100&#0032;browser&#0032;flows&#0032;in&#0032;one&#0032;click&#0046; | Product Hunt" width="250" height="54" />
               </a>
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
