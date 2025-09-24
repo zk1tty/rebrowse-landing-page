@@ -144,7 +144,7 @@ export default function Home() {
                 for no-API ops, and multi SNS accounts, multi AI tool flow. 
                 <br />
                 <br />
-                import from browser-use and run at <span className="text-purple-400">20x</span> speed.
+                import from browser-use and run <span className="text-purple-400">20x</span> faster.
               </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
