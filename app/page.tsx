@@ -138,10 +138,13 @@ export default function Home() {
                 </div>
               </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">
-                Turn <span className="text-purple-400">one</span> repetitive browser task into <span className="text-purple-400">100 runs</span> in one click.
+                Turn <span className="text-purple-400">one</span> repetitive browser flow into <span className="text-purple-400">100 runs</span> in one click.
                 <br />
                 <br />
-                for QA testing, no-API ops, and multi SNS accounts.
+                for no-API ops, and multi SNS accounts, multi AI tool flow. 
+                <br />
+                <br />
+                import from browser-use and run at <span className="text-purple-400">20x</span> speed.
               </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
@@ -149,7 +152,7 @@ export default function Home() {
               {/* Auto-play Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/demo-grok-post.mp4"
-                title="Record and Replay"
+                title=""
                 description="v0.1.0 - Grok-powered X bot demo"
               />
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
