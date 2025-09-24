@@ -79,7 +79,7 @@ export default function Home() {
                   Record and Replay browser - in one click.
                 </h1>
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Figma for your or AI's browser automation.
+                  n8n for cloud run browser automation.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
