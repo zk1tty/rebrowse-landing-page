@@ -76,15 +76,15 @@ export default function Home() {
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
               <div className="text-center mb-8 w-full px-4 sm:px-0">
                 <div className="flex items-center justify-center mb-3">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/70 bg-white/10">
+                  <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
                     <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-sm sm:text-base text-gray-200">Browser-as-a-Service for Human</span>
-                    <User className="w-4 h-4 text-gray-200" aria-hidden="true" />
+                    <span className="text-xs sm:text-sm md:text-base text-gray-200">Browser-as-a-Service for Human</span>
+                    <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
-                <h1 className="text-xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <span className="inline-flex items-center justify-center gap-3">
-                    <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" />
+                <h1 className="text-[1.2rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight" style={{ animationDelay: '0.2s' }}>
+                  <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
+                    {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>n8n for Cloud Browser Automation</span>
                   </span>
                 </h1>
