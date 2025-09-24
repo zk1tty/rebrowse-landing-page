@@ -15,7 +15,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Puzzle, Send } from 'lucide-react';
+import { Puzzle, Send, User, Blocks } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -75,11 +75,21 @@ export default function Home() {
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
               <div className="text-center mb-8 w-full px-4 sm:px-0">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/70 bg-white/10">
+                    <span className="h-2 w-2 rounded-full bg-purple-300"></span>
+                    <span className="text-sm sm:text-base text-gray-200">Browser-as-a-Service for Human</span>
+                    <User className="w-4 h-4 text-gray-200" aria-hidden="true" />
+                  </div>
+                </div>
                 <h1 className="text-xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  Record and Replay browser - in one click.
+                  <span className="inline-flex items-center justify-center gap-3">
+                    <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" />
+                    <span>n8n for Cloud Browser Automation</span>
+                  </span>
                 </h1>
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  n8n for Cloud Browser automation.
+                  Record and Replay browser flows - in one click.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
