@@ -56,14 +56,71 @@ export default function Privacy() {
         <main className="flex-1 w-full">
           <div className="max-w-[800px] mx-auto px-4 py-8 sm:py-16">
             <div className="prose prose-invert max-w-none">
+              <div className="mb-6 rounded-md border border-white/10 bg-white/5 p-4 text-sm">
+                <p className="text-white font-semibold mb-1">Prominent Disclosure</p>
+                <p className="text-gray-300">
+                  Rebrowse Recorder collects only the data needed to provide its single purpose: screen recording and workflow automation.
+                  Data collection begins <strong>only after your explicit consent</strong> and is limited to <strong>recorded interactions</strong>, <strong>session cookies/login state</strong> for browser sync, and <strong>authentication data</strong> for secure sign-in.
+                  You can revoke access at any time in the extension settings.
+                  Corresponds to <strong><a href="https://developer.chrome.com/docs/webstore/program-policies">Chrome Web Store Program Policy</a></strong>.
+                </p>
+              </div>
               <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
               
               <div className="space-y-6 text-gray-300">
                 <section>
                   <h2 className="text-2xl font-semibold mb-4 text-white">Single Purpose Statement</h2>
                   <p className="mb-4">
-                    Rebrowse is a screen recording and workflow automation extension with a single purpose: to enable users to record their screen interactions and convert them into shareable, executable workflow automations. All data collection and processing is limited to supporting this core functionality.
+                    Rebrowse Recorder is a screen recording and workflow automation extension with a single purpose: to enable users to record their screen interactions and convert them into shareable, executable workflow automations. All data collection and processing is limited to supporting this core functionality.
                   </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4 text-white">Core Features</h2>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Workflow Recording:</strong> Capture navigation, clicks, keystrokes, copy/paste, and file interactions</li>
+                    <li><strong>Browser Sync:</strong> Sync your login/session state from your local browser to Rebrowse Cloud Browser</li>
+                    <li><strong>Seamless Authentication:</strong> One login across the extension and app.rebrowse.me</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4 text-white">Data Collection &amp; Usage Disclosure</h2>
+                  <p className="mb-4">
+                    To enable workflow automation and browser sync, Rebrowse Recorder may collect the following user data:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Session cookies and login state:</strong> Used only to replicate workflows on the Rebrowse Cloud Browser</li>
+                    <li><strong>Recorded interactions:</strong> Navigation steps, clicks, typed input, and copy/paste actions used only to create and replay workflows you explicitly record</li>
+                    <li><strong>Authentication data:</strong> Used only for secure login to your Rebrowse account</li>
+                  </ul>
+                  <p className="mt-4">
+                    We do not sell or share data with third parties. All data is encrypted in transit and at rest.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4 text-white">Consent and Control</h2>
+                  <p className="mb-4">
+                    <strong>Consent Required:</strong> Before any data is collected, you will be asked for explicit permission. You may revoke access at any time from the extension settings.
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Consent prompts appear before recording or syncing any data</li>
+                    <li>You can disable Workflow Recording and Browser Sync individually in the extension options</li>
+                    <li>Revoking consent immediately stops collection and clears granted permissions</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4 text-white">Opt-Out and Offline Mode</h2>
+                  <p className="mb-4">
+                    You can opt out of data collection from within the extension at any time:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Turn off Workflow Recording to prevent capture of interactions</li>
+                    <li>Turn off Browser Sync to prevent session cookies/login state syncing</li>
+                    <li>Use Offline Mode to store recordings locally only; nothing is uploaded until you choose to sync</li>
+                  </ul>
                 </section>
 
                 <section>
@@ -159,7 +216,7 @@ export default function Privacy() {
                     <li><strong>Sharing Control:</strong> Choose which workflows to share and with whom</li>
                   </ul>
                   <p className="mt-4">
-                    To exercise these rights, contact us at privacy@rebrowse.me or use your account settings.
+                    To exercise these rights, contact us at hi@rebrowse.me or use your account settings.
                   </p>
                 </section>
 
@@ -174,7 +231,13 @@ export default function Privacy() {
                     <li>Web browsing activity is collected only during active recording sessions for workflow generation</li>
                     <li>We do not collect, use, or transfer user data for purposes unrelated to our single purpose</li>
                     <li>All third-party data sharing is limited to necessary service providers bound by strict data protection agreements</li>
+                    <li>Prominent disclosure of data collection and handling appears in this Privacy Policy and on our Chrome Web Store listing</li>
+                    <li>Data collection only begins after explicit user consent; consent can be revoked at any time in the extension settings</li>
+                    <li>Users can opt out of data collection via the extension options and use an offline mode</li>
                   </ul>
+                  <p className="mt-4 text-sm">
+                    Corresponds to notification ID: <strong>Purple Nickel</strong>
+                  </p>
                 </section>
 
                 <section>
@@ -186,7 +249,7 @@ export default function Privacy() {
                     <li>We process your data based on legitimate interest and consent for our core functionality</li>
                     <li>You have additional rights under GDPR including data portability and the right to be forgotten</li>
                     <li>Data transfers outside your region are protected by appropriate safeguards</li>
-                    <li>You may contact our Data Protection Officer at privacy@rebrowse.me</li>
+                    <li>You may contact our Data Protection Officer at hi@rebrowse.me</li>
                   </ul>
                 </section>
 
@@ -196,8 +259,8 @@ export default function Privacy() {
                     If you have any questions about this Privacy Policy, our data practices, or wish to exercise your privacy rights, please contact us:
                   </p>
                   <div className="space-y-2">
-                    <p><strong>Email:</strong> <a href="mailto:privacy@rebrowse.me" className="text-purple-400 hover:text-purple-300">hello@rebrowse.me</a></p>
-                    <p><strong>Support:</strong> <a href="mailto:support@rebrowse.me" className="text-purple-400 hover:text-purple-300">hello@rebrowse.me</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hi@rebrowse.me" className="text-purple-400 hover:text-purple-300">hi@rebrowse.me</a></p>
+                    <p><strong>Support:</strong> <a href="https://t.me/rebrowser" className="text-purple-400 hover:text-purple-300">Rebrowse Telegram Channel</a></p>
                     <p><strong>Response Time:</strong> We will respond to privacy inquiries within 30 days</p>
                   </div>
                 </section>
@@ -214,9 +277,9 @@ export default function Privacy() {
                     <li>Continued use of our service after changes constitutes acceptance of the new policy</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-400">
-                    <strong>Last updated:</strong> June 2025<br/>
-                    <strong>Effective date:</strong> June 2025<br/>
-                    <strong>Version:</strong> 0.1.0
+                    <strong>Last updated:</strong> September 2025<br/>
+                    <strong>Effective date:</strong> September 2025<br/>
+                    <strong>Version:</strong> 0.2.0
                   </p>
                 </section>
               </div>
