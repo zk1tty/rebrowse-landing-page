@@ -36,22 +36,22 @@ export default function Home() {
             role="dialog"
             aria-modal="true"
           >
-            <button
-              onClick={(e) => { e.stopPropagation(); setIsImageOpen(false); }}
-              aria-label="Close full-screen image"
-              className="absolute top-4 right-4 text-white text-3xl leading-none"
-            >
-              &times;
-            </button>
             <div className="relative w-screen h-screen" onClick={(e) => e.stopPropagation()}>
               <Image
-                src="/images/4-runs-on-canvas.png"
+                src="/images/4-panels-canvas.png"
                 alt="v0.2.0 - production-ready"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsImageOpen(false); }}
+              aria-label="Close full-screen image"
+              className="absolute top-4 right-4 text-white text-3xl leading-none z-[101]"
+            >
+              &times;
+            </button>
           </div>
         )}
         {/* Only show header if TryOutModal is NOT open */}
