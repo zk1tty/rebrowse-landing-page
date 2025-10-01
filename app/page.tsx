@@ -21,6 +21,7 @@ export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
   const [isTryOutOpen, setIsTryOutOpen] = useState(false);
   const [isEventOpen, setIsEventOpen] = useState(false);
+  const [isImageOpen, setIsImageOpen] = useState(false);
 
   return (
     <>
@@ -28,6 +29,31 @@ export default function Home() {
         <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
         <TryOutModal isOpen={isTryOutOpen} onClose={() => setIsTryOutOpen(false)} />
         <EventModal isOpen={isEventOpen} onClose={() => setIsEventOpen(false)} />
+        {isImageOpen && (
+          <div
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center"
+            onClick={() => setIsImageOpen(false)}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsImageOpen(false); }}
+              aria-label="Close full-screen image"
+              className="absolute top-4 right-4 text-white text-3xl leading-none"
+            >
+              &times;
+            </button>
+            <div className="relative w-screen h-screen" onClick={(e) => e.stopPropagation()}>
+              <Image
+                src="/images/4-runs-on-canvas.png"
+                alt="v0.2.0 - production-ready"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        )}
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
           <header className="w-full sticky top-0 z-50 bg-black/90 backdrop-blur">
@@ -85,7 +111,7 @@ export default function Home() {
                 <h1 className="text-[1.2rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
-                    <span>n8n for Cloud Browser Automation</span>
+                    <span>n8n for Browser Automation</span>
                   </span>
                 </h1>
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -159,12 +185,18 @@ export default function Home() {
                  {/* add the oneliner description on the top of the image */}
                  <div className="text-center mb-8">
                    <p className="text-lg sm:text-2xl text-white mb-4">
-                     v0.2.0 - Techy features 🤓
+                     v0.2.0 - Boost concurrency and Control the performance.
                    </p>
                  </div>
-                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
+                <div 
+                  className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-zoom-in"
+                  onClick={() => setIsImageOpen(true)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsImageOpen(true); } }}
+                >
                    <Image 
-                     src="/images/v0.2-core-feature.png" 
+                     src="/images/4-panels-canvas.png" 
                      alt="v0.2.0 - production-ready" 
                      width={1000} 
                      height={1000}
