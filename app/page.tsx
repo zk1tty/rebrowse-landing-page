@@ -117,7 +117,7 @@ export default function Home() {
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                   Record > Replay > Fix  AI browser flows - at a glance.
                   <br />
-                  with the realtime streaming of headless browsers.
+                  with the world-first live-streaming of headless browsers 🤯
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
