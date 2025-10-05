@@ -153,7 +153,7 @@ export default function Home() {
               </a>
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
-                videoSrc="/videos/grok-post-with-cloud-run.mp4"
+                videoSrc="/videos/rebrowse-demo-with-music.mp4"
                 title=""
                 description= ""
                 bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account.\nYou can run the multipul browserflows in one click, from your phone.🤯"}
