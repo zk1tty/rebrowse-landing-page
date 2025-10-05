@@ -104,7 +104,7 @@ export default function Home() {
                 <div className="flex items-center justify-center mb-3">
                   <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
                     <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-xs sm:text-sm md:text-base text-gray-200">Browser-as-a-Service for Human</span>
+                    <span className="text-xs sm:text-sm md:text-base text-gray-200">Browser-Automaitonas-as-a-Service</span>
                     <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
@@ -115,7 +115,9 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Record and Replay browser flows - in one click.
+                  Record > Replay > Fix  AI browser flows - at a glance.
+                  <br />
+                  with the realtime streaming of headless browsers.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
