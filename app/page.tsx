@@ -114,7 +114,7 @@ export default function Home() {
                     <span>n8n for Browser Automation</span>
                   </span>
                 </h1>
-                <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                   Record → Monitor → Run Agentic browser flows.
                   <br />
                   with the world-first live-streaming of headless browsers 🤯
