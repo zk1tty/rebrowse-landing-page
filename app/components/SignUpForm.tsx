@@ -7,7 +7,7 @@ const SignUpForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xjkwgdjd");
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
-  const dockerCommand = 'docker rebrowse up -d';
+  const installCommand = 'npm i -g @railway/cli';
 
   useEffect(() => {
     if (state.succeeded) {
@@ -23,7 +23,7 @@ const SignUpForm: React.FC = () => {
 
   const handleCopyDocker = async () => {
     try {
-      await navigator.clipboard.writeText(dockerCommand);
+      await navigator.clipboard.writeText(installCommand);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch (_) {
@@ -145,12 +145,11 @@ const SignUpForm: React.FC = () => {
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)]">
               <div className="flex items-center justify-center gap-2">
-                <div className="font-medium">Install with Docker</div>
-                <img alt="Docker" className="h-5 w-5" src="https://cdn.simpleicons.org/docker/2496ED" />
+                <div className="font-medium">Install with npm(Coming soon!)</div>
               </div>
               <div className="mt-3 relative max-w-full">
                 <pre className="rounded bg-black/60 text-stone-100 px-3 py-2 text-xs sm:text-sm overflow-x-auto border border-white/10">
-<code>{dockerCommand}</code>
+<code>{installCommand}</code>
                 </pre>
                 <button
                   type="button"
