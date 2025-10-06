@@ -108,16 +108,19 @@ export default function Home() {
                     <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
-                <h1 className="text-[1.2rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight" style={{ animationDelay: '0.2s' }}>
+                <h1 className="text-[1.2rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
-                    <span>n8n for Browser Automation</span>
+                    <span>
+                      The Open Source{' '}
+                      <span className="text-purple-300">Browser Agent Builder</span>
+                    </span>
                   </span>
                 </h1>
                 <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Record → Monitor → Run Agentic browser flows.
+                  Record → Monitor → Run 100x browser flows
                   <br />
-                  with the world-first live-streaming of headless browsers 🤯
+                  with the word-first live-streaming of headless browser views 🤯
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
