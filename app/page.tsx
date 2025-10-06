@@ -115,7 +115,7 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Record > Replay > Fix  AI browser flows - at a glance.
+                  Record → Monitor → Run Agentic browser flows.
                   <br />
                   with the world-first live-streaming of headless browsers 🤯
                 </h2>
