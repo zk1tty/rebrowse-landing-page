@@ -7,7 +7,7 @@ const SignUpForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xjkwgdjd");
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
-  const installCommand = 'npm i -g @railway/cli';
+  const installCommand = 'npx rebrowse';
 
   useEffect(() => {
     if (state.succeeded) {
@@ -118,28 +118,26 @@ const SignUpForm: React.FC = () => {
           <div className="mt-2 text-md text-stone-200">
               Quick start!
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors">
+            <a
+              href="https://chromewebstore.google.com/detail/fedihgolnjheimplodebfklbncpkamgg?utm_source=item-share-cb"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Rebrowse Recorder Chrome Extension"
+              className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
+            >
               <img alt="Google Chrome" className="h-5 w-5" src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" />
-              <button
-                type="button"
-                onClick={() => openInNewTab('https://chromewebstore.google.com/detail/fedihgolnjheimplodebfklbncpkamgg?utm_source=item-share-cb')}
-                aria-label="Open Rebrowse Recorder Chrome Extension"
-              >
-                Rebrowse Recorder (Chrome Extension)
-              </button>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors">
+              <span>Rebrowse Recorder (Chrome Extension)</span>
+            </a>
+            <a
+              href="https://app.rebrowse.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Rebrowse App"
+              className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
+            >
               <Cloud className="h-5 w-5" aria-hidden="true" />
-              <div>
-                <button
-                  type="button"
-                  onClick={() => openInNewTab('https://app.rebrowse.me')}
-                  aria-label="Open Rebrowse App"
-                >
-                  Rebrowse App
-                </button> to try cloud run
-              </div>
-            </div>
+              <span>Rebrowse App to try Cloud Run</span>
+            </a>
             <div className="mt-2 text-md text-stone-200">
               Do you want to self host?
             </div>
