@@ -108,7 +108,7 @@ export default function Home() {
                     <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
-                <h1 className="text-[1.2rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
+                <h1 className="text-[1.8rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
@@ -118,12 +118,14 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Single screen-record → Thousands of browser flows.
                   <br />
-                  with the browser live-preview and live-evals🤯
+                  Single screen-record → Thousands of browser flows
                   <br />
                   <br />
-                  No code. No prompt.
+                  with browser live-preview and live-evals🤯
+                  <br />
+                  <br />
+                  No code. No prompt. In one click.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
