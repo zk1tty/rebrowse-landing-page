@@ -32,14 +32,6 @@ export default function AutoPlayVideoSection({
                 console.log('Autoplay blocked');
               });
             }
-            
-            // Auto-open full-screen video after a short delay
-            setTimeout(() => {
-              if (!hasTriggered) {
-                setIsVideoModalOpen(true);
-                setHasTriggered(true);
-              }
-            }, 1000); // 1 second delay
           }
         });
       },
@@ -113,12 +105,7 @@ export default function AutoPlayVideoSection({
               </div>
             </div> */}
 
-            {/* Auto-play indicator */}
-            {!hasTriggered && (
-              <div className="absolute top-4 left-4 bg-purple-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white">
-                Auto-play on scroll
-              </div>
-            )}
+            {/* Click to play only - no auto-open on scroll */}
           </div>
 
           {/* Bottom gradient */}

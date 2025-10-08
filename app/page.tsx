@@ -112,15 +112,18 @@ export default function Home() {
                   <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      The Open Source{' '}
-                      <span className="text-purple-300">Browser Agent Builder</span>
+                      Loom for {' '}
+                      <span className="text-purple-300">Browser Automation</span>
                     </span>
                   </span>
                 </h1>
                 <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Record → Monitor → Run 100x browser flows
+                  Single screen-record → Thousands of browser flows.
                   <br />
-                  with the word-first live-streaming of headless browser views 🤯
+                  with the browser live-preview and live-evals🤯
+                  <br />
+                  <br />
+                  No code. No prompt.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
