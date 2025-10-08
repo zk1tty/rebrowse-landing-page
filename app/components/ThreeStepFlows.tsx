@@ -9,6 +9,7 @@ import {
   RotateCw,
   User,
   Video,
+  ArrowBigRight,
 } from "lucide-react";
 import Image from 'next/image';
 import step1Flow from '../../svgs/LP-Step1.svg';
@@ -173,8 +174,16 @@ const ThreeStepFlows: React.FC = () => {
             </button>
           </div>
 
-          <p className="text-white mb-4 sm:mb-6 text-sm md:text-base">
-            prompt 💬 → [ChatGPT] → Ghibli image 🖼️ → [Krea.ai] → movie 🎦
+          <p className="text-white mb-4 sm:mb-6 text-sm md:text-base flex items-center gap-1 flex-wrap">
+            <span>prompt 💬</span>
+            <ArrowBigRight className="inline w-4 h-4 align-middle" aria-hidden="true" />
+            <span>[ChatGPT]</span>
+            <ArrowBigRight className="inline w-4 h-4 align-middle" aria-hidden="true" />
+            <span>Ghibli image 🖼️</span>
+            <ArrowBigRight className="inline w-4 h-4 align-middle" aria-hidden="true" />
+            <span>[Krea.ai]</span>
+            <ArrowBigRight className="inline w-4 h-4 align-middle" aria-hidden="true" />
+            <span>movie 🎦</span>
           </p>
 
           <div className="bg-stone-800 border border-stone-700 rounded-sm mb-6 overflow-hidden flex flex-col h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">

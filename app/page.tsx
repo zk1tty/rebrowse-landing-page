@@ -15,7 +15,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Puzzle, Send, User, Blocks } from 'lucide-react';
+import { Puzzle, Send, User, Blocks, ArrowBigRight } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -119,7 +119,7 @@ export default function Home() {
                 </h1>
                 <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                   <br />
-                  Single screen-record → Thousands of browser flows
+                  Single screen-record <ArrowBigRight className="inline w-8 h-8 align-middle" aria-hidden="true" /> Hundreds of browser flows
                   <br />
                   <br />
                   with browser live-preview and live-evals🤯
@@ -173,15 +173,6 @@ export default function Home() {
                 <div className="my-16">
                 </div>
               </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-16 text-center">
-                Turn <span className="text-purple-400">one</span> repetitive browser flow into <span className="text-purple-400">100 runs</span> in one click.
-                <br />
-                <br />
-                for no-API ops, and multi SNS accounts, multi AI tool flow. 
-                <br />
-                <br />
-                import from browser-use and run <span className="text-purple-400">20x</span> faster.
-              </h2>
               <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div>
