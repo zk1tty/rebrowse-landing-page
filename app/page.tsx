@@ -57,8 +57,8 @@ export default function Home() {
         )}
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
-          <header className="w-full sticky top-0 z-50 bg-black/90 backdrop-blur">
-            <div className="max-w-[1200px] mx-auto px-4 py-8">
+          <header className="w-full fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur h-16 sm:h-20">
+            <div className="max-w-[1200px] h-full mx-auto px-4">
               <nav className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center">
@@ -73,10 +73,6 @@ export default function Home() {
                   <span className="text-lg sm:text-xl font-bold">Rebrowse</span>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
-                  <a href="#" onClick={(e) => { e.preventDefault(); setIsQROpen(true); }} className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base flex items-center gap-1 cursor-pointer">
-                    <img src="/svgs/qr.svg" alt="QR Code" width={20} height={20} className="mr-1" />
-                    QR
-                  </a>
                   <a href="https://n0ri.com" className="hover:text-purple-400 transition-colors text-xs sm:text-sm md:text-base flex items-center gap-1">
                     <img src="/svgs/hugging-face.svg" alt="Hugging Face" width={20} height={20} className="mr-1" />
                     Creator
@@ -98,19 +94,20 @@ export default function Home() {
             </div>
           </header>
         )}
-        <div className="flex flex-col min-h-screen">
+        <div className={`flex flex-col min-h-screen ${!isTryOutOpen ? 'pt-16 sm:pt-20' : ''}`}>
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
               <div className="text-center mb-8 w-full px-4 sm:px-0">
-                <div className="flex items-center justify-center mb-3">
+                {/* app badge */}
+                <div className="flex items-center justify-center mt-4 mb-3">
                   <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
                     <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-xs sm:text-sm md:text-base text-gray-200">Browser-Automaitonas-as-a-Service</span>
+                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">Browser-Automaitonas-as-a-Service</span>
                     <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
-                <h1 className="text-[1.8rem] sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
-                  <span className="inline-flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap">
+                <h1 className="mt-4 text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
+                  <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
                       Loom for {' '}
@@ -215,7 +212,7 @@ export default function Home() {
               {/* Add sign up for whitelists */}
               <div className="mb-8 sm:mb-16">
               <h2 className="sm:w-auto mx-auto text-center text-4xl font-bold mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8 font-['Times_New_Roman',_Times,_serif]">
-                So try Rebrowse, now!
+                try Rebrowse now!
               </h2>
                 <SignUpForm />
               </div>

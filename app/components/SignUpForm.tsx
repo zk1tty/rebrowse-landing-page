@@ -106,7 +106,7 @@ const SignUpForm: React.FC = () => {
               className="rounded-2xl border border-white/10 bg-white/5 text-white px-8 py-6 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
             >
               <img alt="Google Chrome" className="h-6 w-6" src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" />
-              <span>Rebrowse Recorder (Chrome Extension)</span>
+              <span>Rebrowse Recorder</span>
             </a>
             <a
               href="https://app.rebrowse.me"
@@ -116,14 +116,14 @@ const SignUpForm: React.FC = () => {
               className="rounded-2xl border border-white/10 bg-white/5 text-white px-8 py-6 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
             >
               <Cloud className="h-6 w-6 text-purple-500" fill="purple-500" stroke="white" aria-hidden="true" />
-              <span>Rebrowse App to try Cloud Run</span>
+              <span>Rebrowse App</span>
             </a>
             <div className="mt-2 text-md text-stone-200">
               Do you want to self host?
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)]">
               <div className="flex items-center justify-center gap-2">
-                <div className="font-medium">Install with npm(Coming soon!)</div>
+                <div className="font-medium">Install with npm<br />(Coming soon!)</div>
               </div>
               <div className="mt-3 relative max-w-full">
                 <pre className="rounded bg-black/60 text-stone-100 px-3 py-2 text-xs sm:text-sm overflow-x-auto border border-white/10">
