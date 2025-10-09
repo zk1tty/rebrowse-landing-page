@@ -16,7 +16,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Puzzle, Send, User, Blocks, ArrowBigRight } from 'lucide-react';
+import { Puzzle, Send, Zap, Blocks, ArrowBigRight } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -58,8 +58,8 @@ export default function Home() {
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
           <header className="w-full fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur h-16 sm:h-20">
-            <div className="max-w-[1200px] h-full mx-auto px-4">
-              <nav className="flex justify-between items-center">
+            <div className="max-w-[1200px] h-full mx-auto px-4 flex items-center">
+              <nav className="flex justify-between items-center w-full">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center">
                     <Image
@@ -102,8 +102,8 @@ export default function Home() {
                 <div className="flex items-center justify-center mt-4 mb-3">
                   <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
                     <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">Browser-Automaitonas-as-a-Service</span>
-                    <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
+                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">Simplest-Browser-Automaitona</span>
+                    <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
                 <h1 className="mt-4 text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>

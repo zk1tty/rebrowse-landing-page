@@ -39,8 +39,8 @@ const SignUpForm: React.FC = () => {
     <div className="max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
       {!state.succeeded && (
         <form onSubmit={onSubmitForm} aria-label="Hero Download Form" className="w-full">
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch">
-            <div className="relative flex-1">
+          <div className="flex flex-row gap-2 sm:gap-4 items-stretch">
+            <div className="relative flex-1 min-w-0">
               <input
                 id="email"
                 name="email"
@@ -50,7 +50,7 @@ const SignUpForm: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required 
                 disabled={state.submitting}
-                className="w-full h-12 sm:h-14 rounded-md bg-stone-800/60 border border-purple-500/20 px-4 sm:px-5 text-white placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/40 transition"
+                className="w-full h-10 sm:h-14 rounded-md bg-stone-800/60 border border-purple-500/20 px-3 sm:px-5 text-white placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/40 transition"
               />
               <ValidationError
                 prefix="Email"
@@ -62,12 +62,12 @@ const SignUpForm: React.FC = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="h-12 sm:h-14 px-5 sm:px-6 rounded-md bg-white text-black font-semibold whitespace-nowrap hover:bg-stone-100 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2"
+              className="h-10 sm:h-14 px-3 sm:px-6 rounded-md bg-white text-black font-semibold whitespace-nowrap hover:bg-stone-100 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-base shrink-0"
             >
               <img
                 src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg"
                 alt="Google Chrome"
-                className="h-5 w-5"
+                className="h-4 w-4 sm:h-5 sm:w-5"
                 loading="lazy"
               />
               {state.submitting ? 'Please wait...' : 'Try Rebrowse'}
@@ -94,7 +94,7 @@ const SignUpForm: React.FC = () => {
           </div>
 
           {/* Packages list */}
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-3 sm:space-y-4">
           <div className="mt-2 text-md text-stone-200">
               Quick start!
             </div>
@@ -103,9 +103,9 @@ const SignUpForm: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Rebrowse Recorder Chrome Extension"
-              className="rounded-2xl border border-white/10 bg-white/5 text-white px-8 py-6 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
+              className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 sm:px-8 sm:py-6 text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
             >
-              <img alt="Google Chrome" className="h-6 w-6" src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" />
+              <img alt="Google Chrome" className="h-5 w-5 sm:h-6 sm:w-6" src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" />
               <span>Rebrowse Recorder</span>
             </a>
             <a
@@ -113,15 +113,15 @@ const SignUpForm: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Rebrowse App"
-              className="rounded-2xl border border-white/10 bg-white/5 text-white px-8 py-6 flex items-center justify-center gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
+              className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 sm:px-8 sm:py-6 text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-purple-500/40 transition-colors"
             >
-              <Cloud className="h-6 w-6 text-purple-500" fill="purple-500" stroke="white" aria-hidden="true" />
+              <Cloud className="h-5 w-5 sm:h-6 sm:w-6 text-purple-500" fill="purple-500" stroke="white" aria-hidden="true" />
               <span>Rebrowse App</span>
             </a>
             <div className="mt-2 text-md text-stone-200">
               Do you want to self host?
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-4 py-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)]">
+            <div className="rounded-2xl border border-white/10 bg-white/5 text-white px-3 py-2 sm:px-4 sm:py-3 ring-1 ring-white/10 hover:ring-purple-400/40 transition-shadow shadow-[0_0_20px_rgba(168,85,247,0.15)] text-sm sm:text-base">
               <div className="flex items-center justify-center gap-2">
                 <div className="font-medium">Install with npm<br />(Coming soon!)</div>
               </div>

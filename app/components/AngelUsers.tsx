@@ -67,15 +67,15 @@ const AngelUsers: React.FC = () => {
           </div>
           {/* Stats cards (mapped to current user) */}
           <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center flex flex-col items-center">
               <div className="text-purple-400 text-2xl sm:text-3xl md:text-5xl font-extrabold leading-none">{stats.developmentTime}</div>
               <div className="mt-2 text-stone-300 text-xs sm:text-sm whitespace-nowrap">creation</div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center flex flex-col items-center">
               <div className="text-purple-400 text-2xl sm:text-3xl md:text-5xl font-extrabold leading-none">{stats.concurrency}</div>
               <div className="mt-2 text-stone-300 text-xs sm:text-sm whitespace-nowrap">{stats.concurrencyLabel}</div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 text-center flex flex-col items-center">
               <div className="text-purple-400 text-2xl sm:text-3xl md:text-5xl font-extrabold leading-none">{stats.accuracy}</div>
               <div className="mt-2 text-stone-300 text-xs sm:text-sm whitespace-nowrap">success</div>
             </div>
