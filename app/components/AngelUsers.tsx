@@ -39,13 +39,13 @@ const AngelUsers: React.FC = () => {
 
   return (
     <div className="mx-auto px-4">
-      <h2 className="sm:w-auto mx-auto text-center text-4xl font-bold mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8 font-['Times_New_Roman',_Times,_serif]">
+      <h2 className="sm:w-auto mx-auto text-center text-3xl font-bold mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8 font-['Times_New_Roman',_Times,_serif]">
         Users' voices
       </h2>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto w-full max-w-4xl">
-          <div className="relative w-4/5 mx-auto overflow-hidden rounded-2xl">
+          <div className="relative mx-auto overflow-hidden rounded-2xl">
             <Image
               key={slide.src}
               src={slide.src}

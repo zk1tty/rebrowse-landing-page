@@ -212,7 +212,7 @@ export default function Home() {
               {/* Add sign up for whitelists */}
               <div className="mb-8 sm:mb-16">
               <h2 className="sm:w-auto mx-auto text-center text-4xl font-bold mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8 font-['Times_New_Roman',_Times,_serif]">
-                try Rebrowse now!
+                try now!
               </h2>
                 <SignUpForm />
               </div>
