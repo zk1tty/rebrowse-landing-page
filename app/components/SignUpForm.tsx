@@ -144,22 +144,22 @@ const SignUpForm: React.FC = () => {
       )}
 
       {/* Social links - visible regardless of submission state */}
-      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+      <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-6">
         <a
           href="https://github.com/zk1tty/rebrowse-app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition px-8 py-4"
+          className="inline-flex items-center rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition px-3 py-1.5 sm:px-8 sm:py-4"
         >
-          <span className="text-white text-lg">Star on GitHub</span>
-          <img className="ml-2 h-7 w-7" alt="github logo" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c83c3d33dde7a684a8f690_github.svg" />
+          <span className="text-white text-sm sm:text-lg">Star on GitHub</span>
+          <img className="ml-2 h-5 w-5 sm:h-7 sm:w-7" alt="github logo" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c83c3d33dde7a684a8f690_github.svg" />
         </a>
-        <div className="flex items-center gap-6">
-          <a href="https://discord.gg/Z8AMERgZ" target="_blank" rel="noopener noreferrer" className="p-2">
-            <img alt="Discord" className="h-7 w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68df15429861e98f202bfba8_discord-icon.svg" />
+        <div className="flex items-center gap-3 sm:gap-6">
+          <a href="https://discord.gg/Z8AMERgZ" target="_blank" rel="noopener noreferrer" className="p-1 sm:p-2">
+            <img alt="Discord" className="h-5 w-5 sm:h-7 sm:w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68df15429861e98f202bfba8_discord-icon.svg" />
           </a>
-          <a href="https://x.com/n0rikitty" target="_blank" rel="noopener noreferrer" className="p-2">
-            <img alt="X logo" className="h-7 w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c843eb737d1ddcf5404f8c_new-twitter.svg" />
+          <a href="https://x.com/n0rikitty" target="_blank" rel="noopener noreferrer" className="p-1 sm:p-2">
+            <img alt="X logo" className="h-5 w-5 sm:h-7 sm:w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c843eb737d1ddcf5404f8c_new-twitter.svg" />
           </a>
         </div>
       </div>

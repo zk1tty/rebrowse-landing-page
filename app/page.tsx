@@ -4,6 +4,7 @@ import FigmaEmbed from './components/FigmaEmbed'
 import ThreeStepFlows from './components/ThreeStepFlows'
 import FeatureShowcase from './components/FeatureShowcase'
 import TargetAudience from './components/TargetAudience'
+import AngelUsers from './components/AngelUsers'
 import SignUpForm from './components/SignUpForm'
 import Image from 'next/image'
 import rebrowseLogo from '../svgs/rebrowse-logo.png'
@@ -118,14 +119,12 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  <br />
                   Single screen-record <ArrowBigRight className="inline w-8 h-8 align-middle" aria-hidden="true" /> Hundreds of browser flows
                   <br />
                   <br />
                   with browser live-preview and live-evals🤯
                   <br />
-                  <br />
-                  No code. No prompt. In one click.
+                  No code. No prompt.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
@@ -166,22 +165,17 @@ export default function Home() {
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
                 title=""
                 description= ""
-                bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account.\nYou can run the multipul browserflows in one click, from your phone.🤯"}
+                bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account."}
               />
               {/* Hero Title Section */}
               <div className="text-center mb-8 w-full">
                 <div className="my-16">
                 </div>
               </div>
-              <div className="flex justify-center w-full mb-8">
+              {/* <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
-              </div>
-              {/* Auto-play Video Section */}
-              <AutoPlayVideoSection 
-                videoSrc="/videos/demo-grok-post.mp4"
-                title=""
-                description="v0.1.0 - Grok-powered X bot demo"
-              />
+              </div> */}
+
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
                  {/* add the oneliner description on the top of the image */}
                  <div className="text-center mb-8">
@@ -206,9 +200,25 @@ export default function Home() {
                  </div>
                </div> 
               {/* <FeatureShowcase /> */}
-              <ThreeStepFlows />
-              <TargetAudience />
-              <TechnicalRoadmapSection />
+              {/* <ThreeStepFlows /> */}
+              {/* <TargetAudience /> */}
+              <AngelUsers />
+              
+              {/* Auto-play Video Section */}
+              <AutoPlayVideoSection 
+                videoSrc="/videos/demo-grok-post.mp4"
+                title="Recording demo"
+                description="1 min to build a Grok-powered X bot"
+              />
+
+              {/* <TechnicalRoadmapSection /> */}
+              {/* Add sign up for whitelists */}
+              <div className="mb-8 sm:mb-16">
+              <h2 className="sm:w-auto mx-auto text-center text-4xl font-bold mb-6 border-b border-stone-800 pb-2 text-stone-50 mt-8 font-['Times_New_Roman',_Times,_serif]">
+                So try Rebrowse, now!
+              </h2>
+                <SignUpForm />
+              </div>
             </div>
           </main>
 

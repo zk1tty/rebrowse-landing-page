@@ -64,7 +64,7 @@ export default function AutoPlayVideoSection({
         className="relative w-full max-w-4xl mx-auto mb-16 px-4"
       >
         <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold mb-6 border-b border-stone-800 pb-2 text-white mt-8 font-['Times_New_Roman',_Times,_serif]">
             {title}
           </h2>
           <p className="text-lg text-gray-400">
