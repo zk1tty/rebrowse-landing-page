@@ -97,10 +97,12 @@ export default function Home() {
         <div className={`flex flex-col min-h-screen ${!isTryOutOpen ? 'pt-16 sm:pt-20' : ''}`}>
           <main className="flex-1 w-full">
             <div className="container-app py-8 sm:py-16">
-              <div className="relative text-center mb-8 w-full px-0 overflow-hidden rounded-xl">
-                {/* ambient glow + subtle grid */}
-                <div className="hero-ambient"></div>
+                {/* ambient glow + subtle grid + vignette + noise */}
                 <div className="grid-overlay"></div>
+                <div className="hero-ambient"></div>
+                <div className="hero-vignette pointer-events-none"></div>
+                <div className="hero-noise pointer-events-none"></div>
+              <div className="relative text-center mb-8 w-full px-0 overflow-hidden rounded-xl">
               {/* Backed by badge */}
               <div className="flex items-center justify-center mb-2">
                 <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
@@ -127,7 +129,7 @@ export default function Home() {
                   Single screen-record <span className="animate-arrow-move inline-block">→</span> 100x workflows
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  Teach your AI browser by recording waht you do. No code, no prompt.
+                  Teach your AI browser by recording what you do. No code, no prompt.
                 </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
