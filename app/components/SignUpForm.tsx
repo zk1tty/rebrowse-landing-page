@@ -45,7 +45,7 @@ const SignUpForm: React.FC = () => {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="Enter your email address"
+                placeholder="email?"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required 
