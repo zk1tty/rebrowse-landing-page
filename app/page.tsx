@@ -16,7 +16,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
-import { Puzzle, Send, Zap, Blocks, ArrowBigRight } from 'lucide-react';
+import { Puzzle, Send, Zap, Blocks, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-gradient-to-b from-[#0B0B0D] to-[#131316] text-white">
         <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
         <TryOutModal isOpen={isTryOutOpen} onClose={() => setIsTryOutOpen(false)} />
         <EventModal isOpen={isEventOpen} onClose={() => setIsEventOpen(false)} />
@@ -57,7 +57,7 @@ export default function Home() {
         )}
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
-          <header className="w-full fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur h-16 sm:h-20">
+          <header className="w-full fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-[#0B0B0D]/95 to-[#131316]/90 backdrop-blur h-16 sm:h-20">
             <div className="max-w-[1200px] h-full mx-auto px-4 flex items-center">
               <nav className="flex justify-between items-center w-full">
                 <div className="flex items-center gap-2">
@@ -97,66 +97,43 @@ export default function Home() {
         <div className={`flex flex-col min-h-screen ${!isTryOutOpen ? 'pt-16 sm:pt-20' : ''}`}>
           <main className="flex-1 w-full">
             <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-              <div className="text-center mb-8 w-full px-4 sm:px-0">
-                {/* app badge */}
-                <div className="flex items-center justify-center mt-4 mb-3">
-                  <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
-                    <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">The-Simplest-Browser-Automation</span>
-                    <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
-                  </div>
-                </div>
+              <div className="relative text-center mb-8 w-full px-4 sm:px-0">
+                {/* optional faint browser-grid overlay */}
+                <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:24px_24px] rounded-xl"></div>
+              {/* Backed by badge */}
+              <div className="flex items-center justify-center mb-2">
+                <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
+                <Image
+                  alt="Browser-use"
+                  loading="lazy"
+                  width={808}
+                  height={161}
+                  className="h-4 sm:h-5 md:h-6 w-auto opacity-90"
+                  style={{ color: 'transparent' }}
+                  src="/images/browser-use-white-text.png"
+                />
+              </div>
                 <h1 className="mt-4 text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
                       Loom for {' '}
-                      <span className="text-purple-300">Browser Automation</span>
+                      <span className="text-[#B692F6]">Browser Automation</span>
                     </span>
                   </span>
                 </h1>
-                <h2 className="text-sm sm:text-xl md:text-2xl font-bold mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  Single screen-record <ArrowBigRight className="inline w-8 h-8 align-middle" aria-hidden="true" /> Hundreds of browser flows
-                  <br />
-                  <br />
-                  with browser live-preview and live-evals🤯
-                  <br />
-                  No code. No prompt.
+                <h2 className="text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
+                  Single screen-record → 100x workflows
                 </h2>
+                <p className="text-sm sm:text-sm text-gray-400 mb-8 sm:mb-16 animate-fade-in-up text-white" style={{ animationDelay: '0.35s' }}>
+                  No prompt. No code.
+                </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
                   <SignUpForm />
                 </div>
               </div>
-              <div className="flex justify-center items-center w-full mb-8 gap-6 flex-wrap">
-                <div className="flex items-center gap-3">
-                  <span className="text-sm text-white"><span className="text-md font-bold">NOT</span> backed by</span>
-                  <Image
-                    alt="backed by Y Combinator"
-                    loading="lazy"
-                    width={808}
-                    height={161}
-                    className="w-32 sm:w-40 md:w-60"
-                    style={{ color: 'transparent' }}
-                    src="/svgs/YCombinator_logo.svg"
-                  />
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm text-white"> BUT <span className="text-md font-bold">partnered</span> with</span>
-                  <Image
-                    alt="partnered with Browser-use"
-                    loading="lazy"
-                    width={808}
-                    height={161}
-                    className="w-32 sm:w-40 md:w-60"
-                    style={{ color: 'transparent' }}
-                    src="/images/browser-use-white-text.png"
-                  />
-                </div>
-              </div>
-              <a href="https://www.producthunt.com/products/rebrowse?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-rebrowse" target="_blank">
-                <img className="block mx-auto w-2/5 sm:w-[250px] h-auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=987539&theme=light&t=1758515080888" alt="Rebrowse - Turn&#0032;screen&#0045;recording&#0032;into&#0032;100&#0032;browser&#0032;flows&#0032;in&#0032;one&#0032;click&#0046; | Product Hunt" width="250" height="54" />
-              </a>
+
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
@@ -164,11 +141,8 @@ export default function Home() {
                 description= ""
                 bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account."}
               />
-              {/* Hero Title Section */}
-              <div className="text-center mb-8 w-full">
-                <div className="my-16">
-                </div>
-              </div>
+
+              
               {/* <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div> */}
@@ -177,7 +151,7 @@ export default function Home() {
                  {/* add the oneliner description on the top of the image */}
                  <div className="text-center mb-8">
                    <p className="text-lg sm:text-2xl text-white mb-4">
-                     v0.2.0 - Boost concurrency and Control the performance.
+                     v0.2.0 - 4 runs with the real-time preview and evals.
                    </p>
                  </div>
                 <div 
@@ -196,9 +170,6 @@ export default function Home() {
                    />
                  </div>
                </div> 
-              {/* <FeatureShowcase /> */}
-              {/* <ThreeStepFlows /> */}
-              {/* <TargetAudience /> */}
               <AngelUsers />
               
               {/* Auto-play Video Section */}

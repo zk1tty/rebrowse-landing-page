@@ -36,7 +36,7 @@ const SignUpForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+    <div className="w-4/5 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
       {!state.succeeded && (
         <form onSubmit={onSubmitForm} aria-label="Hero Download Form" className="w-full">
           <div className="flex flex-row gap-2 sm:gap-4 items-stretch">
@@ -62,7 +62,7 @@ const SignUpForm: React.FC = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="h-10 sm:h-14 px-3 sm:px-6 rounded-md bg-white text-black font-semibold whitespace-nowrap hover:bg-stone-100 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-base shrink-0"
+              className="h-10 sm:h-14 px-2.5 py-1 sm:px-6 sm:py-3 rounded-md bg-white/5 text-white font-semibold whitespace-nowrap border border-white/30 ring-1 ring-white/20 hover:bg-white/10 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-base shrink-0"
             >
               <img
                 src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg"
@@ -144,22 +144,26 @@ const SignUpForm: React.FC = () => {
       )}
 
       {/* Social links - visible regardless of submission state */}
-      <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-6">
+      <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-6">
         <a
           href="https://github.com/zk1tty/rebrowse-app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition px-3 py-1.5 sm:px-8 sm:py-4"
+          className="inline-flex items-center rounded-md bg-white/5 border border-white/30 ring-1 ring-white/20 hover:bg-white/10 transition px-2.5 py-1 sm:px-6 sm:py-3"
         >
-          <span className="text-white text-sm sm:text-lg">Star on GitHub</span>
-          <img className="ml-2 h-5 w-5 sm:h-7 sm:w-7" alt="github logo" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c83c3d33dde7a684a8f690_github.svg" />
+          <span className="text-white text-xs sm:text-base">Star on Git</span>
+          <img className="ml-2 h-4 w-4 sm:h-6 sm:w-6" alt="github logo" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c83c3d33dde7a684a8f690_github.svg" />
         </a>
+        {/* <img
+          className="ml-2 h-8 sm:h-10 w-auto align-middle"
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=987539&theme=light&t=1758515080888"
+          alt="Rebrowse on Product Hunt"
+          width="250"
+          height="54"
+        /> */}
         <div className="flex items-center gap-3 sm:gap-6">
           <a href="https://discord.gg/Z8AMERgZ" target="_blank" rel="noopener noreferrer" className="p-1 sm:p-2">
-            <img alt="Discord" className="h-5 w-5 sm:h-7 sm:w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68df15429861e98f202bfba8_discord-icon.svg" />
-          </a>
-          <a href="https://x.com/n0rikitty" target="_blank" rel="noopener noreferrer" className="p-1 sm:p-2">
-            <img alt="X logo" className="h-5 w-5 sm:h-7 sm:w-7" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c843eb737d1ddcf5404f8c_new-twitter.svg" />
+            <img alt="Discord" className="h-4 w-4 sm:h-6 sm:w-6" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68df15429861e98f202bfba8_discord-icon.svg" />
           </a>
         </div>
       </div>

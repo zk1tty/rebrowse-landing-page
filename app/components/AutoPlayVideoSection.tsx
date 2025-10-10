@@ -63,17 +63,23 @@ export default function AutoPlayVideoSection({
         ref={sectionRef}
         className="relative w-full max-w-4xl mx-auto mb-16 px-4"
       >
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-6 border-b border-stone-800 pb-2 text-white mt-7 font-['Times_New_Roman',_Times,_serif]">
-            {title}
-          </h2>
-          <p className="text-lg text-gray-400">
-            {description}
-          </p>
-        </div>
+        {((title && title.trim().length > 0) || (description && description.trim().length > 0)) && (
+          <div className="text-center mb-8">
+            {title && title.trim().length > 0 && (
+              <h2 className="text-3xl font-bold mb-6 border-b border-stone-800 pb-2 text-white mt-7 font-['Times_New_Roman',_Times,_serif]">
+                {title}
+              </h2>
+            )}
+            {description && description.trim().length > 0 && (
+              <p className="text-lg text-gray-400">
+                {description}
+              </p>
+            )}
+          </div>
+        )}
 
         <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-pointer group"
+          className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1029] to-[#121528] border border-[#B692F6]/20 cursor-pointer group"
           onClick={handleManualPlay}
         >
           {/* Video Preview */}
@@ -111,7 +117,7 @@ export default function AutoPlayVideoSection({
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
         {bottomText && (
-          <p className="mt-3 text-lg sm:text-xl text-gray-300 text-center whitespace-pre-line">
+          <p className="mt-3 text-sm sm:text-base text-gray-300 text-center whitespace-pre-line">
             {bottomText}
           </p>
         )}
