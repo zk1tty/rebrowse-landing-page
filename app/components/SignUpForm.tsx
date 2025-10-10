@@ -62,7 +62,7 @@ const SignUpForm: React.FC = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="h-10 sm:h-14 px-2.5 py-1 sm:px-6 sm:py-3 rounded-md bg-white/5 text-white font-semibold whitespace-nowrap border border-white/30 ring-1 ring-white/20 hover:bg-white/10 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-base shrink-0"
+              className="h-10 sm:h-14 btn-ghost-sm sm:btn-ghost-lg text-white font-semibold whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-1 sm:gap-2 shrink-0"
             >
               <img
                 src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg"
@@ -149,7 +149,7 @@ const SignUpForm: React.FC = () => {
           href="https://github.com/zk1tty/rebrowse-app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-md bg-white/5 border border-white/30 ring-1 ring-white/20 hover:bg-white/10 transition px-2.5 py-1 sm:px-6 sm:py-3"
+          className="btn-ghost-sm sm:btn-ghost-lg"
         >
           <span className="text-white text-xs sm:text-base">Star on Git</span>
           <img className="ml-2 h-4 w-4 sm:h-6 sm:w-6" alt="github logo" src="https://cdn.prod.website-files.com/688d40041a6f7dfca2e9b515/68c83c3d33dde7a684a8f690_github.svg" />

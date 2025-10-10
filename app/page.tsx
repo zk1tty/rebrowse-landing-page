@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-[#0B0B0D] to-[#131316] text-white">
+      <div className="min-h-screen bg-app text-white overflow-x-hidden">
         <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
         <TryOutModal isOpen={isTryOutOpen} onClose={() => setIsTryOutOpen(false)} />
         <EventModal isOpen={isEventOpen} onClose={() => setIsEventOpen(false)} />
@@ -57,8 +57,8 @@ export default function Home() {
         )}
         {/* Only show header if TryOutModal is NOT open */}
         {!isTryOutOpen && (
-          <header className="w-full fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-[#0B0B0D]/95 to-[#131316]/90 backdrop-blur h-16 sm:h-20">
-            <div className="max-w-[1200px] h-full mx-auto px-4 flex items-center">
+          <header className="w-full fixed top-0 left-0 right-0 z-50 bg-app/90 backdrop-blur h-16 sm:h-20">
+            <div className="container-app h-full flex items-center">
               <nav className="flex justify-between items-center w-full">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center">
@@ -96,10 +96,11 @@ export default function Home() {
         )}
         <div className={`flex flex-col min-h-screen ${!isTryOutOpen ? 'pt-16 sm:pt-20' : ''}`}>
           <main className="flex-1 w-full">
-            <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-              <div className="relative text-center mb-8 w-full px-4 sm:px-0">
-                {/* optional faint browser-grid overlay */}
-                <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:24px_24px] rounded-xl"></div>
+            <div className="container-app py-8 sm:py-16">
+              <div className="relative text-center mb-8 w-full px-0 overflow-hidden rounded-xl">
+                {/* ambient glow + subtle grid */}
+                <div className="hero-ambient"></div>
+                <div className="grid-overlay"></div>
               {/* Backed by badge */}
               <div className="flex items-center justify-center mb-2">
                 <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
@@ -113,20 +114,20 @@ export default function Home() {
                   src="/images/browser-use-white-text.png"
                 />
               </div>
-                <h1 className="mt-4 text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
+                <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      Loom for {' '}
-                      <span className="text-[#B692F6]">Browser Automation</span>
+                      <span className="text-hero-soft">Loom for</span>{' '}
+                      <span className="text-hero-accent">Browser Automation</span>
                     </span>
                   </span>
                 </h1>
-                <h2 className="text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Single screen-record → 100x workflows
+                <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
+                  Single screen-record <span className="animate-arrow-move inline-block">→</span> 100x workflows
                 </h2>
-                <p className="text-sm sm:text-sm text-gray-400 mb-8 sm:mb-16 animate-fade-in-up text-white" style={{ animationDelay: '0.35s' }}>
-                  No prompt. No code.
+                <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
+                  Teach your AI browser by recording waht you do. No code, no prompt.
                 </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
@@ -147,13 +148,13 @@ export default function Home() {
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div> */}
 
-               <div className="relative w-full max-w-4xl mx-auto mb-16 px-4">
+               <div className="relative w-full max-w-4xl mx-auto mb-16 px-4 pt-8 sm:pt-10">
                  {/* add the oneliner description on the top of the image */}
-                 <div className="text-center mb-8">
-                   <p className="text-lg sm:text-2xl text-white mb-4">
-                     v0.2.0 - 4 runs with the real-time preview and evals.
-                   </p>
-                 </div>
+                <div className="text-center mb-4">
+                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
+                    v0.2.0 - 4 runs with the real-time preview and evals.
+                  </p>
+                </div>
                 <div 
                   className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-zoom-in"
                   onClick={() => setIsImageOpen(true)}
