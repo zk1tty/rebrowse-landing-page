@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="flex items-center justify-center mt-4 mb-3">
                   <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/70 bg-white/10 whitespace-nowrap">
                     <span className="h-2 w-2 rounded-full bg-purple-300"></span>
-                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">Simplest-Browser-Automaitona</span>
+                    <span className="text-[clamp(9px,2.8vw,12px)] sm:text-sm md:text-base text-gray-200">The-Simplest-Browser-Automation</span>
                     <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-gray-200" aria-hidden="true" />
                   </div>
                 </div>
