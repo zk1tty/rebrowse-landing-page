@@ -129,10 +129,10 @@ export default function Home() {
                   Forget prompts. 
                   <br />
                   <span className="text-hero-soft">Single screen-record</span>{' '}
-                  <span className="animate-arrow-move inline-block">→</span> 100x workflows
+                  <span className="animate-arrow-move inline-block">→</span> 100x reliable workflows
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  The most natural and reliable way to teach AI what to do.
+                  The most natural way to teach AI what to do.
                 </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
