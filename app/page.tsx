@@ -126,7 +126,7 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Forget prompts. 
+                  No more prompts!
                   <br />
                   <span className="text-hero-soft">Single screen-record</span>{' '}
                   <span className="animate-arrow-move inline-block">→</span> 100x reliable workflows
