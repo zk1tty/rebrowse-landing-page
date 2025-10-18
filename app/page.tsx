@@ -120,16 +120,19 @@ export default function Home() {
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      <span className="text-hero-soft">Loom for</span>{' '}
-                      <span className="text-hero-accent">Browser Automation</span>
+                      <span className="text-hero-soft">Self-learning</span>{' '}
+                      <span className="text-hero-accent">Browser Recorder</span>
                     </span>
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Single screen-record <span className="animate-arrow-move inline-block">→</span> 100x workflows
+                  Forget prompts. 
+                  <br />
+                  <span className="text-hero-soft">Single screen-record</span>{' '}
+                  <span className="animate-arrow-move inline-block">→</span> 100x workflows
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  Teach your AI browser by recording what you do. No code, no prompt.
+                  The most natural and reliable way to teach AI what to do.
                 </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-8 sm:mb-16">
