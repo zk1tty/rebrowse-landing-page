@@ -147,7 +147,7 @@ export default function Home() {
                   <br />
                   <span className="text-hero-accent">It learns your actions by watching you, naturally.</span>
                   <br />
-                  <span className="text-hero-soft">So you have confidence :)<br /> It's <span className="text-hero-accent">faster, accurate, and reliable.</span></span>{' '}
+                  <span className="text-hero-soft">So you have confidence :)<br /> It's </span>  <span className="text-hero-accent">20x</span> <span className="text-hero-soft">faster, accurate, and reliable than Comet.</span>
                 </h2>
               </div>
 
