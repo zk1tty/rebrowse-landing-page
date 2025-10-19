@@ -141,7 +141,7 @@ export default function Home() {
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
                   Jonan said: "Comet is so stupid for workflows."
                   <br />
-                  <span className="text-hero-soft">Yes, <span className="text-hero-accent">prompting LLMs</span> is failed to communicate browser actions.</span>{' '}
+                  <span className="text-hero-soft">Yes, you're sick of <span className="text-hero-accent">prompting LLMs</span>to tell what you want to do.</span>{' '}
                   <br />
                   <span className="text-hero-soft">Rebrowse thinks differently: </span>{' '}
                   <br />
