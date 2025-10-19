@@ -138,6 +138,17 @@ export default function Home() {
                 <div className="mb-8 sm:mb-16">
                   <SignUpForm />
                 </div>
+                <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
+                  Jonan said: "Comet is so stupid for workflows."
+                  <br />
+                  <span className="text-hero-soft">Yes, <span className="text-hero-accent">prompting LLMs</span> is failed to communicate browser actions.</span>{' '}
+                  <br />
+                  <span className="text-hero-soft">Rebrowse thinks differently: </span>{' '}
+                  <br />
+                  <span className="text-hero-accent">It learns your actions by watching you, naturally.</span>
+                  <br />
+                  <span className="text-hero-soft">So you have confidence :)<br /> It's <span className="text-hero-accent">faster, accurate, and reliable.</span></span>{' '}
+                </h2>
               </div>
 
               {/* Hero Video Section */}
