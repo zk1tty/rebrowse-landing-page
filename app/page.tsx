@@ -127,7 +127,14 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Run workflow <span className="text-hero-accent font-bold">20x</span> faster than Comet.
+                  Run workflows <span className="text-hero-accent font-bold">20x</span> faster than{' '}
+                  <Image
+                    src="/images/Comet-logo.png"
+                    alt="Comet"
+                    width={100}
+                    height={25}
+                    className="inline-block h-6 sm:h-8 md:h-10 w-auto align-bottom"
+                  />
                   <br />
                   <span className="text-hero-soft">Single screen-record</span>{' '}
                   <span className="animate-arrow-move inline-block">→</span> Agentic workflows
