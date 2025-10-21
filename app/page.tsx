@@ -155,7 +155,7 @@ export default function Home() {
 
               {/* Jonan's quote */}
               <div className="py-8 sm:py-12">
-                <h3 className="relative z-[1] text-center text-base sm:text-xl md:text-2xl mb-2 sm:mb-3 animate-fade-in-up text-white font-empathetic" style={{ animationDelay: '0.3s' }}>
+                <h3 className="relative z-[1] text-center text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 animate-fade-in-up text-white font-empathetic" style={{ animationDelay: '0.3s' }}>
                     Jonan said, "Comet is so stupid for workflows."
                     <br />
                     <span className="text-hero-soft">Yes, Comet is for web search, not workflows.</span>
