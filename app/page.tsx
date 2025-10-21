@@ -158,18 +158,18 @@ export default function Home() {
                 <h3 className="relative z-[1] text-center text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 animate-fade-in-up text-white font-empathetic" style={{ animationDelay: '0.3s' }}>
                     Jonan said, "Comet is so stupid for workflows."
                     <br />
-                    <span className="text-hero-soft">Yes, Comet is for web search, not workflows.</span>
+                    Yes, Comet is made for <span className="text-hero-accent">web search</span>.
                     <br />
-                    <span className="text-hero-soft">Yet, we're forced to <span className="text-hero-accent">prompt LLMs</span> for browsing tasks.</span>
+                    So we're forced to <span className="text-hero-accent">prompt browsing</span> tasks. 😭
                     <br />
                     <br />
-                    <span className="text-hero-soft">Rebrowse thinks differently.</span>
+                    Rebrowse is  made for <span className="text-hero-accent">workflows</span>.
                     <br />
                     <span className="text-hero-accent">It learns your actions by watching you.</span>
                     <br />
-                    <span className="text-hero-soft">So you have confidence :)</span>
-                    <br />
-                    <span className="text-hero-soft">Enjoy the <span className="text-hero-accent">20x</span> speed and accuracy of Rebrowse.</span>
+                    So you have confidence :)
+                      <br />
+                      Enjoy the <span className="text-hero-accent">20x</span> speed and accuracy of Rebrowse. 🤗
                 </h3>
               </div>
               
