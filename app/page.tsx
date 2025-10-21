@@ -179,11 +179,6 @@ export default function Home() {
 
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4 pt-8 sm:pt-10">
                  {/* add the oneliner description on the top of the image */}
-                <div className="text-center mb-4">
-                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
-                    v0.2.0 - 4 runs with the real-time preview and evals.
-                  </p>
-                </div>
                 <div 
                   className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-zoom-in"
                   onClick={() => setIsImageOpen(true)}
@@ -198,7 +193,12 @@ export default function Home() {
                      height={1000}
                      className="w-full h-auto object-cover"
                    />
-                 </div>
+                </div>
+                <div className="text-center mb-4">
+                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
+                    v0.2.0 - parallel mode
+                  </p>
+                </div> 
                </div> 
               <AngelUsers />
               
