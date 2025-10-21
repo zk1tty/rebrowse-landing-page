@@ -135,9 +135,6 @@ export default function Home() {
                     height={25}
                     className="inline-block h-6 sm:h-8 md:h-10 w-auto align-bottom"
                   />
-                  <br />
-                  <span className="text-hero-soft">Single screen-record</span>{' '}
-                  <span className="animate-arrow-move inline-block">→</span> Agentic workflows
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
                   Turn single screen-record into agentic workflows.
