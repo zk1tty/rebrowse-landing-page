@@ -137,7 +137,7 @@ export default function Home() {
                   />
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  Turn single screen-record into agentic workflows.
+                  Turn screen recordings into agentic workflows.
                 </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-4 sm:mb-8">
@@ -196,7 +196,7 @@ export default function Home() {
                 </div>
                 <div className="text-center mb-4">
                   <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
-                    v0.2.0 - parallel mode
+                    v0.2.0 - parallel-run mode
                   </p>
                 </div> 
                </div> 
