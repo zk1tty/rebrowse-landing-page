@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="hero-ambient"></div>
                 <div className="hero-vignette pointer-events-none"></div>
                 <div className="hero-noise pointer-events-none"></div>
-              <div className="relative text-center mb-8 w-full px-0 overflow-hidden rounded-xl">
+              <div className="relative text-center mb-4 w-full px-0 overflow-hidden rounded-xl">
               {/* Backed by badge */}
               <div className="flex items-center justify-center mb-2">
                 <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
@@ -140,23 +140,12 @@ export default function Home() {
                   <span className="animate-arrow-move inline-block">→</span> Agentic workflows
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  The most natural way to teach AI what to do.
+                  Turn single screen-record into agentic workflows.
                 </p>
                 {/* Add sign up for whitelists */}
-                <div className="mb-8 sm:mb-16">
+                <div className="mb-4 sm:mb-8">
                   <SignUpForm />
                 </div>
-                <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Jonan said: "Comet is so stupid for workflows."
-                  <br />
-                  <span className="text-hero-soft">Yes, you're sick of <span className="text-hero-accent">prompting LLMs</span> to tell what to browse.</span>{' '}
-                  <br />
-                  <span className="text-hero-soft">Rebrowse thinks differently: </span>{' '}
-                  <br />
-                  <span className="text-hero-accent">It learns your actions by watching you, naturally.</span>
-                  <br />
-                  <span className="text-hero-soft">So you have confidence :)<br /> It's </span>  <span className="text-hero-accent">20x</span> <span className="text-hero-soft">faster and accurate than Comet.</span>
-                </h2>
               </div>
 
               {/* Hero Video Section */}
@@ -167,6 +156,25 @@ export default function Home() {
                 bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account."}
               />
 
+              {/* Jonan's quote */}
+              <div className="py-8 sm:py-12">
+                <h3 className="relative z-[1] text-center text-base sm:text-xl md:text-2xl mb-2 sm:mb-3 animate-fade-in-up text-white font-empathetic" style={{ animationDelay: '0.3s' }}>
+                    Jonan said, "Comet is so stupid for workflows."
+                    <br />
+                    <span className="text-hero-soft">Yes, Comet is for web search, not workflows.</span>
+                    <br />
+                    <span className="text-hero-soft">Yet, we're forced to <span className="text-hero-accent">prompt LLMs</span> for browsing tasks.</span>
+                    <br />
+                    <br />
+                    <span className="text-hero-soft">Rebrowse thinks differently.</span>
+                    <br />
+                    <span className="text-hero-accent">It learns your actions by watching you.</span>
+                    <br />
+                    <span className="text-hero-soft">So you have confidence :)</span>
+                    <br />
+                    <span className="text-hero-soft">Enjoy the <span className="text-hero-accent">20x</span> speed and accuracy of Rebrowse.</span>
+                </h3>
+              </div>
               
               {/* <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
