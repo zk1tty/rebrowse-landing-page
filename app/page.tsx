@@ -120,14 +120,14 @@ export default function Home() {
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      <span className="text-hero-accent">AI Browser</span>{' '}
-                      <span className="text-hero-soft">for</span>{' '}
-                      <span className="text-hero-accent">workflow</span>
+                      <span className="text-hero-accent">Influence your Skills</span>{' '}
+                      <span className="text-hero-soft">by</span>{' '}
+                      <span className="text-hero-accent">Recording</span>
                     </span>
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Run workflows <span className="text-hero-accent font-bold">20x</span> faster than{' '}
+                  Run Skill workflow <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
                     src="/images/Comet-logo.png"
                     alt="Comet"
