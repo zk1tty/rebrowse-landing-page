@@ -149,8 +149,8 @@ export default function Home() {
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
                 title=""
-                description= ""
-                bottomText={"e.g. prompt Grok-4 and post a tweet on X via your account."}
+                description= "AI auto-correct workflows on your behalf. 🤖"
+                bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
 
               {/* Jonan's quote */}
