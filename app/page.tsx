@@ -207,12 +207,12 @@ export default function Home() {
                 videos={[
                   {
                     src: "/videos/PH-Apollo-Recording.mp4",
-                    title: "PH -> Apollo",
-                    description: "ProductHunt -> Apollo -> save email list "
+                    title: "PH → Apollo",
+                    description: "Search founder's name on ProductHunt and save emails on Apollo"
                   },
                   {
                     src: "/videos/grok-post.mp4",
-                    title: "Grok -> X",
+                    title: "Grok → X",
                     description: "Generate a post with Grok and Post on X"
                   }
                 ]}
