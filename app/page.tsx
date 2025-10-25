@@ -16,6 +16,7 @@ import CountdownTimer from './components/CountdownTimer';
 import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
+import SlotMachineSwitcher from './components/SlotMachineSwitcher';
 import { Puzzle, Send, Zap, Blocks, ArrowRight } from 'lucide-react';
 
 export default function Home() {
@@ -120,14 +121,20 @@ export default function Home() {
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      <span className="text-hero-accent">Influence your Skills</span>{' '}
-                      <span className="text-hero-soft">by</span>{' '}
-                      <span className="text-hero-accent">Recording</span>
+                      <span className="text-hero-soft">make your </span>
+                      <span className="text-hero-accent">Skill</span>
+                      <span className="text-hero-soft"> workflow
+                        <br />
+                        callable from
+                        </span> <SlotMachineSwitcher />
                     </span>
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Run Skill workflow <span className="text-hero-accent font-bold">20x</span> faster than{' '}
+                  <br />
+                  Call friend's Skill from Claude, and execute workflows.
+                  <br />
+                  Run <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
                     src="/images/Comet-logo.png"
                     alt="Comet"
@@ -148,8 +155,8 @@ export default function Home() {
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title=""
-                description= "AI auto-correct workflows on your behalf. 🤖"
+                title="Skill: Viral X Post"
+                description= "AI news reporter for X using Grok"
                 bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
 

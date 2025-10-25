@@ -18,8 +18,8 @@ interface AutoPlayVideoSectionProps {
 
 export default function AutoPlayVideoSection({ 
   videoSrc, 
-  title: defaultTitle = "Watch Demo", 
-  description: defaultDescription = "See how it works in action",
+  title = "Watch Demo", 
+  description = "See how it works in action",
   bottomText = "",
   videos = []
 }: AutoPlayVideoSectionProps) {
@@ -27,7 +27,7 @@ export default function AutoPlayVideoSection({
   const videoOptions: VideoOption[] = videos.length > 0 
     ? videos 
     : videoSrc 
-      ? [{ src: videoSrc, title: defaultTitle, description: defaultDescription }]
+      ? [{ src: videoSrc, title: title, description: description }]
       : [];
 
   const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
@@ -114,14 +114,14 @@ export default function AutoPlayVideoSection({
         {/* Title and Description */}
         {((selectedVideo.title && selectedVideo.title.trim().length > 0) || 
           (selectedVideo.description && selectedVideo.description.trim().length > 0)) && (
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 relative z-10">
             {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
-              <h2 className="mx-auto text-center font-['Times_New_Roman',_Times,_serif] font-bold tracking-tight leading-tight text-stone-50 text-2xl sm:text-3xl md:text-4xl">
+              <h2 className="mx-auto text-center font-['Times_New_Roman',_Times,_serif] font-bold tracking-tight leading-tight text-white text-2xl sm:text-3xl md:text-4xl relative z-10">
                 {selectedVideo.title}
               </h2>
             )}
             {selectedVideo.description && selectedVideo.description.trim().length > 0 && (
-              <p className="mt-2 text-sm sm:text-base text-[#B3B3B3] leading-[1.55]">
+              <p className="mt-2 text-sm sm:text-base text-white leading-[1.55] relative z-10">
                 {selectedVideo.description}
               </p>
             )}
