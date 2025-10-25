@@ -204,9 +204,18 @@ export default function Home() {
               
               {/* Auto-play Video Section */}
               <AutoPlayVideoSection 
-                videoSrc="/videos/demo-grok-post.mp4"
-                title="Recording demo"
-                description="1 min to build a Grok-powered X bot"
+                videos={[
+                  {
+                    src: "/videos/PH-Apollo-Recording.mp4",
+                    title: "PH -> Apollo",
+                    description: "ProductHunt -> Apollo -> save email list "
+                  },
+                  {
+                    src: "/videos/grok-post.mp4",
+                    title: "Grok -> X",
+                    description: "Generate a post with Grok and Post on X"
+                  }
+                ]}
               />
 
               {/* <TechnicalRoadmapSection /> */}

@@ -2,23 +2,49 @@
 import { useEffect, useRef, useState } from 'react';
 import VideoModal from './VideoModal';
 
+interface VideoOption {
+  src: string;
+  title?: string;
+  description?: string;
+}
+
 interface AutoPlayVideoSectionProps {
-  videoSrc: string;
+  videoSrc?: string; // deprecated - use videos prop instead
   title?: string;
   description?: string;
   bottomText?: string;
+  videos?: VideoOption[]; // new prop for multiple videos
 }
 
 export default function AutoPlayVideoSection({ 
   videoSrc, 
-  title = "Watch Demo", 
-  description = "See how it works in action",
-  bottomText = ""
+  title: defaultTitle = "Watch Demo", 
+  description: defaultDescription = "See how it works in action",
+  bottomText = "",
+  videos = []
 }: AutoPlayVideoSectionProps) {
+  // Support both old videoSrc prop and new videos prop
+  const videoOptions: VideoOption[] = videos.length > 0 
+    ? videos 
+    : videoSrc 
+      ? [{ src: videoSrc, title: defaultTitle, description: defaultDescription }]
+      : [];
+
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoPreviewRef = useRef<HTMLVideoElement>(null);
+
+  const selectedVideo = videoOptions[selectedVideoIndex];
+
+  // Reset video when switching
+  useEffect(() => {
+    if (videoPreviewRef.current && selectedVideo) {
+      videoPreviewRef.current.src = selectedVideo.src;
+      videoPreviewRef.current.load();
+    }
+  }, [selectedVideoIndex, selectedVideo]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,19 +83,46 @@ export default function AutoPlayVideoSection({
     setHasTriggered(true);
   };
 
+  if (!selectedVideo) {
+    return null;
+  }
+
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12">
-        {((title && title.trim().length > 0) || (description && description.trim().length > 0)) && (
+        {/* Tab Switcher - only show if multiple videos */}
+        {videoOptions.length > 1 && (
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex rounded-lg bg-[#1a1029] p-1 border border-purple-500/20">
+              {videoOptions.map((video, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedVideoIndex(index)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                    selectedVideoIndex === index
+                      ? 'bg-purple-600 text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-purple-600/30'
+                  }`}
+                >
+                  {video.title || `Video ${index + 1}`}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Title and Description */}
+        {((selectedVideo.title && selectedVideo.title.trim().length > 0) || 
+          (selectedVideo.description && selectedVideo.description.trim().length > 0)) && (
           <div className="text-center mb-8">
-            {title && title.trim().length > 0 && (
+            {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
               <h2 className="mx-auto text-center font-['Times_New_Roman',_Times,_serif] font-bold tracking-tight leading-tight text-stone-50 text-2xl sm:text-3xl md:text-4xl">
-                {title}
+                {selectedVideo.title}
               </h2>
             )}
-            {description && description.trim().length > 0 && (
+            {selectedVideo.description && selectedVideo.description.trim().length > 0 && (
               <p className="mt-2 text-sm sm:text-base text-[#B3B3B3] leading-[1.55]">
-                {description}
+                {selectedVideo.description}
               </p>
             )}
           </div>
@@ -90,7 +143,7 @@ export default function AutoPlayVideoSection({
                 playsInline
                 preload="metadata"
               >
-                <source src={videoSrc} type="video/mp4" />
+                <source src={selectedVideo.src} type="video/mp4" />
               </video>
               
               {/* Play Button Overlay */}
@@ -124,7 +177,7 @@ export default function AutoPlayVideoSection({
       <VideoModal 
         isOpen={isVideoModalOpen} 
         onClose={() => setIsVideoModalOpen(false)} 
-        videoSrc={videoSrc} 
+        videoSrc={selectedVideo.src} 
       />
     </>
   );
