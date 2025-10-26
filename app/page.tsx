@@ -125,7 +125,7 @@ export default function Home() {
                     </span>
                   </span>
                 </h1>
-                <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
+                <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
                   Record or import. Execute <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
                     src="/images/Comet-logo.png"
@@ -135,11 +135,8 @@ export default function Home() {
                     className="inline-block h-6 sm:h-8 md:h-10 w-auto align-bottom"
                   />.
                   <br />
-                  Call from <SlotMachineSwitcher />.
+                  invoke <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-sm text-gray-300">@rebrowse test flow</span> from <SlotMachineSwitcher />.
                 </h2>
-                <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-                  Turn screen recordings into agentic workflows.
-                </p>
                 {/* Add sign up for whitelists */}
                 <div className="mb-4 sm:mb-8">
                   <SignUpForm />
