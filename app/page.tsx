@@ -119,29 +119,23 @@ export default function Home() {
               </div>
                 <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
-                    {/* <Blocks className="w-10 h-10 text-purple-300" aria-hidden="true" /> */}
                     <span>
-                      <span className="text-hero-soft">make your </span>
-                      <span className="text-hero-accent">Skill</span>
-                      <span className="text-hero-soft"> workflow
-                        <br />
-                        callable from
-                        </span> <SlotMachineSwitcher />
+                      <span className="text-hero-accent">Fast, Visible Browser Workflows</span>
+                      <br />
                     </span>
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  <br />
-                  Call friend's Skill from Claude, and execute workflows.
-                  <br />
-                  Run <span className="text-hero-accent font-bold">20x</span> faster than{' '}
+                  Record or import. Execute <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
                     src="/images/Comet-logo.png"
                     alt="Comet"
                     width={100}
                     height={25}
                     className="inline-block h-6 sm:h-8 md:h-10 w-auto align-bottom"
-                  />
+                  />.
+                  <br />
+                  Call from <SlotMachineSwitcher />.
                 </h2>
                 <p className="relative z-[1] text-sm sm:text-base text-[#B3B3B3] leading-[1.55] mb-8 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
                   Turn screen recordings into agentic workflows.
