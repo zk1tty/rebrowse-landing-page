@@ -119,12 +119,12 @@ export default function AutoPlayVideoSection({
             {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
               <>
                 {selectedVideo.title.startsWith('@') ? (
-                  <div className="mx-auto text-center font-mono bg-gray-900 border border-gray-700 rounded-md px-6 py-4 text-white inline-flex items-center justify-center tracking-wide leading-tight relative z-10 text-2xl sm:text-3xl md:text-4xl shadow-lg shadow-gray-700/10">
+                  <div className="mx-auto text-center font-mono bg-gray-900 border border-gray-700 rounded-md px-6 py-4 text-white inline-flex items-center justify-center tracking-wide leading-tight relative z-10 text-xl sm:text-2xl md:text-3xl shadow-lg shadow-purple-700/10">
                     <TypingText
-                      text={selectedVideo.title}
+                      text={[selectedVideo.title, selectedVideo.title]}
                       typingSpeed={50}
                       deletingSpeed={30}
-                      pauseDuration={2000}
+                      pauseDuration={1000}
                       showCursor={true}
                       cursorCharacter="|"
                       className="text-white font-medium"
