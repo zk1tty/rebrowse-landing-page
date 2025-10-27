@@ -7,6 +7,7 @@ interface VideoOption {
   src: string;
   title?: string;
   description?: string;
+  type?: 'video' | 'image'; // Support both video and image
 }
 
 interface AutoPlayVideoSectionProps {
@@ -39,11 +40,28 @@ export default function AutoPlayVideoSection({
 
   const selectedVideo = videoOptions[selectedVideoIndex];
 
-  // Reset video when switching
+  // Auto-switch between videos/images every 3 seconds
   useEffect(() => {
-    if (videoPreviewRef.current && selectedVideo) {
+    if (videoOptions.length <= 1) return; // Don't auto-switch if only one item
+
+    const interval = setInterval(() => {
+      setSelectedVideoIndex((prevIndex) => 
+        (prevIndex + 1) % videoOptions.length
+      );
+    }, 3000); // Switch every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [videoOptions.length]);
+
+  // Reset video when switching and auto-play if it's a video
+  useEffect(() => {
+    if (videoPreviewRef.current && selectedVideo && selectedVideo.type !== 'image') {
       videoPreviewRef.current.src = selectedVideo.src;
       videoPreviewRef.current.load();
+      // Auto-play the video when switching to it
+      videoPreviewRef.current.play().catch(() => {
+        console.log('Autoplay blocked');
+      });
     }
   }, [selectedVideoIndex, selectedVideo]);
 
@@ -117,28 +135,21 @@ export default function AutoPlayVideoSection({
           (selectedVideo.description && selectedVideo.description.trim().length > 0)) && (
           <div className="text-center mb-8 relative z-10">
             {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
-              <>
-                {selectedVideo.title.startsWith('@') ? (
-                  <div className="mx-auto text-center font-mono bg-gray-900 border border-gray-700 rounded-md px-6 py-4 text-white inline-flex items-center justify-center tracking-wide leading-tight relative z-10 text-xl sm:text-2xl md:text-3xl shadow-lg shadow-purple-700/10">
-                    <TypingText
-                      text={[selectedVideo.title, selectedVideo.title]}
-                      typingSpeed={50}
-                      deletingSpeed={30}
-                      pauseDuration={1000}
-                      showCursor={true}
-                      cursorCharacter="|"
-                      className="text-white font-medium"
-                      cursorClassName="h-[1.1em] bg-white/90"
-                      loop={true}
-                      reverseMode={false}
-                    />
-                  </div>
-                ) : (
-                  <h2 className="mx-auto text-center font-['Times_New_Roman',_Times,_serif] font-bold tracking-tight leading-tight text-white text-2xl sm:text-3xl md:text-4xl relative z-10">
-                    {selectedVideo.title}
-                  </h2>
-                )}
-              </>
+              <div className="mx-auto text-center font-mono bg-gray-900 border border-gray-700 rounded-md px-6 py-4 text-white inline-flex items-center justify-center tracking-wide leading-tight relative z-10 text-xl sm:text-2xl md:text-3xl shadow-lg shadow-purple-700/10">
+                <TypingText
+                  key={selectedVideoIndex}
+                  text={[selectedVideo.title, selectedVideo.title]}
+                  typingSpeed={50}
+                  deletingSpeed={50}
+                  pauseDuration={1000}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  className="text-white font-medium"
+                  cursorClassName="h-[1.1em] bg-white/90"
+                  loop={true}
+                  reverseMode={false}
+                />
+              </div>
             )}
             {selectedVideo.description && selectedVideo.description.trim().length > 0 && (
               <p className="mt-2 text-sm sm:text-base text-white leading-[1.55] relative z-10">
@@ -153,41 +164,53 @@ export default function AutoPlayVideoSection({
             className="relative rounded-2xl overflow-hidden card-surface border-[#B692F6]/20 ring-1 ring-white/10 bg-gradient-to-br from-[#1a1029] to-[#121528] cursor-pointer group"
             onClick={handleManualPlay}
           >
-            {/* Video Preview */}
+            {/* Video/Image Preview */}
             <div className="relative aspect-video">
-              <video
-                ref={videoPreviewRef}
-                className="w-full h-full object-cover"
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              >
-                <source src={selectedVideo.src} type="video/mp4" />
-              </video>
-              
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg
-                    className="w-6 h-6 text-white ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+              {selectedVideo.type === 'image' ? (
+                // Image Preview
+                <img
+                  src={selectedVideo.src}
+                  alt={selectedVideo.title || 'Preview'}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                // Video Preview
+                <>
+                  <video
+                    ref={videoPreviewRef}
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
                   >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
+                    <source src={selectedVideo.src} type="video/mp4" />
+                  </video>
+                  
+                  {/* Play Button Overlay - only for videos */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg
+                        className="w-6 h-6 text-white ml-1"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Click to play only - no auto-open on scroll */}
             </div>
 
-            {/* Bottom gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
+            {/* Bottom gradient - reduced to not interfere with text below */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
 
           {bottomText && (
-            <figcaption className="mt-3 text-sm sm:text-base text-gray-300 text-center whitespace-pre-line">
+            <figcaption className="mt-6 text-sm sm:text-base text-white font-medium text-center whitespace-pre-line relative z-10">
               {bottomText}
             </figcaption>
           )}
