@@ -17,7 +17,7 @@ import TryOutModal from './components/TryOutModal';
 import EventModal from './components/EventModal';
 import AutoPlayVideoSection from './components/AutoPlayVideoSection';
 import SlotMachineSwitcher from './components/SlotMachineSwitcher';
-import { Puzzle, Send, Zap, Blocks, ArrowRight } from 'lucide-react';
+import TypingText from '@/components/ui/shadcn-io/typing-text';
 
 export default function Home() {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -148,7 +148,7 @@ export default function Home() {
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="/rebrowse grok-post"
+                title="@rebrowse grok-post"
                 description= "ask Grok-4 to generate AI news, and post it from your account"
                 bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
