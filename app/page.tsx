@@ -120,22 +120,24 @@ export default function Home() {
                 <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     <span>
-                      <span className="text-hero-accent">Fast, Visible Browser Workflows</span>
+                      <span className="text-hero-accent">Call Appflows from LLM</span>
                       <br />
                     </span>
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Record or import. Execute <span className="text-hero-accent font-bold">20x</span> faster than{' '}
+                  Record or import your app flow.
+                  <br />
+                  Call <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-sm text-gray-300">@rebrowse my-app-flow</span> from <SlotMachineSwitcher />.
+                  <br />
+                  <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
                     src="/images/Comet-logo.png"
                     alt="Comet"
                     width={100}
                     height={25}
-                    className="inline-block h-6 sm:h-8 md:h-10 w-auto align-bottom"
+                    className="inline-block h-6 sm:h-6 md:h-8 w-auto align-bottom"
                   />.
-                  <br />
-                  invoke <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-sm text-gray-300">@rebrowse test flow</span> from <SlotMachineSwitcher />.
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-4 sm:mb-8">
@@ -146,37 +148,39 @@ export default function Home() {
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="Skill: Viral X Post"
-                description= "AI news reporter for X using Grok"
+                title="/rebrowse grok-post"
+                description= "ask Grok-4 to generate AI news, and post it from your account"
                 bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
 
-              {/* Jonan's quote */}
-              <div className="py-8 sm:py-12">
-                <h3 className="relative z-[1] text-center text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 animate-fade-in-up text-white font-empathetic" style={{ animationDelay: '0.3s' }}>
-                    Jonan said, "Comet is so stupid for workflows."
-                    <br />
-                    Yes, Comet is made for <span className="text-hero-accent">web search</span>.
-                    <br />
-                    So we're forced to <span className="text-hero-accent">prompt browsing</span> tasks. 😭
-                    <br />
-                    <br />
-                    Rebrowse is  made for <span className="text-hero-accent">workflows</span>.
-                    <br />
-                    <span className="text-hero-accent">It learns your actions by watching you.</span>
-                    <br />
-                    So you have confidence :)
-                      <br />
-                      Enjoy the <span className="text-hero-accent">20x</span> speed and accuracy of Rebrowse. 🤗
-                </h3>
-              </div>
+              {/* Recording Demo */}
+              <AutoPlayVideoSection 
+                videos={[
+                  {
+                    src: "/videos/PH-Apollo-Recording.mp4",
+                    title: "ProductHunt -> Apollo",
+                    description: "Search founder's name on ProductHunt and save emails on Apollo"
+                  },
+                  {
+                    src: "/videos/grok-post.mp4",
+                    title: "Grok → X",
+                    description: "Generate a post with Grok and Post on X"
+                  }
+                ]}
+              />
               
               {/* <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div> */}
 
+              <AngelUsers />
+
                <div className="relative w-full max-w-4xl mx-auto mb-16 px-4 pt-8 sm:pt-10">
-                 {/* add the oneliner description on the top of the image */}
+                 <div className="text-center mb-4">
+                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
+                    v0.2.0 - parallel-run mode
+                  </p>
+                </div>
                 <div 
                   className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-zoom-in"
                   onClick={() => setIsImageOpen(true)}
@@ -192,29 +196,7 @@ export default function Home() {
                      className="w-full h-auto object-cover"
                    />
                 </div>
-                <div className="text-center mb-4">
-                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
-                    v0.2.0 - parallel-run mode
-                  </p>
-                </div> 
-               </div> 
-              <AngelUsers />
-              
-              {/* Auto-play Video Section */}
-              <AutoPlayVideoSection 
-                videos={[
-                  {
-                    src: "/videos/PH-Apollo-Recording.mp4",
-                    title: "PH → Apollo",
-                    description: "Search founder's name on ProductHunt and save emails on Apollo"
-                  },
-                  {
-                    src: "/videos/grok-post.mp4",
-                    title: "Grok → X",
-                    description: "Generate a post with Grok and Post on X"
-                  }
-                ]}
-              />
+               </div>
 
               {/* <TechnicalRoadmapSection /> */}
               {/* Add sign up for whitelists */}

@@ -116,8 +116,18 @@ export default function AutoPlayVideoSection({
           (selectedVideo.description && selectedVideo.description.trim().length > 0)) && (
           <div className="text-center mb-8 relative z-10">
             {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
-              <h2 className="mx-auto text-center font-['Times_New_Roman',_Times,_serif] font-bold tracking-tight leading-tight text-white text-2xl sm:text-3xl md:text-4xl relative z-10">
+              <h2 className={`mx-auto text-center font-bold tracking-tight leading-tight relative z-10 text-2xl sm:text-3xl md:text-4xl ${
+                selectedVideo.title.startsWith('/') 
+                  ? 'font-mono bg-gray-900 border border-gray-700 rounded-lg px-6 py-3 text-white inline-flex items-center justify-center'
+                  : 'font-[\'Times_New_Roman\',_Times,_serif] text-white'
+              }`}>
                 {selectedVideo.title}
+                {selectedVideo.title.startsWith('/') && (
+                  <span
+                    aria-hidden="true"
+                    className="ml-2 inline-block w-[2px] h-[1.1em] bg-white/90 animate-pulse align-[-0.1em]"
+                  />
+                )}
               </h2>
             )}
             {selectedVideo.description && selectedVideo.description.trim().length > 0 && (
