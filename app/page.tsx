@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen bg-app text-white overflow-x-hidden">
+      <div className="min-h-screen bg-app text-white overflow-x-hidden max-w-full">
         <QRModal isOpen={isQROpen} onClose={() => setIsQROpen(false)} />
         <TryOutModal isOpen={isTryOutOpen} onClose={() => setIsTryOutOpen(false)} />
         <EventModal isOpen={isEventOpen} onClose={() => setIsEventOpen(false)} />
@@ -98,12 +98,13 @@ export default function Home() {
         <div className={`flex flex-col min-h-screen ${!isTryOutOpen ? 'pt-16 sm:pt-20' : ''}`}>
           <main className="flex-1 w-full">
             <div className="container-app py-8 sm:py-16">
-                {/* ambient glow + subtle grid + vignette + noise */}
+              {/* Hero Section with overlays */}
+              <div className="relative overflow-hidden mb-8">
+                {/* ambient glow + subtle grid + noise */}
                 <div className="grid-overlay"></div>
                 <div className="hero-ambient"></div>
-                <div className="hero-vignette pointer-events-none"></div>
                 <div className="hero-noise pointer-events-none"></div>
-              <div className="relative text-center mb-4 w-full px-0 overflow-hidden rounded-xl">
+                <div className="relative text-center mb-4 w-full px-0 rounded-xl">
               {/* Backed by badge */}
               <div className="flex items-center justify-center mb-2">
                 <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
@@ -126,9 +127,9 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  Record or import your app flow.
+                  1. Record your app flow.
                   <br />
-                  Call <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-sm text-gray-300">@rebrowse my-app-flow</span> from <SlotMachineSwitcher />.
+                  2. Run <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-sm text-gray-300">your-app-flow</span> from <SlotMachineSwitcher />.
                   <br />
                   <span className="text-hero-accent font-bold">20x</span> faster than{' '}
                   <Image
@@ -145,33 +146,36 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero Video Section */}
-              <AutoPlayVideoSection 
-                videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="@rebrowse grok-post"
-                description= "ask Grok-4 to generate AI news, and post it from your account"
-                bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
-              />
-
               {/* Recording Demo */}
               <AutoPlayVideoSection 
                 videos={[
                   {
-                    src: "/videos/PH-Apollo-Recording.mp4",
-                    title: "ProductHunt -> Apollo",
-                    description: "Search founder's name on ProductHunt and save emails on Apollo"
+                    src: "/images/chatbot-apollo.png",
+                    title: "Rebrowse Apollo flow",
+                    description: "Talk to ChatGPT to run the Apollo workflow",
+                    type: "image"
                   },
                   {
-                    src: "/videos/grok-post.mp4",
-                    title: "Grok → X",
-                    description: "Generate a post with Grok and Post on X"
+                    src: "/videos/PH-Apollo-Recording.mp4",
+                    title: "record ProductHunt -> Apollo",
+                    description: "Search founder's name on ProductHunt and save emails on Apollo"
                   }
                 ]}
+              />
+
+              {/* Hero Video Section */}
+              <AutoPlayVideoSection 
+                videoSrc="/videos/rebrowse-demo-with-music.mp4"
+                title="Post Grok-gen posts on X"
+                description= "ask Grok-4 to generate AI news, and post it from your account"
+                bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
               
               {/* <div className="flex justify-center w-full mb-8">
                 <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
               </div> */}
+              </div>
+              {/* End Hero Section */}
 
               <AngelUsers />
 
