@@ -187,16 +187,22 @@ export default function AutoPlayVideoSection({
                     <source src={selectedVideo.src} type="video/mp4" />
                   </video>
                   
-                  {/* Play Button Overlay - only for videos */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {/* Video Icon Overlay - only for videos */}
+                  <div className="absolute bottom-4 right-4">
+                    <div className="px-3 py-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 flex items-center gap-2 group-hover:scale-110 transition-transform duration-300">
                       <svg
-                        className="w-6 h-6 text-white ml-1"
-                        fill="currentColor"
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M8 5v14l11-7z" />
+                        <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
+                        <rect x="2" y="6" width="14" height="12" rx="2" />
                       </svg>
+                      <span className="text-white text-sm font-medium">Play</span>
                     </div>
                   </div>
                 </>
