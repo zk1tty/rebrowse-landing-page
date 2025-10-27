@@ -120,7 +120,7 @@ export default function Home() {
                 <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                   <span className="inline-flex items-center justify-center whitespace-nowrap">
                     <span>
-                      <span className="text-hero-accent">LLM-native Browser Automation</span>
+                      <span className="text-hero-accent">Make any website LLM-native</span>
                       <br />
                     </span>
                   </span>
