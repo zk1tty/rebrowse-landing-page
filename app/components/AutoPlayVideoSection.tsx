@@ -8,6 +8,7 @@ interface VideoOption {
   title?: string;
   description?: string;
   type?: 'video' | 'image'; // Support both video and image
+  duration?: number; // Display duration in milliseconds (default: 3000ms)
 }
 
 interface AutoPlayVideoSectionProps {
@@ -16,6 +17,7 @@ interface AutoPlayVideoSectionProps {
   description?: string;
   bottomText?: string;
   videos?: VideoOption[]; // new prop for multiple videos
+  useTypingAnimation?: boolean; // toggle between typing animation and normal title
 }
 
 export default function AutoPlayVideoSection({ 
@@ -23,7 +25,8 @@ export default function AutoPlayVideoSection({
   title = "Watch Demo", 
   description = "See how it works in action",
   bottomText = "",
-  videos = []
+  videos = [],
+  useTypingAnimation = true
 }: AutoPlayVideoSectionProps) {
   // Support both old videoSrc prop and new videos prop
   const videoOptions: VideoOption[] = videos.length > 0 
@@ -40,18 +43,21 @@ export default function AutoPlayVideoSection({
 
   const selectedVideo = videoOptions[selectedVideoIndex];
 
-  // Auto-switch between videos/images every 3 seconds
+  // Auto-switch between videos/images based on each item's duration
   useEffect(() => {
     if (videoOptions.length <= 1) return; // Don't auto-switch if only one item
+
+    // Use the current video's duration, or default to 3000ms
+    const currentDuration = selectedVideo?.duration || 3000;
 
     const interval = setInterval(() => {
       setSelectedVideoIndex((prevIndex) => 
         (prevIndex + 1) % videoOptions.length
       );
-    }, 3000); // Switch every 3 seconds
+    }, currentDuration);
 
     return () => clearInterval(interval);
-  }, [videoOptions.length]);
+  }, [videoOptions.length, selectedVideoIndex, selectedVideo?.duration]);
 
   // Reset video when switching and auto-play if it's a video
   useEffect(() => {
@@ -136,19 +142,23 @@ export default function AutoPlayVideoSection({
           <div className="text-center mb-8 relative z-10">
             {selectedVideo.title && selectedVideo.title.trim().length > 0 && (
               <div className="mx-auto text-center font-mono bg-gray-900 border border-gray-700 rounded-md px-6 py-4 text-white inline-flex items-center justify-center tracking-wide leading-tight relative z-10 text-xl sm:text-2xl md:text-3xl shadow-lg shadow-purple-700/10">
-                <TypingText
-                  key={selectedVideoIndex}
-                  text={[selectedVideo.title, selectedVideo.title]}
-                  typingSpeed={50}
-                  deletingSpeed={50}
-                  pauseDuration={1000}
-                  showCursor={true}
-                  cursorCharacter="|"
-                  className="text-white font-medium"
-                  cursorClassName="h-[1.1em] bg-white/90"
-                  loop={true}
-                  reverseMode={false}
-                />
+                {useTypingAnimation ? (
+                  <TypingText
+                    key={selectedVideoIndex}
+                    text={[selectedVideo.title, selectedVideo.title]}
+                    typingSpeed={50}
+                    deletingSpeed={50}
+                    pauseDuration={1000}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className="text-white font-medium"
+                    cursorClassName="h-[1.1em] bg-white/90"
+                    loop={true}
+                    reverseMode={false}
+                  />
+                ) : (
+                  <span className="text-white font-medium">{selectedVideo.title}</span>
+                )}
               </div>
             )}
             {selectedVideo.description && selectedVideo.description.trim().length > 0 && (

@@ -151,23 +151,34 @@ export default function Home() {
                 videos={[
                   {
                     src: "/images/chatbot-apollo.png",
-                    title: "Rebrowse Apollo flow",
+                    title: "Extract emails from ProductHunt via Apollo",
                     description: "Talk to ChatGPT to run the Apollo workflow",
-                    type: "image"
+                    type: "image",
+                    duration: 2000
                   },
                   {
-                    src: "/videos/PH-Apollo-Recording.mp4",
-                    title: "record ProductHunt -> Apollo",
-                    description: "Search founder's name on ProductHunt and save emails on Apollo"
+                    src: "/videos/LLM-tool-call-webapps-appflow.mov",
+                    title: "Extract emails from ProductHunt via Apollo",
+                    description: "Search founder's name on ProductHunt and save emails on Apollo",
+                    duration: 11000
                   }
                 ]}
+                useTypingAnimation={false}
               />
+
+              {/* LLM Tool call Demo */}
+              <AutoPlayVideoSection 
+                videoSrc="/videos/PH-Apollo-Recording.mp4"
+                title= "record ProductHunt -> Apollo"
+                description= "Ask ChatGPT to run the app flow, and get the result"
+                useTypingAnimation={false}
+              />        
 
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="Post Grok-gen posts on X"
-                description= "ask Grok-4 to generate AI news, and post it from your account"
+                title="Live preview of Agent Browser"
+                description= "See how the agent browser works in real-time"
                 bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
               />
               
