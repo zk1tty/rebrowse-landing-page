@@ -157,7 +157,7 @@ export default function Home() {
                     duration: 2000
                   },
                   {
-                    src: "/videos/LLM-tool-call-webapps-appflow.mov",
+                    src: "/videos/LLM-tool-call-demo.mp4",
                     title: "Extract emails from ProductHunt via Apollo",
                     description: "Search founder's name on ProductHunt and save emails on Apollo",
                     duration: 11000
