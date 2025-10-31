@@ -129,7 +129,7 @@ export default function Home() {
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
                   1. Record your screen.
                   <br />
-                  2. Call <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-md text-gray-300">app-flow</span> from <SlotMachineSwitcher />.
+                  2. Call <span className="inline-block bg-gray-900 border border-gray-600 rounded px-2 py-1 font-mono text-md text-gray-300">app-flow</span> from <SlotMachineSwitcher /> in-context.
                   <br />
                   Get your job done{' '}
                   <span className="text-hero-accent font-bold">20x</span> faster than{' '}
@@ -150,7 +150,7 @@ export default function Home() {
               {/* insert one image to tell system architceture*/}
               <div className="relative w-full max-w-4xl mx-auto mb-8 sm:mb-12">
                 <Image
-                  src="/images/rebrowse-system-architecture.png"
+                  src="/images/rebrowse-system-arc.png"
                   alt="System Architecture"
                   width={640}
                   height={320}
