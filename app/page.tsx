@@ -146,6 +146,18 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* insert one image to tell system architceture*/}
+              <div className="relative w-full max-w-4xl mx-auto mb-8 sm:mb-12">
+                <Image
+                  src="/images/rebrowse-system-architecture.png"
+                  alt="System Architecture"
+                  width={640}
+                  height={320}
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
+              </div>
+
               {/* Recording Demo */}
               <AutoPlayVideoSection 
                 videos={[
