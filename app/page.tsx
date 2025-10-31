@@ -164,14 +164,14 @@ export default function Home() {
                 videos={[
                   {
                     src: "/images/chatbot-apollo.png",
-                    title: "Extract emails from ProductHunt via Apollo",
+                    title: "Extract ProductHunt maker's email from Apollo",
                     description: "Talk to ChatGPT to run the Apollo workflow",
                     type: "image",
                     duration: 2000
                   },
                   {
                     src: "/videos/LLM-tool-call-demo.mp4",
-                    title: "Extract emails from ProductHunt via Apollo",
+                    title: "Extract ProductHunt maker's email from Apollo",
                     description: "Search founder's name on ProductHunt and save emails on Apollo",
                     duration: 11000
                   }
