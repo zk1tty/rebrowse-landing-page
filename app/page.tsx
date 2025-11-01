@@ -147,8 +147,24 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Recording Demo */}
+              <AutoPlayVideoSection 
+                videos={[
+                  {
+                    src: "/videos/Rebrowse-flow-demo.mp4",
+                    title: "",
+                    description: "",
+                    type: "video",
+                    duration: 10000
+                  }
+                ]}
+                useTypingAnimation={false}
+              />  
+
               {/* insert one image to tell system architceture*/}
               <div className="relative w-full max-w-4xl mx-auto mb-8 sm:mb-12">
+                {/* add padding to the top of image with mb-8 with width of 100% and text-center */}
+                <div className="mb-8 w-full"></div>
                 <Image
                   src="/images/rebrowse-system-arc.png"
                   alt="System Architecture"
@@ -157,6 +173,7 @@ export default function Home() {
                   className="w-full h-auto rounded-lg"
                   priority
                 />
+                <h2 className="text-2xl font-bold mb-4 text-center text-white mt-8 w-full">How it works</h2>
               </div>
 
               {/* Recording Demo */}
@@ -202,29 +219,6 @@ export default function Home() {
               {/* End Hero Section */}
 
               <AngelUsers />
-
-               <div className="relative w-full max-w-4xl mx-auto mb-16 px-4 pt-8 sm:pt-10">
-                 <div className="text-center mb-4">
-                  <p className="text-sm sm:text-lg md:text-xl font-normal text-white mb-2">
-                    v0.2.0 - parallel-run mode
-                  </p>
-                </div>
-                <div 
-                  className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 cursor-zoom-in"
-                  onClick={() => setIsImageOpen(true)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsImageOpen(true); } }}
-                >
-                   <Image 
-                     src="/images/4-panels-canvas.png" 
-                     alt="v0.2.0 - production-ready" 
-                     width={1000} 
-                     height={1000}
-                     className="w-full h-auto object-cover"
-                   />
-                </div>
-               </div>
 
               {/* <TechnicalRoadmapSection /> */}
               {/* Add sign up for whitelists */}
