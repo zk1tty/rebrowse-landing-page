@@ -173,7 +173,7 @@ export default function Home() {
               {/* Hero Video Section */}
               <AutoPlayVideoSection 
                 videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="Step 2: Preview of Agent Browser"
+                title="Step 2: Test agent on cloud"
                 description= "See how the agent browser works in real-time"
                 bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
                 useTypingAnimation={false}
