@@ -119,12 +119,13 @@ export default function Home() {
                 />
               </div>
                 <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
-                  <span className="inline-flex items-center justify-center whitespace-nowrap">
+                  <span className="inline-flex items-center justify-center whitespace-nowrap text-hero-soft">
                     <span>
-                      <span className="text-hero-accent">Make webapps LLM-callable</span>
-                      <br />
+                      <span className="text-hero-accent">Screen recording</span>
+                      {' '}turned into{' '}
+                      <span className="text-hero-accent">Agent</span>
+                      </span>
                     </span>
-                  </span>
                 </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
                   1. Record your screen.
@@ -161,7 +162,53 @@ export default function Home() {
                 useTypingAnimation={false}
               />  
 
-              {/* insert one image to tell system architceture*/}
+              {/* LLM Tool call Demo */}
+              <AutoPlayVideoSection 
+                videoSrc="/videos/PH-Apollo-Recording.mp4"
+                title= "Step 1: Recording"
+                description= "Recording ProductHunt -> Apollo email extraction workflow"
+                useTypingAnimation={false}
+              />        
+
+              {/* Hero Video Section */}
+              <AutoPlayVideoSection 
+                videoSrc="/videos/rebrowse-demo-with-music.mp4"
+                title="Step 2: Preview of Agent Browser"
+                description= "See how the agent browser works in real-time"
+                bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
+                useTypingAnimation={false}
+              />
+
+              {/* Advanced: Call workflow from ChatGPT */}
+              <AutoPlayVideoSection 
+                videos={[
+                  {
+                    src: "/images/chatbot-apollo.png",
+                    title: "Step 3: Call workflow from ChatGPT",
+                    description: "Talk to ChatGPT to run the Apollo workflow",
+                    type: "image",
+                    duration: 2000
+                  },
+                  {
+                    src: "/videos/LLM-tool-call-demo.mp4",
+                    title: "Step 3: Call workflow from ChatGPT",
+                    description: "Search founder's name on ProductHunt and save emails on Apollo",
+                    duration: 11000
+                  }
+                ]}
+                useTypingAnimation={false}
+              />
+              
+              {/* <div className="flex justify-center w-full mb-8">
+                <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
+              </div> */}
+              </div>
+              {/* End Hero Section */}
+
+              <AngelUsers />
+
+
+              {/* How it works */}
               <div className="relative w-full max-w-4xl mx-auto mb-8 sm:mb-12">
                 {/* add padding to the top of image with mb-8 with width of 100% and text-center */}
                 <div className="mb-8 w-full"></div>
@@ -175,50 +222,6 @@ export default function Home() {
                 />
                 <h2 className="text-2xl font-bold mb-4 text-center text-white mt-8 w-full">How it works</h2>
               </div>
-
-              {/* Recording Demo */}
-              <AutoPlayVideoSection 
-                videos={[
-                  {
-                    src: "/images/chatbot-apollo.png",
-                    title: "Extract ProductHunt maker's email from Apollo",
-                    description: "Talk to ChatGPT to run the Apollo workflow",
-                    type: "image",
-                    duration: 2000
-                  },
-                  {
-                    src: "/videos/LLM-tool-call-demo.mp4",
-                    title: "Extract ProductHunt maker's email from Apollo",
-                    description: "Search founder's name on ProductHunt and save emails on Apollo",
-                    duration: 11000
-                  }
-                ]}
-                useTypingAnimation={false}
-              />
-
-              {/* LLM Tool call Demo */}
-              <AutoPlayVideoSection 
-                videoSrc="/videos/PH-Apollo-Recording.mp4"
-                title= "record ProductHunt -> Apollo"
-                description= "Ask ChatGPT to run the app flow, and get the result"
-                useTypingAnimation={false}
-              />        
-
-              {/* Hero Video Section */}
-              <AutoPlayVideoSection 
-                videoSrc="/videos/rebrowse-demo-with-music.mp4"
-                title="Live preview of Agent Browser"
-                description= "See how the agent browser works in real-time"
-                bottomText={"🪄 Agent auto-corrects workflows on your behalf 🪄"}
-              />
-              
-              {/* <div className="flex justify-center w-full mb-8">
-                <AnimatedPlayButton onClick={() => setIsTryOutOpen(true)} />
-              </div> */}
-              </div>
-              {/* End Hero Section */}
-
-              <AngelUsers />
 
               {/* <TechnicalRoadmapSection /> */}
               {/* Add sign up for whitelists */}
