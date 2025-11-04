@@ -107,7 +107,7 @@ export default function Home() {
                 <div className="relative text-center mb-4 w-full px-0 rounded-xl">
               {/* Backed by badge */}
               <div className="flex items-center justify-center mb-2">
-                <span className="text-[10px] sm:text-xs text-gray-300 mr-2">Partnered with</span>
+                <span className="text-[10px] sm:text-sm text-gray-300 mx-2">Partnered with</span>
                 <Image
                   alt="Browser-use"
                   loading="lazy"
@@ -116,6 +116,16 @@ export default function Home() {
                   className="h-4 sm:h-5 md:h-6 w-auto opacity-90"
                   style={{ color: 'transparent' }}
                   src="/images/browser-use-white-text.png"
+                />
+                <span className="text-[10px] sm:text-sm text-gray-300 mx-2"> &amp; </span>
+                <Image
+                  alt="Anchor-browser"
+                  loading="lazy"
+                  width={808}
+                  height={161}
+                  className="h-4 sm:h-5 md:h-6 w-auto opacity-90"
+                  style={{ color: 'transparent' }}
+                  src="/images/anchor-logo.png"
                 />
               </div>
                 <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
