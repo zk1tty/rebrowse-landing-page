@@ -199,7 +199,7 @@ export default function Home() {
                     duration: 2000
                   },
                   {
-                    src: "/videos/LLM-tool-call-demo.mp4",
+                    src: "/videos/GTM-from-ChatGPT.mov",
                     title: "Step 3: Call workflow from ChatGPT",
                     description: "Search founder's name on ProductHunt and save emails on Apollo",
                     duration: 11000
