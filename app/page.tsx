@@ -129,24 +129,8 @@ export default function Home() {
                 />
               </div>
                   <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
-                    <span className="inline-flex items-center justify-center whitespace-nowrap text-hero-soft gap-2 sm:gap-3">
-                      <span className="text-hero-soft">Web Ops Layer for </span>
-                      {/* Human Icon */}
-                      <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                      <span className="text-hero-soft"> & </span>
-                      {/* Robot Icon */}
-                      <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="6" y="8" width="12" height="12" rx="2"></rect>
-                        <path d="M12 2v4"></path>
-                        <circle cx="9" cy="13" r="1"></circle>
-                        <circle cx="15" cy="13" r="1"></circle>
-                        <path d="M9 17h6"></path>
-                        <path d="M6 12H3"></path>
-                        <path d="M21 12h-3"></path>
-                      </svg>
+                    <span className="inline-flex items-center justify-center whitespace-nowrap text-hero-soft">
+                      <span>Vibe <span className="text-hero-accent">Scraping</span> from ChatGPT</span>
                     </span>
                   </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
