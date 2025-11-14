@@ -148,7 +148,7 @@ export default function Home() {
                     <br />
                     Note: Our extension follows{' '}
                     <a 
-                      href="https://webmcp.dev/" 
+                      href="https://docs.mcp-b.ai/concepts/overview" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white underline transition-colors"
