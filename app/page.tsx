@@ -134,25 +134,26 @@ export default function Home() {
                     </span>
                   </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
-                  1. Record your workflow and convert it to MCP tool.
+                  1. Record your workflow
                   <br />
-                  2. Let users talk to your app with <SlotMachineSwitcher /> in-context.
+                  2. Turn it into MCP tool.
                   <br />
-                  Stop losing customers to context-switching ✌🏻
+                  3. Let users use your app with <SlotMachineSwitcher /> in-context.
                 </h2>
 
                 {/* Technical novelty note */}
                 <div className="flex flex-col items-center w-full mb-8">
                   <p className="text-xs sm:text-sm text-gray-400 text-center">
-                    Note: Our extension is a Browser-Native MCP Server.{' '}
+                    Stop losing customers to context-switching ✌🏻
                     <br />
+                    Note: Our extension follows{' '}
                     <a 
                       href="https://webmcp.dev/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white underline transition-colors"
                     >
-                      About Web-MCP
+                      Web Model Context standard(NEW!)
                     </a>
                   </p>
                 </div>
