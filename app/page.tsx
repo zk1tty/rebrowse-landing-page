@@ -140,6 +140,22 @@ export default function Home() {
                   <br />
                   Stop losing customers to context-switching ✌🏻
                 </h2>
+
+                {/* Technical novelty note */}
+                <div className="flex flex-col items-center w-full mb-8">
+                  <p className="text-xs sm:text-sm text-gray-400 text-center">
+                    Note: Our extension is a Browser-Native MCP Server.{' '}
+                    <br />
+                    <a 
+                      href="https://webmcp.dev/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white underline transition-colors"
+                    >
+                      About Web-MCP
+                    </a>
+                  </p>
+                </div>
                 {/* Add sign up for whitelists */}
                 <div className="mb-4 sm:mb-8">
                   <SignUpForm />
