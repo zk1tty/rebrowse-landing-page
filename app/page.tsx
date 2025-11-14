@@ -138,7 +138,7 @@ export default function Home() {
                   <br />
                   2. Let users talk to your app with <SlotMachineSwitcher /> in-context.
                   <br />
-                  Oh no API? You can record. ✌🏻
+                  Stop losing customers to context-switching ✌🏻
                 </h2>
                 {/* Add sign up for whitelists */}
                 <div className="mb-4 sm:mb-8">
