@@ -130,13 +130,13 @@ export default function Home() {
               </div>
                   <h1 className="relative z-[1] mt-4 leading-tight sm:leading-snug text-[clamp(1rem,6.2vw,1.6rem)] sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up tracking-tight font-['Times_New_Roman',_Times,_serif]" style={{ animationDelay: '0.2s' }}>
                     <span className="inline-flex items-center justify-center whitespace-nowrap text-hero-soft">
-                      <span><span className="text-hero-accent">GTM</span> from ChatGPT</span>
+                      <span><span className="text-hero-accent">GTM</span> from {' '}<SlotMachineSwitcher /></span>
                     </span>
                   </h1>
                 <h2 className="relative z-[1] text-sm sm:text-lg md:text-xl font-normal mb-2 sm:mb-3 pb-4 sm:pb-6 animate-fade-in-up text-white" style={{ animationDelay: '0.3s' }}>
                   1. Record your screen.
                   <br />
-                  2. Invoke deterministic workflows from <SlotMachineSwitcher /> in-context.
+                  2. Invoke deterministic workflows with context.
                   <br />
                   Get your job done{' '}
                   <span className="text-hero-accent font-bold">20x</span> faster than{' '}
