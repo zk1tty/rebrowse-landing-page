@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -75,7 +76,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={`${inter.className} overflow-x-hidden`} suppressHydrationWarning>{children}</body>
+      <body className={`${inter.className} overflow-x-hidden`} suppressHydrationWarning>
+        {children}
+        
+        {/* nori-1 Chat Widget */}
+        <Script
+          src="https://app.meetchar.ai/widget.js"
+          strategy="lazyOnload"
+          data-site-id="2c715bb3-6352-4e22-bdc7-f3c25c4d46bb"
+          data-api-key="sk_uWrtye6U1EwKiUu5YrO7hDUQRnaBp184"
+        />
+      </body>
     </html>
   );
 }
